@@ -135,7 +135,8 @@ h6 {
   right: 10px;
 } */
 
-.btn-login, .burger-button-wrapper, .btn-buy {
+.btn-login, .burger-button-wrapper, 
+.btn-buy, .btn-reserve, .button-log-out {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -170,14 +171,16 @@ h6 {
   margin-right: 1em;
 }
 
-.btn-login, .burger-button, .session-link, .package, .btn-form, .login-input-submit, .register-input-submit, .btn-buy {
+.btn-login, .burger-button, .session-link, .package, 
+.btn-form, .login-input-submit, .register-input-submit, 
+.btn-buy, .btn-reserve, .button-log-out {
   transition: .2s;
   will-change: transform;
 }
 
-.btn-login:active, .burger-button:active, .session-link:active, .btn-form:active,
-.login-input-submit:active, .register-input-submit:active, .package:active, 
-.social-link:active, .btn-buy:active {
+.btn-login:active, .burger-button:active, .session-link:active, 
+.btn-form:active,.login-input-submit:active, .register-input-submit:active, 
+.package:active, .social-link:active, .btn-buy:active, .btn-reserve:active, .button-log-out:active {
   transform: scale(.9);
 }
 
@@ -218,9 +221,13 @@ ol {
   width: 100%;
 } */
 
-.register, .login, .restorePass {
+.login, .restorePass {
   padding-top: 70px;
   height: 100vh;
+}
+
+.register {
+  padding-top: 70px;
 }
 
 .login-wrapper, .restorePass-wrapper {
@@ -401,55 +408,22 @@ ol {
   margin: 1em 0;
 }
 
-/* -----------------------------------------User profile ------------------------------------------------ */
+/* -----------------------------------------User profile start------------------------------------------------ */
 .user-profile {
   padding-top: 55px;
   font-family: 'Lato', 'Oxyge', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .user-profile p {
   margin: 0;
 }
 
-.profile-data {
-  /* margin: .5em auto 0; */
-  width: 100%;
-  /* background: #f1f1f1; */
-}
-
 .available-classes, .data, .log-out-wrapper {
   margin: .8em auto;
 }
-
-/* .profile-user-name {
-  font-weight: bold;
-} */
-
-/* .class-available-number {
-  background: #ff0022;
-  color: white;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  font-size: 2em;
-  display: flex;
-  margin: .5em auto .2em;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .txt-available-classes {
-  margin: .3em 0 0;
-  font-size: .8em;
-}
-
-.txt-date-expiry {
-  font-size: .8em;
-} */
 
 .data {
   display: flex;
@@ -469,27 +443,21 @@ ol {
   margin: .5em 0 !important;
 }
 
-/* .buy-reserve-classes {
-  display: flex;
-  justify-content: center;
-} */
-
-
-.log-out-link, .plan-click, .schedule-click {
+.log-out-link, .plan-click, .schedule-click, .account-click {
   margin: 0 auto;
   color: #ff0022;
   font-weight: bolder;
   width: fit-content;
 }
 
-.plan-active, .profile-schedule {
+.plan-active, .profile-schedule, .profile-data {
   width: 100%;
   height: fit-content;
 }
 
-.plan-title, .schedule-title {
+.plan-title, .schedule-title, .profile-title {
   padding: .5em 0;
-  background: #f1f1f1;
+  background: #c1c1c1;
   border-bottom: 1px solid white;
 }
 
@@ -500,7 +468,6 @@ ol {
 }
 
 .plan-info-wrapper {
-  /* display: none; */
   max-width: 80%;
   margin: 0 auto;
 }
@@ -522,7 +489,7 @@ ol {
   margin-bottom: 1em;
 }
 
-.btn-buy {
+.btn-buy, .btn-reserve, .button-log-out {
   padding: 8px 8px;
   background: rgb(255, 0, 34);
   display: inline-block;
@@ -531,50 +498,30 @@ ol {
   box-shadow: outset 0 -.2em rgba(0, 0, 0, .2);
 }
 
-.next-classes {
-  text-align: left;
-  margin: .8em 0 .8em .5em;
+.schedule-classes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.next-classes-title {
-  margin-bottom: .8em !important;
+.next-classes-title, .finished-classes-title, .canceled-classes-title {
+  width: 100%;
+  padding: .4em 0;
+}
+
+.next-classes-title.is-active, .finished-classes-title.is-active, 
+.canceled-classes-title.is-active {
+  background: #ff0022;
+  color: white;
 }
 
 .txt-next-classes {
   margin: 0 2em 2em !important;
 }
 
-/* .next-classes-wrapper {
-  width: 100%;
-  height: fit-content;
-}
-
-.next-classes-title {
-  padding: .5em 0;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.next-classes {
-  margin: 1em 0 3em;
-} */
 
 
-/* .historial-classes {
-  background: #f1f1f1;
-  width: 100%;
-  height: fit-content;
-}
-
-.historial-title {
-  padding: .5em 0;
-  border-bottom: 1px solid white;
-}
-
-.finished-classes {
-  margin: 1em 0 3em;
-} */
-
-/* -----------------------------------------User profile ------------------------------------------------ */
+/* -----------------------------------------User profile end------------------------------------------------ */
 
 .hero {
   margin: 0;
@@ -1126,6 +1073,28 @@ h3 {
       font-size: 1.2em;
     }
 
+    /* ----------------------------------------user profile start --------------------------------------- */
+
+    .user-profile {
+      grid-template-columns: 1fr 2fr;
+
+    }
+
+    .profile-data, .plan-active {
+      border-right: 1px solid #c1c1c1;
+    }
+
+    .plan-active {
+      grid-row-start: 2;
+    }
+
+    .schedule-title{
+      background: none;
+    }
+
+    /* ----------------------------------------user profile end --------------------------------------- */
+
+
     .reserve, .buySession, .we-are, .coaches {
       padding-bottom: 3em;
     }
@@ -1246,7 +1215,7 @@ h3 {
       height: 70px;
     }
 
-    .btn-login, .btn-buy {
+    .btn-login, .btn-buy, .btn-reserve, .button-log-out {
       padding: 10px 18px;
       font-size: 1.2em;
     }
@@ -1273,6 +1242,28 @@ h3 {
       margin: 2em 0;
     }
 
+    /* ----------------------------------------user profile start --------------------------------------- */
+
+    .user-profile {
+      padding-top: 70px;
+    }
+
+    .plan-active {
+      border-right: 1px solid #c1c1c1;
+      height: 100%;
+    }
+
+    .plan-title, .schedule-title, .profile-title {
+      background: none;
+      font-size: 1.3em;
+    }
+
+      .data, .plan-info, .schedule-classes {
+        font-size: 1.1em;
+      }
+
+    /* ----------------------------------------user profile end --------------------------------------- */
+
     .hero {
       padding-top: 70px;
     }
@@ -1287,7 +1278,8 @@ h3 {
       font-size: 1.7em;
     }
 
-    .calendar, .hero, .we-are p, .header-wrapper, .contact-wrapper, .room-wrapper {
+    .calendar, .hero, .we-are p, .header-wrapper, .contact-wrapper, 
+    .room-wrapper, .user-profile {
       max-width: 1024px;
       margin: 0 auto;
     }

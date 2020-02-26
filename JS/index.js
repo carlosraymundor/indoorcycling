@@ -10,6 +10,10 @@ const linkWeAre = document.querySelector('.link-weAre');
 const linkCoaches = document.querySelector('.link-coaches');
 const linkContact = document.querySelector('.link-contact');
 
+const nextClasses = document.querySelector('.next-classes-title');
+const finishedClasses = document.querySelector('.finished-classes-title');
+const canceledClasses = document.querySelector('.canceled-classes-title');
+
 // const plans = document.querySelector('.plan-click');
 // const planInfo = document.querySelector('.plan-info-wrapper');
 // const plans = document.querySelector('.plan-click');
@@ -30,10 +34,16 @@ function validation(event) {
     linkWeAre.addEventListener('click', hideShow);
     linkCoaches.addEventListener('click', hideShow);
     linkContact.addEventListener('click', hideShow);
+    nextClasses.addEventListener('click', optActive);
+    finishedClasses.addEventListener('click', opt2Active);
+    canceledClasses.addEventListener('click', opt3Active);
   } else {
     plans.addEventListener('click', showPlans);
     burgerButton.removeEventListener('click', hideShow);
     closeMenu.removeEventListener('click', hideShow);
+    nextClasses.removeEventListener('click', optActive);
+    finishedClasses.removeEventListener('click', opt2Active);
+    canceledClasses.removeEventListener('click', opt3Active);
   }
 }
 
@@ -45,6 +55,24 @@ function hideShow() {
   } else {
     menu.classList.add('is-active');
   }
+}
+
+function optActive() {
+  nextClasses.classList.add('is-active');
+  finishedClasses.classList.remove('is-active');
+  canceledClasses.classList.remove('is-active');
+}
+
+function opt2Active() {
+  nextClasses.classList.remove('is-active');
+  finishedClasses.classList.add('is-active');
+  canceledClasses.classList.remove('is-active');
+}
+
+function opt3Active() {
+  nextClasses.classList.remove('is-active');
+  finishedClasses.classList.remove('is-active');
+  canceledClasses.classList.add('is-active');
 }
 
 // function showPlans() {
