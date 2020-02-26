@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style="overflow-y: scroll;">
+<body>
     <header class="header">
         <div class="header-wrapper">
             <figure class="logo">
@@ -22,9 +22,34 @@
             <div class="header-menu">
                 <div class="button-login" >
                     <a href="index.html" class="link btn-login link-hl" id="login-button">
-                        <span>Salir</span>
+                        <span>Iniciar sesión</span>
                     </a>
                 </div>
+                <div class="burger-button-wrapper">
+                    <i class="icon-menu burger-button link-hl" id="burger-menu"></i>	
+                </div>
+                <nav class="menu ">
+                    <div class="menu-close">
+                        <img src="images/cross.svg" alt="close" class="menu-close-img">
+                     </div>
+                    <ol>
+                        <li>
+                            <a class="link menu-link link-reserve" href="#reserve">Reservar</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-buySession" href="#buySession">Comprar clases</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-weAre" href="#we-are">¿Quiénes somos?</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-coaches" href="#coaches">Instructores</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-contact" href="#contact">Contacto</a>
+                        </li>
+                    </ol>
+                </nav>
             </div> 
         </div>
     </header>
@@ -54,6 +79,13 @@
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>
+                    Sport Life 2020 © Todos los Derechos Reservados. Diseñado y desarrollado por Hola Mundo TI
+            </p>
+        </div>
+    </footer>
     <script src="JS/index.js"></script>
 </body>
 </html>
