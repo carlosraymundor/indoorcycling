@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sport Life</title>
+    <link rel="icon" type="image/jpg" href="images/indoorcycling.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="overflow-y: scroll;">
+    <header class="header">
+        <div class="header-wrapper">
+            <figure class="logo">
+                <a class="home link-hl" href="index.html">
+                    <img src="images/indoorcycling.png" alt="Logo de http://sportlife.com.mx" />
+                </a>
+            </figure>
+            <div class="header-menu">
+                <div class="button-login" >
+                    <a href="index.html" class="link btn-login link-hl" id="login-button">
+                        <span>Salir</span>
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <section class="login">
+        <div class="login-wrapper">
+            <div class="login-content">
+                <div class="login-welcome">
+                    <p class="welcome">¡Hola de nuevo!</p>
+                    <p class="instruction">Accede a tu cuenta</p>
+                </div>
+                <form action="/suscripcion/" class="login-form">
+                    <div class="wrapper-login-input">
+                        <input type="email" name="email" placeholder="Correo electrónico" class="login-input-email" required>
+                    </div>
+                    <div class="wrapper-login-input">
+                        <input type="password" placeholder="Contraseña" class="login-input-password" required>
+                        <a href="restore.html" class="forget-pass">Olvidé mi contraseña</a>
+                    </div>
+                    <div class="wrapper-login-input">
+                        <button  type="submit" class="login-input-submit link-hl">Entrar</button>
+                        <p class="register-option">
+                            ¿No tienes cuenta?
+                            <a href="registro.html" class="register-link" id="register-link">Regístrate</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="JS/index.js"></script>
+</body>
+</html>

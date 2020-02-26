@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sport Life</title>
+    <link rel="icon" type="image/jpg" href="images/indoorcycling.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <figure class="logo">
+                <a class="home link-hl" href="index.html">
+                    <img src="images/indoorcycling.png" alt="Logo de http://sportlife.com.mx" />
+                </a>
+            </figure>
+            <div class="header-menu">
+                <div class="button-login" >
+                    <a href="index.html" class="link btn-login link-hl" id="login-button">
+                        <span>Salir</span>
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <div class="restorePass">
+        <div class="restorePass-wrapper">
+            <div class="restorePass-content">
+                <div class="restorePass-welcome">
+                    <p class="welcome">Reestablecer contraseña</p>
+                    <p class="instruction">Por favor, introduzca su correo electrónico y le enviaremos instrucciones sobre cómo restaurar su contraseña.</p>
+                </div>
+                <form action="/restablecer/" class="restorePass-form">
+                    <div class="wrapper-restorePass-input">
+                        <input type="email" name="email" placeholder="Correo electrónico" class="restorePass-input-email" required>
+                    </div>
+                    <div class="wrapper-restorePass-input">
+                        <button type="submit" class="restorePass-input-submit link-hl">Enviar</button>
+                        <p class="restorePass-option">
+                            <a href="login.html" class="restorePass-link restorePass-back" id="restorePass-link">Regresar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ipad = window.matchMedia('screen and (min-width: 320px)');
+        const menu = document.querySelector('.menu');
+        const burgerButton = document.querySelector('#burger-menu');
+        const closeMenu = document.querySelector('.menu-close-img');    
+
+        const login = document.querySelector('.login');
+        const loginButton = document.querySelector('#login-button');
+        const closeLogin = document.querySelector('.login-close-img');
+        
+        const package1 = document.querySelector('#package1');
+        const package2 = document.querySelector('#package2');
+        const package3 = document.querySelector('#package3');
+        const package4 = document.querySelector('#package4');
+        const package5 = document.querySelector('#package5');
+
+        const forgetPass = document.querySelector('.forget-pass');        
+        const backLogin = document.querySelector('.restorePass-back');
+        const restore = document.querySelector('.restorePass');
+        const closeRestore = document.querySelector('.restorePass-close-img');
+
+        
+        // const register = document.querySelector('.register');
+        // const registerLink = document.querySelector('.register-link');
+        // const closeRegister = document.querySelector('.register-close-img');
+
+        const access = document.querySelector('.access-link');
+
+        const linkReserve = document.querySelector('.link-reserve');
+        const linkBuySession = document.querySelector('.link-buySession');
+        const linkWeAre = document.querySelector('.link-weAre');
+        const linkCoaches = document.querySelector('.link-coaches');
+        const linkContact = document.querySelector('.link-contact');
+
+        // const password = document.querySelector(".register-input-password"), confirm_password = document.querySelector("register-input-password-confirm");
+  
+        ipad.addListener(validation);
+  
+        function validation(event) {
+          if (event.matches) {
+            burgerButton.addEventListener('click', hideShow);
+            closeMenu.addEventListener('click', hideShow);
+            linkReserve.addEventListener('click', hideShow);
+            linkBuySession.addEventListener('click', hideShow);
+            linkWeAre.addEventListener('click', hideShow);
+            linkCoaches.addEventListener('click', hideShow);
+            linkContact.addEventListener('click', hideShow);
+            loginButton.addEventListener('click', hideShowLogin);
+            closeLogin.addEventListener('click', hideShowLogin);
+            package1.addEventListener('click', hideShowLogin);
+            package2.addEventListener('click', hideShowLogin);
+            package3.addEventListener('click', hideShowLogin);
+            package4.addEventListener('click', hideShowLogin);
+            package5.addEventListener('click', hideShowLogin);
+            forgetPass.addEventListener('click', ShowRestore);
+            backLogin.addEventListener('click', hideRestore);
+            closeRestore.addEventListener('click', hideRestore);
+            closeRestore.addEventListener('click', hideShowLogin);
+          } else {
+            burgerButton.removeEventListener('click', hideShow);
+            closeMenu.removeEventListener('click', hideShow);
+            closeLogin.removeEventListener('click', hideShowLogin);
+          }
+        }
+  
+        validation(ipad);
+        
+        function hideShow() {
+          if (menu.classList.contains('is-active')) {
+            menu.classList.remove('is-active');
+          } else {
+            menu.classList.add('is-active');
+          }
+        }
+
+        function hideShowLogin() {
+          if (login.classList.contains('is-active')) {
+            login.classList.remove('is-active');
+          } else {
+            login.classList.add('is-active');
+          }
+        }
+
+        function ShowRestore() {
+            restore.style.visibility = 'visible';
+        }
+
+        function hideRestore() {
+            restore.style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>

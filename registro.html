@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sport Life</title>
+    <link rel="icon" type="image/jpg" href="images/indoorcycling.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <figure class="logo">
+                <a class="home" href="index.html">
+                    <img src="images/indoorcycling.png" alt="Logo de http://sportlife.com.mx" />
+                </a>
+            </figure>
+            <div class="header-menu">
+                <div class="button-login" >
+                    <a href="login.html" class="link btn-login" id="login-button">
+                        <span>Iniciar sesión</span>
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <div class="register">
+        <div class="register-wrapper">
+            <div class="register-content">
+                <div class="register-welcome">
+                    <p class="welcome">¡Bienvenido a Sport Life!</p>
+                    <p class="instruction">Ingresa todos tus datos</p>
+                </div>
+                <form action="/suscripcion/" class="register-form">
+                    <div class="wrapper-register-input">
+                        <input type="text" placeholder="Nombre" class="register-input-name" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="text" placeholder="Apellidos" class="register-input-last-name" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="email" name="email" placeholder="Correo electrónico" class="register-input-email" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="password" placeholder="Contraseña" class="register-input-password" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="password" placeholder="Confirmar contraseña" class="register-input-password-confirm" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="tel" name="telephone" placeholder="Teléfono" class="register-input-tel" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="date" name="born" placeholder="Fecha de nacimiento" class="register-input-born" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <input type="text" name="sizeshoes" placeholder="Talla de Zapatos (MX)" class="register-input-size-shoes" required>
+                    </div>
+                    <div class="wrapper-register-input">
+                        <button type="submit" class="register-input-submit link-hl">Regístrate</button>
+                        <p class="access-option">
+                            ¿Ya tienes cuenta?
+                            <a href="login.html" class="access-link" id="access-link">Entrar</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ipad = window.matchMedia('screen and (min-width: 320px)');
+        // const menu = document.querySelector('.menu');
+        // const burgerButton = document.querySelector('#burger-menu');
+        // const closeMenu = document.querySelector('.menu-close-img');
+        
+
+        const login = document.querySelector('.login');
+        const loginButton = document.querySelector('#login-button');
+        const closeLogin = document.querySelector('.login-close-img');
+
+        // const register = document.querySelector('.register');
+        // const registerLink = document.querySelector('.register-link');
+        // const closeRegister = document.querySelector('.register-close-img');
+
+        const access = document.querySelector('.access-link');
+
+        // const linkReserve = document.querySelector('.link-reserve');
+        // const linkBuySession = document.querySelector('.link-buySession');
+        // const linkWeAre = document.querySelector('.link-weAre');
+        // const linkCoaches = document.querySelector('.link-coaches');
+        // const linkContact = document.querySelector('.link-contact');
+
+        // const password = document.querySelector(".register-input-password"), confirm_password = document.querySelector("register-input-password-confirm");
+  
+        ipad.addListener(validation);
+  
+        function validation(event) {
+          if (event.matches) {
+            // burgerButton.addEventListener('click', hideShow);
+            // closeMenu.addEventListener('click', hideShow);
+            // linkReserve.addEventListener('click', hideShow);
+            // linkBuySession.addEventListener('click', hideShow);
+            // linkWeAre.addEventListener('click', hideShow);
+            // linkCoaches.addEventListener('click', hideShow);
+            // linkContact.addEventListener('click', hideShow);
+            loginButton.addEventListener('click', hideShowLogin);
+            closeLogin.addEventListener('click', hideShowLogin);
+            // closeRegister.addEventListener('click', hideShowRegister);
+            // registerLink.addEventListener('click', hideShowRegister);
+            access.addEventListener('click', hideShowLogin);
+          } else {
+            burgerButton.removeEventListener('click', hideShow);
+            closeMenu.removeEventListener('click', hideShow);
+            // loginButton.removeEventListener('click', hideShow2);
+            closeLogin.removeEventListener('click', hideShowLogin);
+            closeRegister.removeEventListener('click', hideShowRegister);
+            registerLink.removeEventListener('click', hideShowRegister);
+            
+          }
+        }
+  
+        validation(ipad);
+
+        function hideShowLogin() {
+          if (login.classList.contains('is-active')) {
+            login.classList.remove('is-active');
+          } else {
+            login.classList.add('is-active');
+          }
+        }
+
+        // function hideShowRegister() {
+        //   if (register.classList.contains('is-active')) {
+        //     register.classList.remove('is-active');
+        //     // login.classList.add('is-active');
+        //   } else {
+        //     register.classList.add('is-active');
+        //     login.classList.remove('is-active');
+        //   }
+        // }
+
+        // function hideShowRegisterLogin() {
+        //   if (register.classList.contains('is-active')) {
+        //     register.classList.remove('is-active');
+        //     login.classList.add('is-active');
+        //   } else {
+        //     // register.classList.add('is-active');
+        //   }
+        // }
+
+        // function validatePassword(){
+        //     if(password.value != confirm_password.value) {
+        //         confirm_password.setCustomValidity("Las contraseñas no coinciden");
+        //     } else {
+        //         confirm_password.setCustomValidity('');
+        //     }
+        // }
+
+        // password.onchange = validatePassword;
+        // confirm_password.onkeyup = validatePassword;
+    </script>
+</body>
