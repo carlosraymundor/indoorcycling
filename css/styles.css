@@ -101,6 +101,12 @@ h6 {
   grid-template-columns: 80% 20%;
 }
 
+.header-elements {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .button-login, .login-user-wrapper {
   display: flex;
   justify-content: flex-end;
