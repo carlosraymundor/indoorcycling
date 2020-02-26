@@ -20,11 +20,52 @@
                 </a>
             </figure>
             <div class="header-menu">
-                <div class="button-login" >
-                    <a href="index.html" class="link btn-login link-hl" id="login-button">
-                        <span>Salir</span>
-                    </a>
+                <div class="header-elements">
+                    <div class="button-login" >
+                        <a href="login.html" class="link btn-login link-hl" id="login-button">
+                            <span>Iniciar sesión</span>
+                        </a>
+                    </div>
+                    <div class="button-leave">
+                        <a href="index.html" class="link btn-login link-hl" id="login-button">
+                            <span>Salir</span>
+                        </a>
+                    </div>
+                    <div class="login-user-wrapper">
+                        <p class="user-name">Hola Carlos</p>
+                        <a href="profile.html" class="link-user link icons">
+                            <i class="icon-user link-hl" id="icon-user"></i>
+                        </a>
+                        <a href="" class="link-close-session link icons">
+                            <i class="icon-switch link-hl" id="icon-switch"></i>
+                        </a>
+                    </div>
                 </div>
+                <div class="burger-button-wrapper">
+                    <i class="icon-menu burger-button link-hl" id="burger-menu"></i>	
+                </div>
+                <nav class="menu ">
+                    <div class="menu-close">
+                        <img src="images/cross.svg" alt="close" class="menu-close-img">
+                     </div>
+                    <ol>
+                        <li>
+                            <a class="link menu-link link-reserve" href="#reserve">Reservar</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-buySession" href="#buySession">Comprar clases</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-weAre" href="#we-are">¿Quiénes somos?</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-coaches" href="#coaches">Instructores</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-contact" href="#contact">Contacto</a>
+                        </li>
+                    </ol>
+                </nav>
             </div> 
         </div>
     </header>
@@ -48,96 +89,13 @@
             </div>
         </div>
     </div>
-    <script>
-        const ipad = window.matchMedia('screen and (min-width: 320px)');
-        const menu = document.querySelector('.menu');
-        const burgerButton = document.querySelector('#burger-menu');
-        const closeMenu = document.querySelector('.menu-close-img');    
-
-        const login = document.querySelector('.login');
-        const loginButton = document.querySelector('#login-button');
-        const closeLogin = document.querySelector('.login-close-img');
-        
-        const package1 = document.querySelector('#package1');
-        const package2 = document.querySelector('#package2');
-        const package3 = document.querySelector('#package3');
-        const package4 = document.querySelector('#package4');
-        const package5 = document.querySelector('#package5');
-
-        const forgetPass = document.querySelector('.forget-pass');        
-        const backLogin = document.querySelector('.restorePass-back');
-        const restore = document.querySelector('.restorePass');
-        const closeRestore = document.querySelector('.restorePass-close-img');
-
-        
-        // const register = document.querySelector('.register');
-        // const registerLink = document.querySelector('.register-link');
-        // const closeRegister = document.querySelector('.register-close-img');
-
-        const access = document.querySelector('.access-link');
-
-        const linkReserve = document.querySelector('.link-reserve');
-        const linkBuySession = document.querySelector('.link-buySession');
-        const linkWeAre = document.querySelector('.link-weAre');
-        const linkCoaches = document.querySelector('.link-coaches');
-        const linkContact = document.querySelector('.link-contact');
-
-        // const password = document.querySelector(".register-input-password"), confirm_password = document.querySelector("register-input-password-confirm");
-  
-        ipad.addListener(validation);
-  
-        function validation(event) {
-          if (event.matches) {
-            burgerButton.addEventListener('click', hideShow);
-            closeMenu.addEventListener('click', hideShow);
-            linkReserve.addEventListener('click', hideShow);
-            linkBuySession.addEventListener('click', hideShow);
-            linkWeAre.addEventListener('click', hideShow);
-            linkCoaches.addEventListener('click', hideShow);
-            linkContact.addEventListener('click', hideShow);
-            loginButton.addEventListener('click', hideShowLogin);
-            closeLogin.addEventListener('click', hideShowLogin);
-            package1.addEventListener('click', hideShowLogin);
-            package2.addEventListener('click', hideShowLogin);
-            package3.addEventListener('click', hideShowLogin);
-            package4.addEventListener('click', hideShowLogin);
-            package5.addEventListener('click', hideShowLogin);
-            forgetPass.addEventListener('click', ShowRestore);
-            backLogin.addEventListener('click', hideRestore);
-            closeRestore.addEventListener('click', hideRestore);
-            closeRestore.addEventListener('click', hideShowLogin);
-          } else {
-            burgerButton.removeEventListener('click', hideShow);
-            closeMenu.removeEventListener('click', hideShow);
-            closeLogin.removeEventListener('click', hideShowLogin);
-          }
-        }
-  
-        validation(ipad);
-        
-        function hideShow() {
-          if (menu.classList.contains('is-active')) {
-            menu.classList.remove('is-active');
-          } else {
-            menu.classList.add('is-active');
-          }
-        }
-
-        function hideShowLogin() {
-          if (login.classList.contains('is-active')) {
-            login.classList.remove('is-active');
-          } else {
-            login.classList.add('is-active');
-          }
-        }
-
-        function ShowRestore() {
-            restore.style.visibility = 'visible';
-        }
-
-        function hideRestore() {
-            restore.style.visibility = 'hidden';
-        }
-    </script>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>
+                    Sport Life 2020 © Todos los Derechos Reservados. Diseñado y desarrollado por Hola Mundo TI
+            </p>
+        </div>
+    </footer>
+    <script src="JS/index.js"></script>
 </body>
 </html>
