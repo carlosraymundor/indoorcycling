@@ -28,7 +28,7 @@
             </div> 
         </div>
     </header>
-    <div class="register">
+    <section class="register">
         <div class="register-wrapper">
             <div class="register-content">
                 <div class="register-welcome">
@@ -70,97 +70,6 @@
                 </form>
             </div>
         </div>
-    </div>
-    <script>
-        const ipad = window.matchMedia('screen and (min-width: 320px)');
-        // const menu = document.querySelector('.menu');
-        // const burgerButton = document.querySelector('#burger-menu');
-        // const closeMenu = document.querySelector('.menu-close-img');
-        
-
-        const login = document.querySelector('.login');
-        const loginButton = document.querySelector('#login-button');
-        const closeLogin = document.querySelector('.login-close-img');
-
-        // const register = document.querySelector('.register');
-        // const registerLink = document.querySelector('.register-link');
-        // const closeRegister = document.querySelector('.register-close-img');
-
-        const access = document.querySelector('.access-link');
-
-        // const linkReserve = document.querySelector('.link-reserve');
-        // const linkBuySession = document.querySelector('.link-buySession');
-        // const linkWeAre = document.querySelector('.link-weAre');
-        // const linkCoaches = document.querySelector('.link-coaches');
-        // const linkContact = document.querySelector('.link-contact');
-
-        // const password = document.querySelector(".register-input-password"), confirm_password = document.querySelector("register-input-password-confirm");
-  
-        ipad.addListener(validation);
-  
-        function validation(event) {
-          if (event.matches) {
-            // burgerButton.addEventListener('click', hideShow);
-            // closeMenu.addEventListener('click', hideShow);
-            // linkReserve.addEventListener('click', hideShow);
-            // linkBuySession.addEventListener('click', hideShow);
-            // linkWeAre.addEventListener('click', hideShow);
-            // linkCoaches.addEventListener('click', hideShow);
-            // linkContact.addEventListener('click', hideShow);
-            loginButton.addEventListener('click', hideShowLogin);
-            closeLogin.addEventListener('click', hideShowLogin);
-            // closeRegister.addEventListener('click', hideShowRegister);
-            // registerLink.addEventListener('click', hideShowRegister);
-            access.addEventListener('click', hideShowLogin);
-          } else {
-            burgerButton.removeEventListener('click', hideShow);
-            closeMenu.removeEventListener('click', hideShow);
-            // loginButton.removeEventListener('click', hideShow2);
-            closeLogin.removeEventListener('click', hideShowLogin);
-            closeRegister.removeEventListener('click', hideShowRegister);
-            registerLink.removeEventListener('click', hideShowRegister);
-            
-          }
-        }
-  
-        validation(ipad);
-
-        function hideShowLogin() {
-          if (login.classList.contains('is-active')) {
-            login.classList.remove('is-active');
-          } else {
-            login.classList.add('is-active');
-          }
-        }
-
-        // function hideShowRegister() {
-        //   if (register.classList.contains('is-active')) {
-        //     register.classList.remove('is-active');
-        //     // login.classList.add('is-active');
-        //   } else {
-        //     register.classList.add('is-active');
-        //     login.classList.remove('is-active');
-        //   }
-        // }
-
-        // function hideShowRegisterLogin() {
-        //   if (register.classList.contains('is-active')) {
-        //     register.classList.remove('is-active');
-        //     login.classList.add('is-active');
-        //   } else {
-        //     // register.classList.add('is-active');
-        //   }
-        // }
-
-        // function validatePassword(){
-        //     if(password.value != confirm_password.value) {
-        //         confirm_password.setCustomValidity("Las contraseñas no coinciden");
-        //     } else {
-        //         confirm_password.setCustomValidity('');
-        //     }
-        // }
-
-        // password.onchange = validatePassword;
-        // confirm_password.onkeyup = validatePassword;
-    </script>
+    </section>
+    <script src="JS/index.js"></script>
 </body>
