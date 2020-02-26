@@ -14,6 +14,10 @@ const nextClasses = document.querySelector('.next-classes-title');
 const finishedClasses = document.querySelector('.finished-classes-title');
 const canceledClasses = document.querySelector('.canceled-classes-title');
 
+const tableNext = document.querySelector('.next-classes-table');
+const tableFinished = document.querySelector('.finished-classes-table');
+const tableCanceled = document.querySelector('.canceled-classes-table');
+
 // const plans = document.querySelector('.plan-click');
 // const planInfo = document.querySelector('.plan-info-wrapper');
 // const plans = document.querySelector('.plan-click');
@@ -34,16 +38,16 @@ function validation(event) {
     linkWeAre.addEventListener('click', hideShow);
     linkCoaches.addEventListener('click', hideShow);
     linkContact.addEventListener('click', hideShow);
-    nextClasses.addEventListener('click', optActive);
-    finishedClasses.addEventListener('click', opt2Active);
-    canceledClasses.addEventListener('click', opt3Active);
+    nextClasses.addEventListener('click', optNextActive);
+    finishedClasses.addEventListener('click', optFinishedActive);
+    canceledClasses.addEventListener('click', optCanceledActive);
   } else {
     plans.addEventListener('click', showPlans);
     burgerButton.removeEventListener('click', hideShow);
     closeMenu.removeEventListener('click', hideShow);
-    nextClasses.removeEventListener('click', optActive);
-    finishedClasses.removeEventListener('click', opt2Active);
-    canceledClasses.removeEventListener('click', opt3Active);
+    nextClasses.removeEventListener('click', optNextActive);
+    finishedClasses.removeEventListener('click', optFinishedActive);
+    canceledClasses.removeEventListener('click', optCanceledActive);
   }
 }
 
@@ -57,22 +61,31 @@ function hideShow() {
   }
 }
 
-function optActive() {
+function optNextActive() {
   nextClasses.classList.add('is-active');
   finishedClasses.classList.remove('is-active');
   canceledClasses.classList.remove('is-active');
+  tableNext.classList.add('is-active');
+  tableFinished.classList.remove('is-active');
+  tableCanceled.classList.remove('is-active');
 }
 
-function opt2Active() {
+function optFinishedActive() {
   nextClasses.classList.remove('is-active');
   finishedClasses.classList.add('is-active');
   canceledClasses.classList.remove('is-active');
+  tableNext.classList.remove('is-active');
+  tableFinished.classList.add('is-active');
+  tableCanceled.classList.remove('is-active');
 }
 
-function opt3Active() {
+function optCanceledActive() {
   nextClasses.classList.remove('is-active');
   finishedClasses.classList.remove('is-active');
   canceledClasses.classList.add('is-active');
+  tableNext.classList.remove('is-active');
+  tableFinished.classList.remove('is-active');
+  tableCanceled.classList.add('is-active');
 }
 
 // function showPlans() {

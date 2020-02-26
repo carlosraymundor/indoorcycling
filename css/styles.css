@@ -507,6 +507,7 @@ ol {
 .next-classes-title, .finished-classes-title, .canceled-classes-title {
   width: 100%;
   padding: .4em 0;
+  background: #f1f1f1;
 }
 
 .next-classes-title.is-active, .finished-classes-title.is-active, 
@@ -515,8 +516,25 @@ ol {
   color: white;
 }
 
-.txt-next-classes {
-  margin: 0 2em 2em !important;
+.classes-tables {
+  display: none;
+}
+
+.classes-tables.is-active {
+  display: block;
+}
+
+.header-tables {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #c1c1c1;
+  padding: 0.5em 0;
+  color: #ff0022;
+  font-weight: bold;
+}
+
+.txt-next-classes, .txt-finished-classes, .txt-canceled-classes {
+  margin: 1em 2em 2em !important;
 }
 
 
