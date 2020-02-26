@@ -496,6 +496,7 @@ ol {
   color: white;
   border-radius: 5px;
   box-shadow: outset 0 -.2em rgba(0, 0, 0, .2);
+  cursor: pointer;
 }
 
 .schedule-classes {
@@ -508,6 +509,7 @@ ol {
   width: 100%;
   padding: .4em 0;
   background: #f1f1f1;
+  cursor: pointer;
 }
 
 .next-classes-title.is-active, .finished-classes-title.is-active, 
@@ -1106,8 +1108,22 @@ h3 {
       grid-row-start: 2;
     }
 
+    .profile-schedule {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    .schedule-classes {
+      flex-direction: initial;
+    }
+
     .schedule-title{
       background: none;
+    }
+    
+    .next-classes-title, .finished-classes-title, .canceled-classes-title {
+      background: transparent;
+      border-radius: 10px;
     }
 
     /* ----------------------------------------user profile end --------------------------------------- */
