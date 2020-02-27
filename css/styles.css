@@ -1115,6 +1115,7 @@ h3 {
 
     .schedule-classes {
       flex-direction: initial;
+      margin-bottom: 1em;
     }
 
     .schedule-title{
@@ -1292,9 +1293,9 @@ h3 {
       font-size: 1.3em;
     }
 
-      .data, .plan-info, .schedule-classes {
-        font-size: 1.1em;
-      }
+    .data, .plan-info, .schedule-classes {
+      font-size: 1.1em;
+    }
 
     /* ----------------------------------------user profile end --------------------------------------- */
 
