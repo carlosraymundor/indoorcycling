@@ -344,10 +344,7 @@ ol {
   text-align: end;
 }
 
-.login-input-email, .login-input-password, .register-input-name, 
-.register-input-last-name, .register-input-email, .register-input-password, 
-.register-input-password-confirm, .register-input-tel, .register-input-born, 
-.register-input-size-shoes, .restorePass-input-email {
+.form-inputs {
   width: 100%;
   background: transparent;
   border: none;
@@ -537,6 +534,10 @@ ol {
 
 .txt-next-classes, .txt-finished-classes, .txt-canceled-classes {
   margin: 1em 2em 2em !important;
+}
+
+.next-classes-header {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 
