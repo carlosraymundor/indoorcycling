@@ -44,9 +44,15 @@
   content: "\ea92";
 }
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
     font-family: 'Fjalla One', sans-serif;
     margin: 0;
+    margin-bottom: 52px;
 }
 
 h1,
@@ -210,7 +216,6 @@ ol {
 
 .login, .restorePass{
   padding-top: 55px;
-  height: calc(100vh - 52px)
 }
 
 .register {
@@ -779,6 +784,9 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 10px;
   font-size: .8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .social {
@@ -938,8 +946,9 @@ h3 {
   }
 
   @media screen and (min-width: 601px) {
-    .login, .restorePass{
-      height: calc(100vh - 36px)
+
+    body {
+      margin-bottom: 36px;
     }
 
     .calendar-header {
@@ -999,6 +1008,11 @@ h3 {
   }
 
   @media screen and (min-width: 768px) {
+
+    body {
+      margin-bottom: 38px;
+    }
+
     .home {
       margin-left: 5%;
     }
@@ -1058,11 +1072,6 @@ h3 {
     .welcome {
       font-size: 1.2em;
     }
-
-    .login, .restorePass{
-      height: calc(100vh - 38px)
-    }
-
 
     /* ----------------------------------------user profile start --------------------------------------- */
 
@@ -1217,6 +1226,11 @@ h3 {
   }
 
   @media screen and (min-width: 1024px) {
+
+    body {
+      margin-bottom: 40px;
+    }
+
     .header, .header-wrapper {
       height: 70px;
     }
@@ -1246,7 +1260,6 @@ h3 {
 
     .login, .restorePass{
       padding-top: 70px;
-      height: calc(100vh - 40px)
     }
 
     .register {
