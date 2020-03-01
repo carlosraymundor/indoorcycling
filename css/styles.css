@@ -252,7 +252,7 @@ ol {
 .login-content, .register-content, .restorePass-content {
   font-family: 'Source Sans Pro', sans-serif;
   margin: auto;
-  max-width: 70%;
+  width: 70%;
 }
 
 .login-welcome, .register-welcome, .restorePass-welcome {
