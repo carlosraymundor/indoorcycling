@@ -331,7 +331,7 @@ ol {
   outline: 0;
 }
 
-.email-password-needed, .email-password-error {
+.error-form, .error-validation-form {
   font-size: .8em;
   color: #ff0022; 
 }
