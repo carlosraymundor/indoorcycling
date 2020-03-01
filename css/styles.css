@@ -289,10 +289,11 @@ ol {
   text-align: end;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .wrapper-login-input:nth-of-type(2) span {
-  text-align: initial;
+  align-self: baseline;
 }
 
 .wrapper-login-input:nth-of-type(3) {
