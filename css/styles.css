@@ -777,7 +777,7 @@ h3 {
 
 }
 
-/* -----------------------------Room map -----------------#8a8a8a-------------------------------- */
+/* -----------------------------Room map start------------------------------------------------- */
 .room {
   background: #f1f1f1;
   padding: 0 1em 1.5em;
@@ -869,6 +869,26 @@ h3 {
   background: rgb(255, 0, 34);
   color: white;
 }
+
+/* -----------------------------Room map end------------------------------------------------- */
+
+/* -----------------------------Payment start------------------------------------------------- */
+
+.payment-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.payment-wrapper fieldset {
+  border: none;
+}
+
+.
+
+/* -----------------------------Payment end------------------------------------------------- */
+
+
 
 /* Mobile first */
 
@@ -1007,7 +1027,7 @@ h3 {
       left: initial;
     }
 
-    .login-wrapper, .register-wrapper, .restorePass-wrapper {
+    .login-wrapper, .register-wrapper, .restorePass-wrapper, .payment-wrapper {
       width: 440px;
       margin: 0 auto;
       font-size: 1.3em;
