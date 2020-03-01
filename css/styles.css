@@ -63,7 +63,6 @@ h5,
 h6 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
-  /* font-style: italic; */
 }
 
 .header {
@@ -119,10 +118,6 @@ h6 {
   align-items: center;
 }
 
-/* .user-name, .icon-user, .icon-switch {
-  font-size: 1em;
-} */
-
 .user-name {
   margin: 0 1em 0 0;
   text-align: end;
@@ -140,19 +135,11 @@ h6 {
   font-size: 1.5em;
 }
 
-/* .burger-button {
-  margin-left: 1em;
-} */
-
 .icons {
   width: 2em;
   margin: 0 1em 0 0;
   color: inherit;
 }
-
-/* .burger-button:active {
-  transform: scale(.9);
-} */
 
 .btn-login {
   padding: 8px 8px;
@@ -185,16 +172,13 @@ ol {
 
 .logo {
   margin: 0;
-  /* padding: 0 20px ; */
   width: auto;
   height: inherit;
-  /* text-align: center; */
 }
 
 .menu {
   position: fixed;
   z-index: 3;
-  /* background: rgba(21, 68, 213); */
   background: rgba(255, 0, 34, .9);;
   top: 0;
   bottom: 0;
@@ -577,7 +561,6 @@ h3 {
   display: grid;
   grid-template-rows: 30px 5fr;
   grid-row-gap: 2%;
-  /* padding: 8px 16px; */
 }
 
 .calendar-header, .calendar-sessions {
@@ -589,7 +572,6 @@ h3 {
 } 
 
 .days{
-  /* border: solid 1px #fff; */
   color: #8a8a8a;
   display: flex;
   flex-direction: column;
@@ -622,11 +604,6 @@ h3 {
   border: solid 1px #f4f4f4;
   background: #fff;
 }
-
-/* .session-link:hover {
-  background: rgb(255, 0, 34);
-  color: white;
-} */
 
 .session-coache {
   font-weight: bold;
@@ -679,7 +656,6 @@ h3 {
 .package {
   border: 1.5px solid #8a8a8a;
   font-family: 'Roboto Mono', sans-serif;
-  /* text-align: center; */
   padding: 1em 0;
   cursor: pointer;
 }
@@ -895,7 +871,6 @@ h3 {
 }
 
 /* Mobile first */
-  /* @media screen and (min-width: 320px) {} */
 
   @media screen and (min-width: 461px) {
 
@@ -1106,7 +1081,6 @@ h3 {
 
     .calendar {
       grid-template-rows: 70px 5fr;
-      /* padding: 8px 16px; */
     }
 
     .calendar-header {
