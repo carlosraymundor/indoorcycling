@@ -210,15 +210,7 @@ ol {
   left: 0;
 }
 
-/* .login {
-  width: 100%;
-} */
-
-.login, .restorePass{
-  padding-top: 55px;
-}
-
-.register {
+.login, .restorePass, .register, .payment-container {
   padding-top: 55px;
 }
 
@@ -226,7 +218,6 @@ ol {
   background: rgba(255, 255, 255, .96);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   width: 100%;
   height: 100%;
 }
@@ -308,7 +299,21 @@ ol {
 
 .wrapper-login-input, .wrapper-restorePass-input {
   margin-bottom: 2.3em;
+}
+
+.wrapper-login-input:nth-of-type(2) {
   text-align: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-login-input:nth-of-type(2) span {
+  text-align: initial;
+}
+
+.wrapper-login-input:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper-register-input {
@@ -325,6 +330,13 @@ ol {
   padding: .7em .4em .7em 0;
   outline: 0;
 }
+
+.email-password-needed, .email-password-error {
+  font-size: .8em;
+  color: #ff0022; 
+}
+
+  
 
 .forget-pass {
   font-size: .8em;
@@ -672,17 +684,6 @@ h3 {
   cursor: pointer;
 }
 
-/* .package:hover {
-  background: rgb(255, 0, 34);
-  color: white;
-  border: none;
-  transform: scale(1.1);
-} */
-
-/* .package:hover .txt-class, .package:hover .txt-validity {
-  color: white;
-} */
-
 .package-link {
   text-decoration: none;
   color: inherit;
@@ -731,10 +732,6 @@ h3 {
   text-align: center;
 }
 
-/* .form-email {
-  text-align: center;
-} */
-
 .form-email input {
   border-color: #8a8a8a;
   border-style: solid;
@@ -742,11 +739,6 @@ h3 {
   border-radius: 5px;
   padding: .5em 1em;
   outline: 0;
-  /* background-image: url('../images/envelope.svg'); */
-  /* background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 5px; */
 }
 
 #email::placeholder {
@@ -763,7 +755,6 @@ h3 {
   border-radius: 5px;
   box-shadow: inset 0 -.2em rgba(0, 0, 0, .2);
   width: 100px;
-  /* margin-top: 10px; */
   margin: 1em auto;
   outline: 0;
 }
@@ -835,7 +826,6 @@ h3 {
   width: 150px;
   line-height: 25px;
   text-align: center;
-  /* box-shadow: 0 1px 1px 0 #800000; */
   font-family: 'Lato', sans-serif;
 }
 
@@ -908,21 +898,13 @@ h3 {
   /* @media screen and (min-width: 320px) {} */
 
   @media screen and (min-width: 461px) {
-    /* .burger-button {
-      font-size: 1.2em;
-    } */
 
     h2 {
       font-size: 1.5em;
     }
-    
-    /* .form-email h3 {
-      font-size: 1.5em;
-    } */
 
     .calendar {
       grid-template-rows: 55px 5fr;
-      /* padding: 8px 16px; */
     }
 
     .calendar-header {
@@ -1257,11 +1239,7 @@ h3 {
       margin: 2em 0;
     }
 
-    .login, .restorePass{
-      padding-top: 70px;
-    }
-
-    .register {
+    .login, .restorePass, .register, .hero, .payment-container {
       padding-top: 70px;
     }
 
@@ -1287,10 +1265,6 @@ h3 {
     }
 
     /* ----------------------------------------user profile end --------------------------------------- */
-
-    .hero {
-      padding-top: 70px;
-    }
 
     h2 {
       font-size: 2em;
