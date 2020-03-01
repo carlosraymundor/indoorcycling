@@ -303,7 +303,7 @@ ol {
 
 .wrapper-register-input {
   margin-bottom: 1.6em;
-  text-align: end;
+  /* text-align: end; */
 }
 
 .form-inputs {
