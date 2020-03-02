@@ -44,9 +44,15 @@
   content: "\ea92";
 }
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
     font-family: 'Fjalla One', sans-serif;
     margin: 0;
+    margin-bottom: 52px;
 }
 
 h1,
@@ -57,7 +63,6 @@ h5,
 h6 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
-  /* font-style: italic; */
 }
 
 .header {
@@ -113,27 +118,10 @@ h6 {
   align-items: center;
 }
 
-/* .user-name, .icon-user, .icon-switch {
-  font-size: 1em;
-} */
-
 .user-name {
   margin: 0 1em 0 0;
   text-align: end;
 }
-
-
-/* .login-close, .register-close, .restorePass-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-} */
-
-/* .restorePass-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-} */
 
 .btn-login, .burger-button-wrapper, 
 .btn-buy, .btn-reserve, .button-log-out {
@@ -147,19 +135,11 @@ h6 {
   font-size: 1.5em;
 }
 
-/* .burger-button {
-  margin-left: 1em;
-} */
-
 .icons {
   width: 2em;
   margin: 0 1em 0 0;
   color: inherit;
 }
-
-/* .burger-button:active {
-  transform: scale(.9);
-} */
 
 .btn-login {
   padding: 8px 8px;
@@ -192,16 +172,13 @@ ol {
 
 .logo {
   margin: 0;
-  /* padding: 0 20px ; */
   width: auto;
   height: inherit;
-  /* text-align: center; */
 }
 
 .menu {
   position: fixed;
   z-index: 3;
-  /* background: rgba(21, 68, 213); */
   background: rgba(255, 0, 34, .9);;
   top: 0;
   bottom: 0;
@@ -217,27 +194,16 @@ ol {
   left: 0;
 }
 
-/* .login {
-  width: 100%;
-} */
-
-.login, .restorePass {
-  padding-top: 70px;
-  height: 100vh;
-}
-
-.register {
-  padding-top: 70px;
+.login, .restorePass, .register, .payment-container {
+  padding-top: 55px;
 }
 
 .login-wrapper, .restorePass-wrapper {
   background: rgba(255, 255, 255, .96);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   width: 100%;
   height: 100%;
-  overflow-y: scroll !important;  
 }
 
 .restorePass-wrapper {
@@ -256,20 +222,7 @@ ol {
   background: rgba(255, 255, 255, .96);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* width: 100%;
-  top: -200vh;
-  height: 100%; */
 }
-
-/* .login.is-active, .register.is-active {
-  top: 0;
-} */
-
-/* .login-close-img, .register-close-img, .restorePass-close-img {
-  width: 25px;
-  height: 25px;
-}  */
 
 .menu-close-img  {
   position: absolute;
@@ -283,14 +236,8 @@ ol {
 .login-content, .register-content, .restorePass-content {
   font-family: 'Source Sans Pro', sans-serif;
   margin: auto;
-  max-width: 70%;
+  width: 70%;
 }
-
-/* .login-title {
-  font-weight: bold;
-  color: rgb(255, 0, 34);
-  text-align: center;
-} */
 
 .login-welcome, .register-welcome, .restorePass-welcome {
   font-weight: lighter;
@@ -336,12 +283,27 @@ ol {
 
 .wrapper-login-input, .wrapper-restorePass-input {
   margin-bottom: 2.3em;
+}
+
+.wrapper-login-input:nth-of-type(2) {
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.wrapper-login-input:nth-of-type(2) span {
+  align-self: baseline;
+}
+
+.wrapper-login-input:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper-register-input {
   margin-bottom: 1.6em;
-  text-align: end;
+  /* text-align: end; */
 }
 
 .form-inputs {
@@ -353,6 +315,13 @@ ol {
   padding: .7em .4em .7em 0;
   outline: 0;
 }
+
+.error-form, .error-validation-form {
+  font-size: .8em;
+  color: #ff0022; 
+}
+
+  
 
 .forget-pass {
   font-size: .8em;
@@ -379,10 +348,6 @@ ol {
   text-align: center;
   font-size: .8em;
 }
-
-/* .register-link {
-  font-weight: bold;
-} */
 
 .menu a {
   color: white;
@@ -597,7 +562,6 @@ h3 {
   display: grid;
   grid-template-rows: 30px 5fr;
   grid-row-gap: 2%;
-  /* padding: 8px 16px; */
 }
 
 .calendar-header, .calendar-sessions {
@@ -609,7 +573,6 @@ h3 {
 } 
 
 .days{
-  /* border: solid 1px #fff; */
   color: #8a8a8a;
   display: flex;
   flex-direction: column;
@@ -642,11 +605,6 @@ h3 {
   border: solid 1px #f4f4f4;
   background: #fff;
 }
-
-/* .session-link:hover {
-  background: rgb(255, 0, 34);
-  color: white;
-} */
 
 .session-coache {
   font-weight: bold;
@@ -699,21 +657,9 @@ h3 {
 .package {
   border: 1.5px solid #8a8a8a;
   font-family: 'Roboto Mono', sans-serif;
-  /* text-align: center; */
   padding: 1em 0;
   cursor: pointer;
 }
-
-/* .package:hover {
-  background: rgb(255, 0, 34);
-  color: white;
-  border: none;
-  transform: scale(1.1);
-} */
-
-/* .package:hover .txt-class, .package:hover .txt-validity {
-  color: white;
-} */
 
 .package-link {
   text-decoration: none;
@@ -763,10 +709,6 @@ h3 {
   text-align: center;
 }
 
-/* .form-email {
-  text-align: center;
-} */
-
 .form-email input {
   border-color: #8a8a8a;
   border-style: solid;
@@ -774,11 +716,6 @@ h3 {
   border-radius: 5px;
   padding: .5em 1em;
   outline: 0;
-  /* background-image: url('../images/envelope.svg'); */
-  /* background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 5px; */
 }
 
 #email::placeholder {
@@ -795,7 +732,6 @@ h3 {
   border-radius: 5px;
   box-shadow: inset 0 -.2em rgba(0, 0, 0, .2);
   width: 100px;
-  /* margin-top: 10px; */
   margin: 1em auto;
   outline: 0;
 }
@@ -815,6 +751,9 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 10px;
   font-size: .8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .social {
@@ -839,7 +778,7 @@ h3 {
 
 }
 
-/* -----------------------------Room map -----------------#8a8a8a-------------------------------- */
+/* -----------------------------Room map start------------------------------------------------- */
 .room {
   background: #f1f1f1;
   padding: 0 1em 1.5em;
@@ -864,7 +803,6 @@ h3 {
   width: 150px;
   line-height: 25px;
   text-align: center;
-  /* box-shadow: 0 1px 1px 0 #800000; */
   font-family: 'Lato', sans-serif;
 }
 
@@ -933,25 +871,36 @@ h3 {
   color: white;
 }
 
+/* -----------------------------Room map end------------------------------------------------- */
+
+/* -----------------------------Payment start------------------------------------------------- */
+
+.payment-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.payment-wrapper fieldset {
+  border: none;
+}
+
+.
+
+/* -----------------------------Payment end------------------------------------------------- */
+
+
+
 /* Mobile first */
-  /* @media screen and (min-width: 320px) {} */
 
   @media screen and (min-width: 461px) {
-    /* .burger-button {
-      font-size: 1.2em;
-    } */
 
     h2 {
       font-size: 1.5em;
     }
-    
-    /* .form-email h3 {
-      font-size: 1.5em;
-    } */
 
     .calendar {
       grid-template-rows: 55px 5fr;
-      /* padding: 8px 16px; */
     }
 
     .calendar-header {
@@ -974,9 +923,10 @@ h3 {
   }
 
   @media screen and (min-width: 601px) {
-    /* .burger-button {
-      font-size: 1.5em;
-    } */
+
+    body {
+      margin-bottom: 36px;
+    }
 
     .calendar-header {
       font-size: 1.3em;
@@ -1035,6 +985,11 @@ h3 {
   }
 
   @media screen and (min-width: 768px) {
+
+    body {
+      margin-bottom: 38px;
+    }
+
     .home {
       margin-left: 5%;
     }
@@ -1073,7 +1028,7 @@ h3 {
       left: initial;
     }
 
-    .login-wrapper, .register-wrapper, .restorePass-wrapper {
+    .login-wrapper, .register-wrapper, .restorePass-wrapper, .payment-wrapper {
       width: 440px;
       margin: 0 auto;
       font-size: 1.3em;
@@ -1147,7 +1102,6 @@ h3 {
 
     .calendar {
       grid-template-rows: 70px 5fr;
-      /* padding: 8px 16px; */
     }
 
     .calendar-header {
@@ -1246,7 +1200,13 @@ h3 {
       font-size: .9em;
     }
   }
+
   @media screen and (min-width: 1024px) {
+
+    body {
+      margin-bottom: 40px;
+    }
+
     .header, .header-wrapper {
       height: 70px;
     }
@@ -1266,16 +1226,16 @@ h3 {
       right: -350px;
     }
 
-    /* .menu.is-active {
-      left: 70vw;
-    } */
-
     .menu a {
       font-size: 2.5em;
     }
 
     .menu-link {
       margin: 2em 0;
+    }
+
+    .login, .restorePass, .register, .hero, .payment-container {
+      padding-top: 70px;
     }
 
     /* ----------------------------------------user profile start --------------------------------------- */
@@ -1300,10 +1260,6 @@ h3 {
     }
 
     /* ----------------------------------------user profile end --------------------------------------- */
-
-    .hero {
-      padding-top: 70px;
-    }
 
     h2 {
       font-size: 2em;

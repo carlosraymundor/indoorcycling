@@ -9,74 +9,141 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="payment-container">
-        <p class="payment-head">Datos de tu tarjeta</p>
-        <form action="/payment/" class="payment-form">
-            <div class="payment-img">
-                <img src="images/pagos.png" alt="Tarjeta permitidas">
-            </div>
-            <div class="form-group">
-                <fieldset>
-                    <input type="text" name="name" placeholder="Nombre" value="" class="form-control">
-                </fieldset>
-            </div>
-            <div class="form-group">
-                <fieldset>
-                    <input type="text" name="card" placeholder="# Tarjeta" class="form-control" size="20" value="">
-                </fieldset>
-            </div>
-            <div class="form-group">
-                <div class="form-inline">
-                    <div class="form-group month">
-                        <fieldset>
-                            <select class="inline middle">
-                                <option value="01">01 - Ene</option>
-                                <option value="02">02 - Feb</option>
-                                <option value="03">03 - Mar</option>
-                                <option value="04">04 - Abr</option>
-                                <option value="05">05 - May</option>
-                                <option value="06">06 - Jun</option>
-                                <option value="07">07 - Jul</option>
-                                <option value="08">08 - Ago</option>
-                                <option value="09">09 - Sep</option>
-                                <option value="10">10 - Oct</option>
-                                <option value="11">11 - Nov</option>
-                                <option value="12">12 - Dic</option>
-                            </select>
-                        </fieldset>
+    <header class="header">
+        <div class="header-wrapper">
+            <figure class="logo">
+                <a class="home link-hl" href="index.html">
+                    <img src="images/indoorcycling.png" alt="Logo de http://sportlife.com.mx" />
+                </a>
+            </figure>
+            <div class="header-menu">
+                <div class="header-elements">
+                    <div class="button-login" >
+                        <a href="login.html" class="link btn-login link-hl" id="login-button">
+                            <span>Iniciar sesión</span>
+                        </a>
                     </div>
-                    <div class="form-group year">
-                        <fieldset>
-                            <select class="inline middle">
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                            </select>
-                        </fieldset>
+                    <div class="button-leave">
+                        <a href="index.html" class="link btn-login link-hl" id="login-button">
+                            <span>Salir</span>
+                        </a>
                     </div>
-                    <div class="form-group cvc">
-                        <fieldset>
-                            <input style="border-bottom: 1px solid #eee;" type="text" size="2" placeholder="CVC" name="cvc" class="form-control" value="">
-                        </fieldset>
+                    <div class="login-user-wrapper">
+                        <p class="user-name">Hola Carlos</p>
+                        <a href="profile.html" class="link-user link icons">
+                            <i class="icon-user link-hl" id="icon-user"></i>
+                        </a>
+                        <a href="" class="link-close-session link icons">
+                            <i class="icon-switch link-hl" id="icon-switch"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="payment-terms">
-                <input type="checkbox" id="terms" class="terms" name="terms" value="1" required>
-                <span>Acepto términos y condiciones</span>
-            </div>
-            <div class="form-group btn">
-                <button type="submit" class="btn-subtmit">Continuar</button>
-            </div>
-        </form>
-    </div>
+                <div class="burger-button-wrapper">
+                    <i class="icon-menu burger-button link-hl" id="burger-menu"></i>	
+                </div>
+                <nav class="menu ">
+                    <div class="menu-close">
+                        <img src="images/cross.svg" alt="close" class="menu-close-img">
+                     </div>
+                    <ol>
+                        <li>
+                            <a class="link menu-link link-reserve" href="#reserve">Reservar</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-buySession" href="#buySession">Comprar clases</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-weAre" href="#we-are">¿Quiénes somos?</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-coaches" href="#coaches">Instructores</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-contact" href="#contact">Contacto</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div> 
+        </div>
+    </header>
+    <section class="payment-container">
+        <div class="payment-wrapper">
+            <p class="payment-head">Datos de tu tarjeta</p>
+            <form action="/payment/" class="payment-form">
+                <div class="payment-img">
+                    <img src="images/pagos.png" alt="Tarjeta permitidas">
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <input type="text" name="name" placeholder="Nombre" value="" class="form-inputs">
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <input type="text" name="card" placeholder="# Tarjeta" class="form-inputs" size="20" value="">
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <div class="form-inline">
+                        <div class="form-group month">
+                            <fieldset>
+                                <select class="inline middle">
+                                    <option value="01">01 - Ene</option>
+                                    <option value="02">02 - Feb</option>
+                                    <option value="03">03 - Mar</option>
+                                    <option value="04">04 - Abr</option>
+                                    <option value="05">05 - May</option>
+                                    <option value="06">06 - Jun</option>
+                                    <option value="07">07 - Jul</option>
+                                    <option value="08">08 - Ago</option>
+                                    <option value="09">09 - Sep</option>
+                                    <option value="10">10 - Oct</option>
+                                    <option value="11">11 - Nov</option>
+                                    <option value="12">12 - Dic</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="form-group year">
+                            <fieldset>
+                                <select class="inline middle">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="form-group cvc">
+                            <fieldset>
+                                <input style="border-bottom: 1px solid #eee;" type="text" size="2" placeholder="CVC" name="cvc" class="form-inputs" value="">
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-terms">
+                    <input type="checkbox" id="terms" class="terms" name="terms" value="1" required>
+                    <span>Acepto términos y condiciones</span>
+                </div>
+                <div class="form-group btn">
+                    <button type="submit" class="btn-subtmit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>
+                    Sport Life 2020 © Todos los Derechos Reservados. Diseñado y desarrollado por Hola Mundo TI
+            </p>
+        </div>
+    </footer>
+    <script src="JS/index.js"></script>
 </body>
 </html>
