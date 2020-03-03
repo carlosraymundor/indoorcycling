@@ -194,7 +194,7 @@ ol {
   left: 0;
 }
 
-.login, .restorePass, .register, .payment-container {
+.login, .restorePass, .register, .payment {
   padding-top: 55px;
 }
 
@@ -883,6 +883,36 @@ h3 {
 
 .payment-wrapper fieldset {
   border: none;
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+.payment-head {
+  font-size: 1.3em;
+}
+
+.payment-form {
+  border: 2px solid rgb(255, 0, 34);
+  border-radius: 5%;
+  padding: 1em;
+}
+
+.form-group.month, .form-group.year, .form-group.cvc{
+  width: 31%;
+  float: left;
+  margin-right: 2%;
+}
+
+.form-group.cvc input{
+  padding: 1em 0;
+}
+
+.inline.middle {
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  background: transparent;
 }
 
 /* -----------------------------Payment end------------------------------------------------- */
@@ -1232,7 +1262,7 @@ h3 {
       margin: 2em 0;
     }
 
-    .login, .restorePass, .register, .hero, .payment-container {
+    .login, .restorePass, .register, .hero, .payment {
       padding-top: 70px;
     }
 
