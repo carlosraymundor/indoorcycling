@@ -875,13 +875,48 @@ h3 {
 
 /* -----------------------------Payment start------------------------------------------------- */
 
-.payment-wrapper {
+.payment {
+  font-family: 'Source Sans Pro', sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.order-title  {
+  font-size: 1.8em;
+  margin: .5em 0;
+  color: initial;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+  letter-spacing: .03em;
+}
+
+.order-details {
+  margin: 0 auto;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.order-name, .order-amount {
+  font-size: 1.2em;
+  margin: 0 0 1em;
+}
+
+.order-amount {
+  font-weight: bolder;
+}
+
+.order-expiration {
+  color: #6d6a6a;
+}
+
+.payment-card {
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
-.payment-wrapper fieldset {
+.payment-card fieldset {
   border: none;
   padding: 0;
   margin-bottom: 1.5em;
@@ -1056,7 +1091,7 @@ h3 {
       left: initial;
     }
 
-    .login-wrapper, .register-wrapper, .restorePass-wrapper, .payment-wrapper {
+    .login-wrapper, .register-wrapper, .restorePass-wrapper, .payment-card {
       width: 440px;
       margin: 0 auto;
       font-size: 1.3em;
