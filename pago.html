@@ -70,90 +70,95 @@
         </div>
     </header>
     <section class="payment">
-        <div class="payment-order">
-            <h3 class="order-title">Compra</h3>
-            <div class="order-details">
-                <p class="order-name">Paquete 5 clases </p>
-                <p class="order-amount">$1,450 MN</p>
-                <small class="order-expiration">Tu paquete expira en 60 días</small>
+        <div class="payment-wrapper">
+            <div class="payment-order">
+                <h3 class="order-title">Compra</h3>
+                <div class="order-details">
+                    <p class="order-name">Paquete 5 clases </p>
+                    <p class="order-amount">$1,450 MN</p>
+                    <small class="order-expiration">Tu paquete expira en 60 días</small>
+                </div>
             </div>
         </div>
-        <div class="payment-card">
-            <p class="payment-head">Datos de tu tarjeta</p>
-            <form action="/payment/" class="payment-form">
-                <div class="payment-img">
-                    <img src="images/pagos.png" alt="Tarjeta permitidas">
-                </div>
-                <div class="form-group">
-                    <fieldset>
-                        <input type="text" name="name" placeholder="Nombre" value="" class="form-inputs">
-                    </fieldset>
-                </div>
-                <div class="form-group">
-                    <fieldset>
-                        <input type="text" name="card" placeholder="# Tarjeta" class="form-inputs" size="20" value="">
-                    </fieldset>
-                </div>
-                <div class="form-group">
-                    <div class="form-inline">
-                        <div class="form-group month">
-                            <fieldset>
-                                <select class="inline middle">
-                                    <option value="01">01 - Ene</option>
-                                    <option value="02">02 - Feb</option>
-                                    <option value="03">03 - Mar</option>
-                                    <option value="04">04 - Abr</option>
-                                    <option value="05">05 - May</option>
-                                    <option value="06">06 - Jun</option>
-                                    <option value="07">07 - Jul</option>
-                                    <option value="08">08 - Ago</option>
-                                    <option value="09">09 - Sep</option>
-                                    <option value="10">10 - Oct</option>
-                                    <option value="11">11 - Nov</option>
-                                    <option value="12">12 - Dic</option>
-                                </select>
-                            </fieldset>
-                        </div>
-                        <div class="form-group year">
-                            <fieldset>
-                                <select class="inline middle">
-                                    <option value="2020">2020</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
-                                    <option value="2027">2027</option>
-                                </select>
-                            </fieldset>
-                        </div>
-                        <div class="form-group cvc">
-                            <fieldset>
-                                <input style="border-bottom: 1px solid #eee;" type="text" size="2" placeholder="CVC" name="cvc" class="form-inputs" value="">
-                            </fieldset>
+        <div class="payment-wrapper">
+            <div class="payment-card">
+                <p class="payment-head">Datos de tu tarjeta</p>
+                <form action="/payment/" class="payment-form">
+                    <div class="form-group">
+                        <fieldset>
+                            <input type="text" name="name" placeholder="Nombre" value="" class="form-inputs">
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <input type="text" name="card" placeholder="# Tarjeta" class="form-inputs" size="20" value="">
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <div class="form-group month">
+                                <fieldset>
+                                    <select class="inline middle">
+                                        <option >Mes</option>
+                                        <option value="01">01 - Ene</option>
+                                        <option value="02">02 - Feb</option>
+                                        <option value="03">03 - Mar</option>
+                                        <option value="04">04 - Abr</option>
+                                        <option value="05">05 - May</option>
+                                        <option value="06">06 - Jun</option>
+                                        <option value="07">07 - Jul</option>
+                                        <option value="08">08 - Ago</option>
+                                        <option value="09">09 - Sep</option>
+                                        <option value="10">10 - Oct</option>
+                                        <option value="11">11 - Nov</option>
+                                        <option value="12">12 - Dic</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="form-group year">
+                                <fieldset>
+                                    <select class="inline middle">
+                                        <option >Año</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="form-group cvc">
+                                <fieldset>
+                                    <input type="text" size="2" placeholder="CVC" name="cvc" class="form-inputs" value="">
+                                </fieldset>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="payment-terms">
-                    <input type="checkbox" id="terms" class="terms" name="terms" value="1" required>
-                    <label>Guardar para próximas compras</label>
-                </div>
-            </form>
+                    <div class="payment-terms">
+                        <input type="checkbox" id="terms" class="payment-terms-check" name="terms">
+                        <label>Guardar para próximas compras</label>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="payment-accept">
-            <div class="accept-total">
-                <p class="accept-total-txt">Total</p>
-                <p class="accept-total-ampount">1,450 MN</p>
-            </div>
-            <div class="accept-terms">
-                <div class="form-check">
-                    <input type="checkbox" id="terms" class="terms" name="terms" value="1" required>
-                    <label>Acepto términos y condiciones</label>
+        <div class="payment-wrapper">
+            <div class="payment-accept">
+                <div class="accept-total">
+                    <small class="accept-total-txt">Total</small>
+                    <p class="accept-total-ampount">$1,450 MN</p>
                 </div>
-            </div>
-            <div class="accept-button">
-                <button type="submit" class="btn-subtmit">Comprar paquete</button>
+                <div class="accept-terms">
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" class="accept-terms-check" name="terms" required>
+                        <a href="terminos.html" class="accept-terms-link link">Acepto términos y condiciones</a>
+                    </div>
+                </div>
+                <div class="accept-button">
+                    <button type="submit" class="payment-btn-subtmit link-hl">Comprar paquete</button>
+                </div>
             </div>
         </div>
     </section>
