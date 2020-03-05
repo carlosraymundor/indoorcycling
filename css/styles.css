@@ -132,7 +132,7 @@ h6 {
   margin: 0;
   position: absolute;
   top: 45px;
-  width: 50%;
+  width: 100%;
   z-index: 5;
 }
 
@@ -142,14 +142,43 @@ h6 {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-bottom: 10px solid #ff0022;
-  margin: 0 25% 0 auto;
+  margin: 0 12.5% 0 auto;
 }
 
 .box {
-  height: 150px;
-  background: white;
-  border-top: 1px solid #ff2200;
+  height: 130px;
+  background: rgba(255, 0, 34, .9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
   }  
+
+.username span {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1.5em 0 1em;
+}
+
+.username a {
+  font-size: 1.1em;
+  color: inherit;
+  font-weight: bold;
+  margin: 1em auto;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.logout a {
+  font-size: 1.1em;
+  margin: 0 auto 1em;
+  width: fit-content;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: underline;
+}
 
 /* ---------------------------menu user end ------------------------------------ */
 
@@ -1180,7 +1209,41 @@ h3 {
       font-size: 1.2em;
     }
 
-    /* ----------------------------------------user profile start --------------------------------------- */
+/* ---------------------------menu user start ------------------------------------ */
+
+    .menu-user-container {
+      right: initial;
+      width: 250px;
+      top: 40px;
+    }
+
+    .triangle {
+      margin-right: 5.5%;
+    }
+
+    .box {
+      height: 170px;
+      background: #ff0022;
+    }
+
+    .username span {
+      font-size: 1.4em;
+    }
+
+    .username a {
+      margin: 1.5em auto;
+      font-size: 1.3em;
+    }
+
+    .logout a {
+      font-size: 1.3em;
+      margin: 0 auto 1.5em;
+    }
+
+/* ---------------------------menu user end ------------------------------------ */
+
+
+/* ----------------------------------------user profile start --------------------------------------- */
 
     .user-profile {
       grid-template-columns: 1fr 2fr;
@@ -1332,22 +1395,22 @@ h3 {
 
     /* -----------------------------Payment 768px start------------------------------------------------- */
 
-.payment-form div:nth-of-type(3) {
-  margin-bottom: 0;
-}
+    .payment-form div:nth-of-type(3) {
+      margin-bottom: 0;
+    }
 
-.form-inline {
-  display: flex;
-  justify-content: space-between;
-}
+    .form-inline {
+      display: flex;
+      justify-content: space-between;
+    }
 
-.form-inline div {
-  width: 30%;
-}
+    .form-inline div {
+      width: 30%;
+    }
 
-.form-group.cvc input {
-  padding: .8em 0 .4em;
-}
+    .form-group.cvc input {
+      padding: .8em 0 .4em;
+    }
 
 /* -----------------------------Payment 768px end------------------------------------------------- */
 
@@ -1391,6 +1454,14 @@ h3 {
     .login, .restorePass, .register, .hero, .payment {
       padding-top: 70px;
     }
+
+/* ---------------------------menu user start ------------------------------------ */
+
+    .menu-user-container {
+      top: 48px;
+    }
+
+/* ---------------------------menu user end ------------------------------------ */
 
     /* ----------------------------------------user profile start --------------------------------------- */
 
