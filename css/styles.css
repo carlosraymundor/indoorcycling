@@ -123,6 +123,37 @@ h6 {
   text-align: end;
 }
 
+/* ---------------------------menu user start ------------------------------------ */
+
+.menu-user-container {
+  background: transparent;
+  color: #273b47;
+  right: 0;
+  margin: 0;
+  position: absolute;
+  top: 45px;
+  width: 50%;
+  z-index: 5;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 10px solid #ff0022;
+  margin: 0 25% 0 auto;
+}
+
+.box {
+  height: 150px;
+  background: white;
+  border-top: 1px solid #ff2200;
+  /* border-bottom: 1px solid #ff2200; */
+  }  
+
+/* ---------------------------menu user end ------------------------------------ */
+
 .btn-login, .burger-button-wrapper, 
 .btn-buy, .btn-reserve, .button-log-out, .btn-subtmit {
   display: flex;
