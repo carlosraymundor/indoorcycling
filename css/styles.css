@@ -342,7 +342,7 @@ ol {
 }
 
 .wrapper-login-input, .wrapper-restorePass-input {
-  margin-bottom: 2.3em;
+  margin-bottom: 2em;
 }
 
 .wrapper-login-input:nth-of-type(2) {
@@ -1186,11 +1186,11 @@ h3 {
       left: initial;
     }
 
-    .login-wrapper, .register-wrapper, .restorePass-wrapper, 
-    .payment-wrapper {
+    .login-wrapper, .register-wrapper, 
+    .restorePass-wrapper {
       width: 440px;
       margin: 0 auto;
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
 
     .login-close, .register-close, .restorePass-close {
@@ -1394,6 +1394,11 @@ h3 {
     }
 
     /* -----------------------------Payment 768px start------------------------------------------------- */
+    .payment-wrapper {
+      width: 440px;
+      margin: 0 auto;
+      font-size: 1em;
+    }
 
     .payment-form div:nth-of-type(3) {
       margin-bottom: 0;
@@ -1409,7 +1414,11 @@ h3 {
     }
 
     .form-group.cvc input {
-      padding: .8em 0 .4em;
+      padding: 1.1em 0 .8em;
+    }
+
+    .payment-btn-subtmit {
+      font-size: 1em;
     }
 
 /* -----------------------------Payment 768px end------------------------------------------------- */
@@ -1433,7 +1442,7 @@ h3 {
     }
 
     .register-input-submit, .login-input-submit, 
-    .restorePass-input-submit, .payment-btn-subtmit {
+    .restorePass-input-submit {
       font-size: .8em;
     }
 
@@ -1463,7 +1472,7 @@ h3 {
 
 /* ---------------------------menu user end ------------------------------------ */
 
-    /* ----------------------------------------user profile start --------------------------------------- */
+/* ----------------------------------------user profile start --------------------------------------- */
 
     .user-profile {
       padding-top: 70px;
@@ -1484,7 +1493,7 @@ h3 {
       font-size: 1.1em;
     }
 
-    /* ----------------------------------------user profile end --------------------------------------- */
+/* ----------------------------------------user profile end --------------------------------------- */
 
     h2 {
       font-size: 2em;
