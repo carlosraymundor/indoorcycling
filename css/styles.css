@@ -212,7 +212,8 @@ h6 {
 
 .btn-login, .burger-button, .session-link, .package, 
 .btn-form, .login-input-submit, .register-input-submit, 
-.btn-buy, .btn-reserve, .button-log-out, .payment-btn-subtmit {
+.btn-buy, .btn-reserve, .button-log-out, .payment-btn-subtmit,
+.room-map a {
   transition: .2s;
   will-change: transform;
 }
@@ -844,6 +845,7 @@ h3 {
   background: #f1f1f1;
   padding: 0 1em 1.5em;
   padding-top: 55px;
+  position: relative;
 }
 
 .room-wrapper {
@@ -861,7 +863,6 @@ h3 {
   display: inline-block;
   color: white;
   border-radius: 40px;
-  width: 150px;
   line-height: 25px;
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -887,8 +888,8 @@ h3 {
 
 .room-map {
   display: grid;
-  grid-template-rows: 40px repeat(5, 30px);
-  grid-gap: 5px;
+  grid-template-rows: 50px repeat(5, 40px);
+  grid-gap: 10px;
   width: fit-content;
   margin: 0 auto;
 }
@@ -897,25 +898,50 @@ h3 {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background: #8a8a8a;
-  color: #2c2c2c;
   font-family: 'Oxyge', sans-serif;
   font-size: .7em;
+  color: black;
+  background: white;
+  border: 1px solid black;
+}
+
+.is-reserve {
+  pointer-events: none !important;
+  color: #f02 !important;
+  background: #f02 !important;
+  border: none !important;
 }
 
 .room-map a:hover {
-  background: rgba(255, 0, 34, .9);
+  background: #FF0022;
   color: white;
+  transform: scale(.85);
 }
 
-.row1, .row3, .row4, .row5, .row6, .row7 {
+.row1 {
   display: grid;
-  grid-template-columns: repeat(6, 30px);
+  grid-template-columns: 1fr 50px 1fr;
+}
+
+.row2, .row3, .row5, .row6 {
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
   grid-gap: 5px;
 }
-.row2 {
+
+.row4 {
   display: grid;
-  grid-template-columns: 1fr 40px 1fr;
+  grid-template-columns: repeat(5, 40px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.row4 .column6 {
+  display: none;
+}
+
+.row6 {
+  display: none;
 }
 
 .column1, .column2, .column3, .column4, .column5, .column6 {
@@ -924,12 +950,88 @@ h3 {
   align-items: center;
 }
 
-.column2 {
+.columnC2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background: rgb(255, 0, 34);
+  background: #ff0022;
   color: white;
+}
+
+.overlay-bike {
+  position: fixed;
+  background: rgba(0, 0, 0, .6);
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 8;
+  display: none;
+}
+
+.overlay-bike.is-active {
+  display: block;
+}
+
+.dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.dialog-content {
+  max-width: 450px;;
+  border-radius: 5px;
+  background: white;
+  margin: 0 1.5em;
+  padding: 1em;
+}
+
+.dialog-content p {
+  margin: 0;
+}
+
+.dialog-content small {
+  font-size: 70%;
+}
+
+.dialog-wrapper {
+  margin: 0 0 1.5em;
+}
+
+.dialog-wrapper:nth-of-type(4) {
+  margin-bottom: 1em;
+}
+
+.dialog-wrapper:nth-of-type(4) {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog-title {
+  font-size: 1.5em;
+}
+
+.dialog-actions button {
+  border: none;
+  background: transparent;
+  color: #f02;
+  font-weight: bolder;
+  font-size: 1em;
+  margin: 0 1.25em;
+  cursor: pointer;
+  padding: .5em;
+  outline: none;
+}
+
+.dialog-btn:hover {
+  background: rgba(255, 0, 34, .25);
 }
 
 /* -----------------------------Room map end------------------------------------------------- */
@@ -1100,6 +1202,8 @@ h3 {
       font-size: 1.7em;
     }
 
+/* -----------------------------Room map start------------------------------------------------- */
+
     .back-calendar {
       justify-content: start;
     }
@@ -1118,19 +1222,8 @@ h3 {
       font-size: 1.2em;
     }
 
-    .room-map {
-      grid-template-rows: 50px repeat(5, 40px);
-    grid-gap: 10px;
-    }
+/* -----------------------------Room map end------------------------------------------------- */
 
-    .row2 {
-      grid-template-columns: 1fr 50px 1fr;
-    }
-
-    .row1, .row3, .row4, .row5, .row6, .row7 {
-      grid-template-columns: repeat(6, 40px);
-      grid-gap: 10px;
-    }
 
     .packages-container {
       grid-template-rows: repeat(3, 255px);
@@ -1309,6 +1402,8 @@ h3 {
       align-self: center;
     }
 
+/* -----------------------------Room map start------------------------------------------------- */
+
     .class-date {
       font-size: 1.2em;
     }
@@ -1323,18 +1418,24 @@ h3 {
 
     .room-map {
       font-size: 1.3em;
-      grid-template-rows: 70px repeat(5, 60px);
-      grid-gap: 15px;
+      grid-template-rows: 60px repeat(5, 50px);
     }
 
-    .row2 {
-      grid-template-columns: 1fr 70px 1fr;
+    .row1 {
+      grid-template-columns: 1fr 60px 1fr;
     }
 
-    .row1, .row3, .row4, .row5, .row6, .row7 {
-      grid-template-columns: repeat(6, 60px);
-      grid-gap: 15px;
+    .row2, .row3, .row5, .row6, .row {
+      grid-template-columns: repeat(6, 50px);
+      grid-gap: 10px;
     }
+    
+    .row4 {
+      grid-template-columns: repeat(5, 50px);
+      grid-gap: 10px;
+      justify-content: center;
+    }
+/* -----------------------------Room map end------------------------------------------------- */
 
     .packages-container {
       grid-template-rows: repeat(2, 275px);

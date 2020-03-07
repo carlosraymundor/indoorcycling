@@ -18,19 +18,10 @@ const tableNext = document.querySelector('.next-classes-table');
 const tableFinished = document.querySelector('.finished-classes-table');
 const tableCanceled = document.querySelector('.canceled-classes-table');
 
-// const plans = document.querySelector('.plan-click');
-// const planInfo = document.querySelector('.plan-info-wrapper');
-// const plans = document.querySelector('.plan-click');
-
-// const password = document.querySelector(".register-input-password"), confirm_password = document.querySelector("register-input-password-confirm");
-
 ipad.addListener(validation);
-
-
 
 function validation(event) {
   if (event.matches) {
-    // plans.addEventListener('click', showPlans);
     burgerButton.addEventListener('click', hideShow);
     closeMenu.addEventListener('click', hideShow);
     linkReserve.addEventListener('click', hideShow);
@@ -88,11 +79,4 @@ function optCanceledActive() {
   tableCanceled.classList.add('is-active');
 }
 
-// function showPlans() {
-//   if (planInfo.style.display === 'none') {
-//     planInfo.style.display = 'block'; 
-//   } else {
-//     planInfo.style.display = 'none';
-//   }
-// }
 
