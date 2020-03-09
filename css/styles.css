@@ -134,6 +134,11 @@ h6 {
   top: 45px;
   width: 100%;
   z-index: 5;
+  display: none;
+}
+
+.menu-user-container.is-active {
+  display: block;
 }
 
 .triangle {
@@ -426,6 +431,7 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .menu-link {
@@ -892,6 +898,7 @@ h3 {
   grid-gap: 10px;
   width: fit-content;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .room-map a {
@@ -970,6 +977,10 @@ h3 {
   height: 100vh;
   z-index: 8;
   display: none;
+}
+
+.overlay-bike.is-active {
+  display: block;
 }
 
 .overlay-bike.is-active {
@@ -1309,6 +1320,7 @@ h3 {
       width: 250px;
       top: 40px;
     }
+
 
     .triangle {
       margin-right: 5.5%;

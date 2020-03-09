@@ -18,10 +18,27 @@ const tableNext = document.querySelector('.next-classes-table');
 const tableFinished = document.querySelector('.finished-classes-table');
 const tableCanceled = document.querySelector('.canceled-classes-table');
 
+const bike = document.querySelector('.room-place-link');
+const roomOverlay = document.querySelector('.overlay-bike');
+const cancelBike = document.querySelector('.cancel');
+
+const menuUser = document.querySelector(".menu-user-container");
+const iconUser = document.getElementById("icon-user");
+
 ipad.addListener(validation);
+
+
+if(bike) {
+  bike.addEventListener('click', showDialog);
+}
+
+if(cancelBike) {
+  cancelBike.addEventListener('click', showDialog);
+}
 
 function validation(event) {
   if (event.matches) {
+    iconUser.addEventListener('click', showUserMenu);
     burgerButton.addEventListener('click', hideShow);
     closeMenu.addEventListener('click', hideShow);
     linkReserve.addEventListener('click', hideShow);
@@ -33,12 +50,12 @@ function validation(event) {
     finishedClasses.addEventListener('click', optFinishedActive);
     canceledClasses.addEventListener('click', optCanceledActive);
   } else {
-    plans.addEventListener('click', showPlans);
     burgerButton.removeEventListener('click', hideShow);
     closeMenu.removeEventListener('click', hideShow);
     nextClasses.removeEventListener('click', optNextActive);
     finishedClasses.removeEventListener('click', optFinishedActive);
     canceledClasses.removeEventListener('click', optCanceledActive);
+    iconUser.removeEventListener('click', showUserMenu);
   }
 }
 
@@ -60,7 +77,7 @@ function optNextActive() {
   tableFinished.classList.remove('is-active');
   tableCanceled.classList.remove('is-active');
 }
-
+  
 function optFinishedActive() {
   nextClasses.classList.remove('is-active');
   finishedClasses.classList.add('is-active');
@@ -69,7 +86,7 @@ function optFinishedActive() {
   tableFinished.classList.add('is-active');
   tableCanceled.classList.remove('is-active');
 }
-
+    
 function optCanceledActive() {
   nextClasses.classList.remove('is-active');
   finishedClasses.classList.remove('is-active');
@@ -78,5 +95,19 @@ function optCanceledActive() {
   tableFinished.classList.remove('is-active');
   tableCanceled.classList.add('is-active');
 }
+      
+function showUserMenu() {
+  if (menuUser.classList.contains('is-active')) {
+    menuUser.classList.remove('is-active');    
+  } else {
+    menuUser.classList.add('is-active');
+  }
+}
 
-
+function showDialog() {
+  if (roomOverlay.classList.contains('is-active')) {
+    roomOverlay.classList.remove('is-active');    
+  } else {
+    roomOverlay.classList.add('is-active');
+  }
+}
