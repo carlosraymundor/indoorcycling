@@ -1544,6 +1544,16 @@ h3 {
       margin-bottom: 40px;
     }
 
+    .btn-login:hover, .icon-user:hover, .icon-menu:hover, 
+    .btn-form:hover, .icon-facebook:hover, .icon-instagram:hover,
+    .login-input-submit:hover, .restorePass-input-submit:hover, 
+    .register-input-submit:hover, .box a:hover,
+    .btn-back-calendar:hover, .menu-link:hover,
+    .button-log-out:hover, .plan-buttons a:hover,
+    .schedule-classes a:hover {
+      opacity: .7; 
+    }
+
     .header, .header-wrapper {
       height: 70px;
     }
