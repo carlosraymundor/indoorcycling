@@ -674,6 +674,11 @@ h3 {
   background: #fff;
 }
 
+.session-link.sold-out {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .session-coache {
   font-weight: bold;
 }
@@ -916,8 +921,7 @@ h3 {
   background: #FF0022;
   color: white;
 }
-
-.is-reserve {
+.room-place-link.is-reserve {
   pointer-events: none !important;
   color: #f02 !important;
   background: #f02 !important;
