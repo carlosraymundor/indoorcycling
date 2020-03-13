@@ -151,38 +151,32 @@ h6 {
 }
 
 .box {
-  height: 130px;
   background: rgba(255, 0, 34, .9);
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   border-radius: 5px;
+  padding: 1em;
   }  
 
-.username span {
+.box span {
   display: block;
   font-size: 1.2em;
   font-weight: bold;
-  margin: 1.5em 0 1em;
+  margin: 1em 0;
 }
 
-.username a {
+.box-opt {
+  margin: 0 0 1em;
+}
+
+.box-opt a {
   font-size: 1.1em;
   color: inherit;
   font-weight: bold;
-  margin: 1em auto;
   text-decoration: underline;
   width: fit-content;
-}
-
-.logout a {
-  font-size: 1.1em;
-  margin: 0 auto 1em;
-  width: fit-content;
-  font-weight: bold;
-  color: inherit;
-  text-decoration: underline;
 }
 
 /* ---------------------------menu user end ------------------------------------ */
@@ -218,7 +212,7 @@ h6 {
 .btn-login, .burger-button, .session-link, .package, 
 .btn-form, .login-input-submit, .register-input-submit, 
 .btn-buy, .btn-reserve, .button-log-out, .payment-btn-subtmit,
-.room-map a {
+.room-map a, .btn-submit, .btn-red {
   transition: .2s;
   will-change: transform;
 }
@@ -226,7 +220,8 @@ h6 {
 .btn-login:active, .burger-button:active, .session-link:active, 
 .btn-form:active,.login-input-submit:active, .register-input-submit:active, 
 .package:active, .social-link:active, .btn-buy:active, .btn-reserve:active, 
-.button-log-out:active, .payment-btn-subtmit:active {
+.button-log-out:active, .payment-btn-subtmit:active, .btn-submit:active, 
+.btn-red:active {
   transform: scale(.9);
 }
 
@@ -260,7 +255,7 @@ ol {
   left: 0;
 }
 
-.login, .restorePass, .register, .payment {
+.login, .restorePass, .register, .payment, .under-header {
   padding-top: 55px;
 }
 
@@ -386,20 +381,18 @@ ol {
   color: #ff0022; 
 }
 
-  
-
 .forget-pass {
   font-size: .8em;
 }
 
 .login-input-submit, .register-input-submit, 
-.restorePass-input-submit, .payment-btn-subtmit {
+.restorePass-input-submit, .payment-btn-subtmit, .btn-submit, .btn-red {
   display: block;
-  padding: 8px 8px;
+  padding: .5em;
   background: rgb(255, 0, 34);
   color: white;
   border-radius: 10px;
-  width: 50%;
+  min-width: 100px;
   border: none;
   line-height: 30px;
   text-align: center;
@@ -628,7 +621,6 @@ h3 {
   font-size: .6em;
   display: grid;
   grid-template-rows: 30px 5fr;
-  grid-row-gap: 2%;
 }
 
 .calendar-header, .calendar-sessions {
@@ -757,6 +749,21 @@ h3 {
   font-weight: 600;
   color: #8a8a8a;
   margin: 0;
+}
+
+.add-btn {
+  margin: 1.5em 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-btn a {
+  width: fit-content;
+  margin: 0;
+}
+
+.btn-red {
+  font-size: .8em;
 }
 
 .we-are {
@@ -1068,11 +1075,11 @@ h3 {
 
 /* -----------------------------Payment start------------------------------------------------- */
 
-.payment {
+.payment, .add-package, .add-session {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.payment-order, .payment-card, .payment-accept {
+.payment-order, .payment-card, .payment-accept, .accept-total, .accept-terms {
   max-width: 90%;
   margin: 0 auto;
 }
@@ -1178,6 +1185,75 @@ h3 {
 }
 
 /* -----------------------------Payment end------------------------------------------------- */
+
+/* -----------------------------Admin profile end------------------------------------------------- */
+
+.add-package, .add-session {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.add-container {
+  padding: 1em;
+}
+
+.add-title {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: initial;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bolder;
+  letter-spacing: .03em;
+}
+
+.add-form {
+  padding: 0 1em;
+}
+
+.wrapper-add-input {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: end;
+  margin: 0 0 1em;
+}
+
+.wrapper-add-input label {
+  padding: 0 1em 0 0;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.wrapper-add-input:nth-of-type(5) {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.select-coach {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #a7a89a;
+  padding: .5em 0; 
+  outline: none;
+  color: #6d6a6a;
+}
+
+#session-date, #session-time {
+  color: #6d6a6a;
+  font-size: .8em;
+}
+
+.add-session .wrapper-add-input:nth-of-type(4) {
+  grid-template-columns: 40% 50% 10%;
+}
+
+.duration-span {
+  text-align: end;
+  font-size: .8em;
+}
+
+/* -----------------------------Admin profile end------------------------------------------------- */
+
 
 
 
@@ -1355,7 +1431,7 @@ h3 {
     }
 
     .box {
-      height: 170px;
+      height: fit-content;
       background: #ff0022;
     }
 
@@ -1363,14 +1439,8 @@ h3 {
       font-size: 1.4em;
     }
 
-    .username a {
-      margin: 1.5em auto;
+    .box-opt a {
       font-size: 1.3em;
-    }
-
-    .logout a {
-      font-size: 1.3em;
-      margin: 0 auto 1.5em;
     }
 
 /* ---------------------------menu user end ------------------------------------ */
@@ -1566,11 +1636,23 @@ h3 {
       padding: 1.1em 0 .8em;
     }
 
-    .payment-btn-subtmit {
+    .payment-btn-subtmit, .btn-submit, .btn-red {
       font-size: 1em;
     }
 
 /* -----------------------------Payment 768px end------------------------------------------------- */
+
+/* -----------------------------Admin profile 768px start------------------------------------------------- */
+
+    .wrapper-add-input label {
+      font-size: 1.1em;
+    }
+
+    .select-coach, #session-date, #session-time, #session-duration, .duration-span {
+      font-size: 16px;
+    }
+
+/* -----------------------------Admin profile 768px end------------------------------------------------- */
 
 }
 
@@ -1587,7 +1669,7 @@ h3 {
     .register-input-submit:hover, .box a:hover,
     .btn-back-calendar:hover, .menu-link:hover,
     .button-log-out:hover, .plan-buttons a:hover,
-    .schedule-classes a:hover {
+    .schedule-classes a:hover, .btn-submit:hover, .btn-red:hover {
       opacity: .7; 
     }
 
@@ -1619,7 +1701,7 @@ h3 {
       margin: 2em 0;
     }
 
-    .login, .restorePass, .register, .hero, .payment {
+    .login, .restorePass, .register, .hero, .payment, .under-header {
       padding-top: 70px;
     }
 
@@ -1661,16 +1743,13 @@ h3 {
 
     h2 {
       font-size: 2em;
-      max-width: 1024px;
-      margin: 0 auto;
     }
 
     .calendar-header {
       font-size: 1.7em;
     }
 
-    .calendar, .hero, .we-are p, .header-wrapper, .contact-wrapper, 
-    .room-wrapper, .user-profile, .coaches-container {
+    .header-wrapper, .container {
       max-width: 1024px;
       margin: 0 auto;
     }

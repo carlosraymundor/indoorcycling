@@ -79,96 +79,98 @@
         </div>
     </header>
     <section class="user-profile">
-        <div class="profile-data">
-            <div class="profile-title">
-                <a class="account-click">Cuenta</a>
-            </div>
-            <div class="data">
-                <div class="labels">
-                    <p class="data-label label-name">Nombre</p>
-                    <p class="data-label label-last-name">Apellidos</p>
-                    <p class="data-label label-email">Correo</p>
-                    <p class="data-label label-phone">Teléfono</p>
-                    <p class="data-label label-shoes-size">Talla (mx)</p>
+        <div class="conatiner">
+            <div class="profile-data">
+                <div class="profile-title">
+                    <a class="account-click">Cuenta</a>
                 </div>
-                <div class="labels-info">
-                    <div class="data-label data-name">Carlos</div>
-                    <div class="data-label data-last-name">Raymundo Rivera</div>
-                    <div class="data-label data-email">raymundoriveracarlos@gmail.com</div>
-                    <div class="data-label data-phone">914 140 2040</div>
-                    <div class="data-label data-size">7.0</div>
+                <div class="data">
+                    <div class="labels">
+                        <p class="data-label label-name">Nombre</p>
+                        <p class="data-label label-last-name">Apellidos</p>
+                        <p class="data-label label-email">Correo</p>
+                        <p class="data-label label-phone">Teléfono</p>
+                        <p class="data-label label-shoes-size">Talla (mx)</p>
+                    </div>
+                    <div class="labels-info">
+                        <div class="data-label data-name">Carlos</div>
+                        <div class="data-label data-last-name">Raymundo Rivera</div>
+                        <div class="data-label data-email">raymundoriveracarlos@gmail.com</div>
+                        <div class="data-label data-phone">914 140 2040</div>
+                        <div class="data-label data-size">7.0</div>
+                    </div>
+                </div>
+                <div class="log-out-wrapper">
+                    <a class="button-log-out link">Cerrar sesión</a>
                 </div>
             </div>
-            <div class="log-out-wrapper">
-                <a class="button-log-out link">Cerrar sesión</a>
+            <div class="plan-active">
+                <div class="plan-title">
+                    <a class="plan-click">Planes</a>
+                </div>
+                <div class="plan-info-wrapper" ">
+                    <p class="plan-info">
+                        Tienes
+                        <span class="available-classes-number"> 0 </span>
+                        clases disponibles y puedes usarlas hasta el 
+                        <time datetime="2020-03-08">8 de marzo</time>
+                    </p>
+                    <div class="plan-buttons">
+                        <a href="buysession.html" class="link btn-buy link-hl">
+                            <span>Comprar clases</span>
+                        </a>
+                        <a href="reserve.html" class="link btn-reserve link-hl">
+                            <span>Reservar clase</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="plan-active">
-            <div class="plan-title">
-                <a class="plan-click">Planes</a>
-            </div>
-            <div class="plan-info-wrapper" ">
-                <p class="plan-info">
-                    Tienes
-                    <span class="available-classes-number"> 0 </span>
-                    clases disponibles y puedes usarlas hasta el 
-                    <time datetime="2020-03-08">8 de marzo</time>
-                </p>
-                <div class="plan-buttons">
-                    <a href="buysession.html" class="link btn-buy link-hl">
-                        <span>Comprar clases</span>
+            <div class="profile-schedule next-classes-wrapper">
+                <div class="schedule-title">
+                    <a class="schedule-click">Agenda</a>
+                </div>
+                <div class="schedule-classes">
+                    <a class="next-classes-title is-active">
+                        Próximas clases
                     </a>
-                    <a href="reserve.html" class="link btn-reserve link-hl">
-                        <span>Reservar clase</span>
+                    <a class="finished-classes-title">
+                        Clases terminadas
+                    </a>
+                    <a class="canceled-classes-title">
+                        Clases canceladas
                     </a>
                 </div>
-            </div>
-        </div>
-        <div class="profile-schedule next-classes-wrapper">
-            <div class="schedule-title">
-                <a class="schedule-click">Agenda</a>
-            </div>
-            <div class="schedule-classes">
-                <a class="next-classes-title is-active">
-                    Próximas clases
-                </a>
-                <a class="finished-classes-title">
-                    Clases terminadas
-                </a>
-                <a class="canceled-classes-title">
-                    Clases canceladas
-                </a>
-            </div>
-            <div class="info-classes-wrapper">
-                <div class="next-classes-table classes-tables is-active">
-                    <div class="next-classes-header header-tables">
-                        <p class="next-classes-hour">Hora</p>
-                        <p class="next-classes-date">Fecha</p>
-                        <p class="next-classes-coach">Coach</p>
-                        <p class="next-classes-cancel"></p>
+                <div class="info-classes-wrapper">
+                    <div class="next-classes-table classes-tables is-active">
+                        <div class="next-classes-header header-tables">
+                            <p class="next-classes-hour">Hora</p>
+                            <p class="next-classes-date">Fecha</p>
+                            <p class="next-classes-coach">Coach</p>
+                            <p class="next-classes-cancel"></p>
+                        </div>
+                        <div class="next-classes-info">
+                            <p class="txt-next-classes">No tienes próximas clases</p>
+                        </div>
                     </div>
-                    <div class="next-classes-info">
-                        <p class="txt-next-classes">No tienes próximas clases</p>
+                    <div class="finished-classes-table classes-tables">
+                        <div class="finished-classes-header header-tables">
+                            <p class="finished-classes-hour">Hora</p>
+                            <p class="finished-classes-date">Fecha</p>
+                            <p class="finished-classes-coach">Coach</p>
+                        </div>
+                        <div class="finished-classes-info">
+                            <p class="txt-finished-classes">No tienes clases terminadas</p>
+                        </div>
                     </div>
-                </div>
-                <div class="finished-classes-table classes-tables">
-                    <div class="finished-classes-header header-tables">
-                        <p class="finished-classes-hour">Hora</p>
-                        <p class="finished-classes-date">Fecha</p>
-                        <p class="finished-classes-coach">Coach</p>
-                    </div>
-                    <div class="finished-classes-info">
-                        <p class="txt-finished-classes">No tienes clases terminadas</p>
-                    </div>
-                </div>
-                <div class="canceled-classes-table classes-tables">
-                    <div class="canceled-classes-header header-tables">
-                        <p class="canceled-classes-hour">Hora</p>
-                        <p class="canceled-classes-date">Fecha</p>
-                        <p class="canceled-classes-coach">Coach</p>
-                    </div>
-                    <div class="canceled-classes-info">
-                        <p class="txt-canceled-classes">No tienes clases canceladas</p>
+                    <div class="canceled-classes-table classes-tables">
+                        <div class="canceled-classes-header header-tables">
+                            <p class="canceled-classes-hour">Hora</p>
+                            <p class="canceled-classes-date">Fecha</p>
+                            <p class="canceled-classes-coach">Coach</p>
+                        </div>
+                        <div class="canceled-classes-info">
+                            <p class="txt-canceled-classes">No tienes clases canceladas</p>
+                        </div>
                     </div>
                 </div>
             </div>
