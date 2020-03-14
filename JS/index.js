@@ -36,9 +36,24 @@ if(cancelBike) {
   cancelBike.addEventListener('click', showDialog);
 }
 
+if(iconUser) {
+  iconUser.addEventListener('click', showUserMenu);
+}
+
+if(nextClasses) {
+  nextClasses.addEventListener('click', optNextActive);
+}
+
+if(finishedClasses) {
+  finishedClasses.addEventListener('click', optFinishedActive);
+}
+
+if(canceledClasses) {
+  canceledClasses.addEventListener('click', optCanceledActive);
+}
+
 function validation(event) {
   if (event.matches) {
-    iconUser.addEventListener('click', showUserMenu);
     burgerButton.addEventListener('click', hideShow);
     closeMenu.addEventListener('click', hideShow);
     linkReserve.addEventListener('click', hideShow);
@@ -46,16 +61,14 @@ function validation(event) {
     linkWeAre.addEventListener('click', hideShow);
     linkCoaches.addEventListener('click', hideShow);
     linkContact.addEventListener('click', hideShow);
-    nextClasses.addEventListener('click', optNextActive);
-    finishedClasses.addEventListener('click', optFinishedActive);
-    canceledClasses.addEventListener('click', optCanceledActive);
   } else {
     burgerButton.removeEventListener('click', hideShow);
     closeMenu.removeEventListener('click', hideShow);
-    nextClasses.removeEventListener('click', optNextActive);
-    finishedClasses.removeEventListener('click', optFinishedActive);
-    canceledClasses.removeEventListener('click', optCanceledActive);
-    iconUser.removeEventListener('click', showUserMenu);
+    linkReserve.removeEventListener('click', hideShow);
+    linkBuySession.removeEventListener('click', hideShow);
+    linkWeAre.removeEventListener('click', hideShow);
+    linkCoaches.removeEventListener('click', hideShow);
+    linkContact.removeEventListener('click', hideShow);
   }
 }
 
