@@ -25,6 +25,47 @@ const cancelBike = document.querySelector('.cancel');
 const menuUser = document.querySelector(".menu-user-container");
 const iconUser = document.getElementById("icon-user");
 
+Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
+
+var conektaSuccessResponseHandler = function(token) {
+  // var $form = $("#card-form");
+
+  $("#conektaTokenId").val(token.id);
+
+  //Inserta el token_id en la forma para que se envíe al servidor
+  // $form.append($('<input type="hidden" name="conektaTokenId" id="conektaTokenId">').val(token.id));
+  // $form.get(0).submit(); //Hace submit
+};
+
+var conektaErrorResponseHandler = function(response) {
+  var $form = $("#card-form");
+
+  alert(response.message_to_purchaser);
+  // $form.find(".card-errors").text(response.message_to_purchaser);
+  // $form.find("button").prop("disabled", false);
+};
+
+$(document).ready(function() {
+  $('#card-form').submit(function(e) {
+    e.preventDefault();
+
+    var $form = $("#card-form");
+
+    Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+  })
+})
+
+//jQuery para que genere el token después de dar click en submit
+// $(function () {
+//   $("#card-form").submit(function(event) {
+//     var $form = $(this);
+//     // Previene hacer submit más de una vez
+//     $form.find("button").prop("disabled", true);
+//     Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+//     return false;
+//   });
+// });
+
 ipad.addListener(validation);
 
 

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
 </head>
 <body>
     <header class="header">
@@ -92,83 +94,46 @@
         <div class="payment-wrapper">
             <div class="payment-card">
                 <p class="payment-head">Datos de tu tarjeta</p>
-                <form action="/payment/" class="payment-form">
+                <form action="/payment/" class="payment-form" id="card-form">
+                    <input type="text" id="conektaTokenId" name="conektaTokenId" value="">
                     <div class="form-group">
-                        <fieldset>
-                            <input type="text" name="name" placeholder="Nombre" value="" class="form-inputs">
-                        </fieldset>
+                        <label>Nombre del tarjetahabiente</label>
+                        <input type="text" data-conekta="card[name]" name="name" id="name" placeholder="Nombre completo"  class="form-inputs">
                     </div>
                     <div class="form-group">
-                        <fieldset>
-                            <input type="number" name="card" placeholder="# Tarjeta" class="form-inputs" size="20" value="">
-                        </fieldset>
-                    </div>
+                        <label>Número de tarjeta</label>
+                        <input type="number" data-conekta="card[number]" placeholder="# Tarjeta" class="form-inputs" maxlength="16">
+                    </div>       
+                    <div class="form-group cvc">
+                        <label>CVC</label>
+                        <input type="number" data-conekta="card[cvc]" maxlength="4" placeholder="3 o 4 dígitos" class="form-inputs" >        
+                    </div>         
                     <div class="form-group">
-                        <div class="form-inline">
-                            <div class="form-group month">
-                                <fieldset>
-                                    <select class="inline middle">
-                                        <option >Mes</option>
-                                        <option value="01">01 - Ene</option>
-                                        <option value="02">02 - Feb</option>
-                                        <option value="03">03 - Mar</option>
-                                        <option value="04">04 - Abr</option>
-                                        <option value="05">05 - May</option>
-                                        <option value="06">06 - Jun</option>
-                                        <option value="07">07 - Jul</option>
-                                        <option value="08">08 - Ago</option>
-                                        <option value="09">09 - Sep</option>
-                                        <option value="10">10 - Oct</option>
-                                        <option value="11">11 - Nov</option>
-                                        <option value="12">12 - Dic</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="form-group year">
-                                <fieldset>
-                                    <select class="inline middle">
-                                        <option >Año</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                        <option value="2027">2027</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="form-group cvc">
-                                <fieldset>
-                                    <input type="text" size="2" placeholder="CVC" name="cvc" class="form-inputs" value="">
-                                </fieldset>
-                            </div>
+                        <label>Fecha de vencimiento (MM/AA)</label>
+                        <div class="card-expiration-date">
+                            <input type="number" data-conekta="card[exp_month]" placeholder="Mes (2 dígitos)" maxlength="2" class="form-inputs" min="1" max="12">
+                            <input type="number" data-conekta="card[exp_year]" placeholder="Año (2 dígitos)" maxlength="2" class="form-inputs">
                         </div>
-                    </div>
-                    <div class="payment-terms">
+                    </div>          
+                    <!-- <div class="form-group">
                         <input type="checkbox" id="terms" class="payment-terms-check" name="terms">
                         <label>Guardar para próximas compras</label>
+                    </div> -->
+                    <div class="form-group">
+                        <small class="accept-total-txt">Total</small>
+                        <p class="accept-total-ampount">$1,450 MN</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" class="accept-terms-check" name="terms" required>
+                            <a href="terminos.html" class="accept-terms-link link">Acepto términos y condiciones</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-red">Comprar paquete</button>
                     </div>
                 </form>
             </div>
-        </div>
-        <form class="payment-wrapper">
-            <form class="payment-accept">
-                <div class="accept-total">
-                    <small class="accept-total-txt">Total</small>
-                    <p class="accept-total-ampount">$1,450 MN</p>
-                </div>
-                <div class="accept-terms">
-                    <div class="form-check">
-                        <input type="checkbox" id="terms" class="accept-terms-check" name="terms" required>
-                        <a href="terminos.html" class="accept-terms-link link">Acepto términos y condiciones</a>
-                    </div>
-                </div>
-                <div class="accept-button">
-                    <button type="submit" class="payment-btn-subtmit link-hl">Comprar paquete</button>
-                </div>
-            </form>
         </div>
     </section>
     <footer class="footer">

@@ -1102,7 +1102,7 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.payment-order, .payment-card, .payment-accept, .accept-total, .accept-terms {
+.payment-card {
   max-width: 90%;
   margin: 0 auto;
 }
@@ -1149,38 +1149,29 @@ h3 {
 }
 
 .payment-head {
-  margin: 0 0 .5em;
+  margin: 0 0 1em;
   font-size: 1.2em;
   font-weight: bold;
+}
+
+.payment-form {
+  padding: 0 1em;
 }
 
 .form-group {
   margin-bottom: 1.5em;
 }
 
-.payment-card fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.inline {
-  border: none;
-  border-bottom: 1px solid #a7a89a;
-  outline: none;
-  color: #6d6a6a;
-}
-
-.inline.middle {
-  height: 40px;
-  width: 100%;
-  font-size: .85em;
-  background: transparent;
-}
-
 .payment-terms, .form-check {
   display: flex;
   align-items: center;
+  line-height: 1px;
+}
+
+.card-expiration-date {
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  grid-column-gap: 6%;
 }
 
 .accept-total-txt {
@@ -1662,13 +1653,21 @@ h3 {
 
     /* -----------------------------Payment 768px start------------------------------------------------- */
     .payment-wrapper {
-      width: 440px;
+      max-width: 550px;
       margin: 0 auto;
       font-size: 1em;
     }
 
     .payment-form div:nth-of-type(3) {
-      margin-bottom: 0;
+      width: 30%;
+      display: inline-block;
+      margin-right: 3%;
+    }
+
+    .payment-form div:nth-of-type(4) {
+      width: 66%;
+      display: inline-block;
+
     }
 
     .form-inline {
@@ -1678,10 +1677,6 @@ h3 {
 
     .form-inline div {
       width: 30%;
-    }
-
-    .form-group.cvc input {
-      padding: 1.1em 0 .8em;
     }
 
     .payment-btn-subtmit, .btn-submit, .btn-red {
