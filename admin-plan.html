@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sport Life</title>
+    <link rel="icon" type="image/jpg" href="images/indoorcycling.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <figure class="logo">
+                <a class="home link-hl" href="index.html">
+                    <img src="images/indoorcycling.png" alt="Logo de http://sportlife.com.mx" />
+                </a>
+            </figure>
+            <div class="header-menu">
+                <div class="header-elements">
+                    <div class="button-login" >
+                        <a href="login.html" class="link btn-login link-hl" id="login-button">
+                            <span>Iniciar sesión</span>
+                        </a>
+                    </div>
+                    <div class="button-leave">
+                        <a href="index.html" class="link btn-login link-hl" id="login-button">
+                            <span>Salir</span>
+                        </a>
+                    </div>
+                    <div class="login-user-wrapper">
+                        <p class="user-name">Hola Carlos</p>
+                        <div class="link-user link icons">
+                            <i class="icon-user link-hl" id="icon-user"></i>
+                        </div>
+                        <div class="menu-user-container" id="userMenu">
+                            <div class="triangle"></div>
+                            <div class="box">
+                                <span>¡Hola, Carlos Raymundo!</span>
+                                <div class="box-opt">
+                                    <a href="profile.html" class="link">Ver mi perfil</a>
+                                </div>
+                                <div class="box-opt">
+                                    <a href="" class="link">Cerrar sesión</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-button-wrapper">
+                    <i class="icon-menu burger-button link-hl" id="burger-menu"></i>	
+                </div>
+                <nav class="menu ">
+                    <div class="menu-close">
+                        <img src="images/cross.svg" alt="close" class="menu-close-img">
+                     </div>
+                    <ol>
+                        <li>
+                            <a class="link menu-link link-reserve" href="#reserve">Reservar</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-buySession" href="#buySession">Comprar clases</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-weAre" href="#we-are">¿Quiénes somos?</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-coaches" href="#coaches">Instructores</a>
+                        </li>
+                        <li>
+                            <a class="link menu-link link-contact" href="#contact">Contacto</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div> 
+        </div>
+    </header>
+    <section class="admin-package under-header">
+        <div class="package-info-wrapper">
+            <div class="admin-package-info">
+                <h3 class="package-title">Información del plan</h3>
+                <div class="package-details">
+                    <form class="package-form">
+                        <div class="package-name">
+                            <label>Nombre:</label>
+                            <p class="package-name-txt package-p">Paquete 5 clases </p>
+                            <input type="text" id="package-name" class="form-inputs package-input-name">
+                        </div>
+                        <div class="package-amount">
+                            <label>Monto:</label>
+                            <p class="package-amount-txt package-p">$1,450 MN</p>
+                            <input type="number" id="package-total" class="form-inputs package-input-total">
+                        </div>
+                        <div class="package-expiration">
+                            <label>Validez:</label>
+                            <p class="package-expiration-txt package-p">60 días</p>
+                            <input type="number" id="package-expiration" class="form-inputs package-input-expiration">
+                        </div>
+                        <div class="package-buttons">
+                            <a class="btn-red package-save" id="package-save">Guardar</a>
+                            <a class="btn-red package-cancel" id="package-cancel">Cancelar</a>
+                            <a class="btn-red package-edit" id="package-edit">Modificar</a>
+                            <a class="btn-red package-delet" id="package-delet">Eliminar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container-footer">
+            <p>
+                    Sport Life 2020 © Todos los Derechos Reservados. Diseñado y desarrollado por Hola Mundo TI
+            </p>
+        </div>
+    </footer>
+    <script src="JS/index.js"></script>
+</body>
+</html>

@@ -1098,7 +1098,7 @@ h3 {
 
 /* -----------------------------Payment start------------------------------------------------- */
 
-.payment, .add-package, .add-session {
+.payment, .add-package, .add-session, .admin-package {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -1107,7 +1107,7 @@ h3 {
   margin: 0 auto;
 }
 
-.order-title  {
+.order-title, .package-title  {
   font-size: 1.8em;
   margin: 0 0 .5em;
   color: initial;
@@ -1138,7 +1138,7 @@ h3 {
   font-size: 70%;
 }
 
-.payment-wrapper {
+.payment-wrapper, .package-info-wrapper {
   padding: 1em 0 2em;
   max-width: 440px;
   margin: 0 auto;
@@ -1267,6 +1267,42 @@ h3 {
 }
 
 /* -----------------------------Admin profile end------------------------------------------------- */
+
+/* -----------------------------Admin package start------------------------------------------------- */
+
+.admin-package-info, .package-details {
+  padding: 0 1em;
+}
+
+.package-form label {
+  font-weight: bold;
+}
+
+.package-form p {
+  margin: .5em 0 0;
+  padding: 0 1em;
+}
+
+.package-form div {
+  margin: 0 0 1.5em;
+}
+
+.package-form input, .package-save, .package-cancel {
+  display: none;
+}
+
+/* .package-form input.is-active, .package-save.is-active, .package-cancel.is-active {
+  display: block;
+} */
+
+.package-buttons {
+  display: flex;
+}
+
+
+
+
+/* -----------------------------Admin package end------------------------------------------------- */
 
 
 
@@ -1652,7 +1688,7 @@ h3 {
     }
 
     /* -----------------------------Payment 768px start------------------------------------------------- */
-    .payment-wrapper {
+    .payment-wrapper, .package-info-wrapper {
       max-width: 550px;
       margin: 0 auto;
       font-size: 1em;

@@ -25,6 +25,17 @@ const cancelBike = document.querySelector('.cancel');
 const menuUser = document.querySelector(".menu-user-container");
 const iconUser = document.getElementById("icon-user");
 
+const editPackage = document.querySelector(".package-edit");
+const deletePackage = document.querySelector(".package-delet");
+const saveChanges = document.querySelector(".package-save");
+const cancelChanges = document.querySelector(".package-cancel");
+const pTxtName = document.querySelector(".package-name-txt");
+const pTxtTotal = document.querySelector(".package-amount-txt");
+const pTxtExpiration = document.querySelector(".package-expiration-txt");
+const pInputName = document.querySelector(".package-input-name");
+const pInputTotal = document.querySelector(".package-input-total");
+const pInputExpiration = document.querySelector(".package-input-expiration");
+
 Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
 
 var conektaSuccessResponseHandler = function(token) {
@@ -92,6 +103,15 @@ if(finishedClasses) {
 if(canceledClasses) {
   canceledClasses.addEventListener('click', optCanceledActive);
 }
+
+if(editPackage) {
+  editPackage.addEventListener('click', showInputsPackage);
+}
+
+if(cancelChanges) {
+  cancelChanges.addEventListener('click', hideInputsPackage);
+}
+
 
 function validation(event) {
   if (event.matches) {
@@ -164,4 +184,33 @@ function showDialog() {
   } else {
     roomOverlay.classList.add('is-active');
   }
+}
+
+function showInputsPackage() {
+  pTxtName.style.display = 'none';
+  pTxtTotal.style.display = 'none';
+  pTxtExpiration.style.display = 'none';
+  pInputName.style.display = 'block';
+  pInputName.placeholder = pTxtName.textContent;
+  pInputTotal.style.display = 'block';
+  pInputTotal.placeholder = pTxtTotal.textContent;
+  pInputExpiration.style.display = 'block';
+  pInputExpiration.placeholder = pTxtExpiration.textContent;
+  editPackage.style.display = 'none';
+  deletePackage.style.display = 'none';
+  saveChanges.style.display = 'block';
+  cancelChanges.style.display = 'block';
+}
+
+function hideInputsPackage() {
+  pTxtName.style.display = 'block';
+  pTxtTotal.style.display = 'block';
+  pTxtExpiration.style.display = 'block';
+  pInputName.style.display = 'none';
+  pInputTotal.style.display = 'none';
+  pInputExpiration.style.display = 'none';
+  editPackage.style.display = 'block';
+  deletePackage.style.display = 'block';
+  saveChanges.style.display = 'none';
+  cancelChanges.style.display = 'none';
 }
