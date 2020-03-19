@@ -219,7 +219,7 @@ h6 {
 
 .btn-login:active, .burger-button:active, .session-link:active, 
 .btn-form:active,.login-input-submit:active, .register-input-submit:active, 
-.package:active, .social-link:active, .btn-buy:active, .btn-reserve:active, 
+.social-link:active, .btn-buy:active, .btn-reserve:active, 
 .button-log-out:active, .payment-btn-subtmit:active, .btn-submit:active, 
 .btn-red:active {
   transform: scale(.9);
@@ -683,23 +683,61 @@ h3 {
 
 .packages-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: .5em;
-  grid-template-rows: repeat(5, 230px);
-}
-
-.package-info {
-  display: flex;
+  grid-template-columns: repeat(auto-fill, 170px);
+  grid-gap: 1.5em;
   justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: column;
 }
 
 .package {
-  grid-column-end: span 6;
-  /* grid-row: 1 / span 1; */
+  font-family: 'Roboto Mono', sans-serif;
+  height: 260px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+  border-radius: 3px;
 }
+
+.package-info-header {
+  height: 60%;
+  font-family: 'Lato', 'Oxyge', sans-serif;
+  background: #e2e1e1;
+  padding: .5em;
+}
+
+.package-info-content {
+  height: 40%;
+  padding: .5em;
+}
+
+.package-info-header, .package-info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.package-info-content a:nth-of-type(2) {
+  display: none;
+}
+
+.package p {
+  margin: 0 0 15px;
+}
+
+.package-info-name {
+  font-size: 1.2em;
+}
+
+.package-info-name strong {
+  color: #f02;
+  font-size: 1.2em;
+}
+
+.package-info-description {
+  color: #5d5d5d;
+
+}
+
+/* .package {
+  grid-row: 1 / span 1;
+} */
 
 /* .package:nth-of-type(2){
   grid-column: 7 / span 6;
@@ -744,14 +782,8 @@ h3 {
   grid-row: 5 / span 1;
 } */
 
-.package {
-  border: 1.5px solid #8a8a8a;
-  font-family: 'Roboto Mono', sans-serif;
-  padding: 1em 0;
-  cursor: pointer;
-}
 
-.package-link {
+/* .package-link {
   text-decoration: none;
   color: inherit;
 }
@@ -775,7 +807,7 @@ h3 {
   font-weight: 600;
   color: #8a8a8a;
   margin: 0;
-}
+} */
 
 .add-btn {
   margin: 1.5em 0 0;
@@ -1346,151 +1378,140 @@ h3 {
     }
   }
 
-  @media screen and (min-width: 601px) {
+@media screen and (min-width: 601px) {
 
-    body {
-      margin-bottom: 36px;
-    }
-
-    .calendar-header {
-      font-size: 1.3em;
-    }
-
-    .content-day {
-      display: grid;
-      grid-template-rows: repeat(5, 80px);
-      grid-gap: 6px;
-    }
-
-    .session-link {
-      font-size: 1.7em;
-    }
-
-/* -----------------------------Room map start------------------------------------------------- */
-
-    .back-calendar {
-      justify-content: start;
-    }
-
-    .title-choose-bicycle, .info-room-class {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .class-date {
-      font-size: 1em;
-    }
-
-    .class-coach {
-      font-size: 1.2em;
-    }
-
-/* -----------------------------Room map end------------------------------------------------- */
-
-
-    .packages-container {
-      grid-template-rows: repeat(5, 255px);
-    }
-
-    .class-number {
-      font-size: 5em;
-    }
-
+  body {
+   margin-bottom: 36px;
   }
 
-  @media screen and (min-width: 768px) {
+  .calendar-header {
+    font-size: 1.3em;
+  }
 
-    body {
-      margin-bottom: 38px;
-    }
+  .content-day {
+    display: grid;
+    grid-template-rows: repeat(5, 80px);
+    grid-gap: 6px;
+  }
 
-    .home {
-      margin-left: 5%;
-    }
+  .session-link {
+    font-size: 1.7em;
+  }
 
-    .header-menu {
-      grid-template-columns: 90% 10%;
-    }
+    
+  .back-calendar { /* -----------Room map start---------------------------------- */
+    justify-content: start;
+  }
 
-    .burger-button, .icon-user, .icon-switch {
-      font-size: 2em;
-    }
+  .title-choose-bicycle, .info-room-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .burger-button-wrapper {
-      justify-content: center;
-    }
+  .class-date {
+    font-size: 1em;
+  }
 
-    .user-name {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
+  .class-coach {
+    font-size: 1.2em;
+  } /*-------------------Room map end------------------------ */
 
-    .menu-link {
-      margin: 1.5em 0;
-    }
 
-    .menu {
-      top: 55px;
-      width: 300px;
-      align-items: flex-start;
-      left: initial;
-      right: -300px;
-    }
+}
 
-    .menu.is-active {
-      right: 0vw;
-      left: initial;
-    }
+@media screen and (min-width: 768px) {
 
-    .login-wrapper, .register-wrapper, 
-    .restorePass-wrapper {
-      width: 440px;
-      margin: 0 auto;
-      font-size: 1.2em;
-    }
+  body {
+    margin-bottom: 38px;
+  }
 
-    .login-close, .register-close, .restorePass-close {
-      width: 425px;
-      right: initial;
-      display: flex;
-      justify-content: flex-end;
-    }
+  .home {
+    margin-left: 5%;
+  }
 
-    .menu-close {
-      position: absolute;
-      right: -100vw;
-    }
+  .header-menu {
+    grid-template-columns: 90% 10%;
+  }
 
-    .welcome {
-      font-size: 1.2em;
-    }
+  .burger-button, .icon-user, .icon-switch {
+    font-size: 2em;
+  }
+
+  .burger-button-wrapper {
+    justify-content: center;
+  }
+
+  .user-name {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .menu-link {
+    margin: 1.5em 0;
+  }
+
+  .menu {
+    top: 55px;
+    width: 300px;
+    align-items: flex-start;
+    left: initial;
+    right: -300px;
+  }
+
+  .menu.is-active {
+    right: 0vw;
+    left: initial;
+  }
+
+  .login-wrapper, .register-wrapper, 
+  .restorePass-wrapper {
+    width: 440px;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+
+  .login-close, .register-close, .restorePass-close {
+    width: 425px;
+    right: initial;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-close {
+    position: absolute;
+    right: -100vw;
+  }
+
+  .welcome {
+    font-size: 1.2em;
+  }
 
 /* ---------------------------menu user start ------------------------------------ */
 
-    .menu-user-container {
-      right: initial;
-      width: 250px;
-      top: 40px;
-    }
+  .menu-user-container {
+    right: initial;
+    width: 250px;
+    top: 40px;
+  }
 
 
-    .triangle {
-      margin-right: 5.5%;
-    }
+  .triangle {
+    margin-right: 5.5%;
+  }
 
-    .box {
-      height: fit-content;
-      background: #ff0022;
-    }
+  .box {
+    height: fit-content;
+    background: #ff0022;
+  }
 
-    .username span {
-      font-size: 1.4em;
-    }
+  .username span {
+    font-size: 1.4em;
+  }
 
-    .box-opt a {
-      font-size: 1.3em;
-    }
+  .box-opt a {
+    font-size: 1.3em;
+  }
 
 /* ---------------------------menu user end ------------------------------------ */
 
@@ -1505,231 +1526,183 @@ h3 {
 
 /* ----------------------------------------user profile start --------------------------------------- */
 
-    .profile-wrapper {
-      grid-template-columns: 1fr 2fr;
+  .profile-wrapper {
+    grid-template-columns: 1fr 2fr;
 
-    }
+  }
 
-    .profile-data, .plan-active {
-      border-right: 1px solid #c1c1c1;
-    }
+  .profile-data, .plan-active {
+    border-right: 1px solid #c1c1c1;
+  }
 
-    .plan-active {
-      grid-row-start: 2;
-    }
+  .plan-active {
+    grid-row-start: 2;
+  }
 
-    .profile-schedule {
-      width: 95%;
-      margin: 0 auto;
-    }
+  .profile-schedule {
+    width: 95%;
+    margin: 0 auto;
+  }
 
-    .schedule-classes {
-      flex-direction: initial;
-    }
+  .schedule-classes {
+    flex-direction: initial;
+  }
 
-    .schedule-title{
-      background: none;
-    }
-    
-    .next-classes-title, .finished-classes-title, .canceled-classes-title {
-      background: transparent;
-      border-radius: 10px;
-    }
+  .schedule-title{
+    background: none;
+  }
+  
+  .next-classes-title, .finished-classes-title, .canceled-classes-title {
+    background: transparent;
+    border-radius: 10px;
+  }
 
     /* ----------------------------------------user profile end --------------------------------------- */
 
 
-    .reserve, .buySession, .we-are, .coaches {
-      padding-bottom: 3em;
-    }
+  .reserve, .buySession, .we-are, .coaches {
+    padding-bottom: 3em;
+  }
 
-    .content-day {
-      display: grid;
-      grid-template-rows: repeat(5, 110px);
-      grid-gap: 10px;
-    }
+  .content-day {
+    display: grid;
+    grid-template-rows: repeat(5, 110px);
+    grid-gap: 10px;
+  }
 
-    .session-link {
-      font-size: 2.3em;
-    }
+  .session-link {
+    font-size: 2.3em;
+  }
 
-    .calendar {
-      grid-template-rows: 70px 5fr;
-    }
+  .calendar {
+    grid-template-rows: 70px 5fr;
+  }
 
-    .calendar-header {
-      font-size: 1.5em;
-    }
-    
-    .calendar-header, .calendar-sessions {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      text-align: center;
-      grid-gap: 8px;
-      align-self: center;
-    }
+  .calendar-header {
+    font-size: 1.5em;
+  }
+  
+  .calendar-header, .calendar-sessions {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    grid-gap: 8px;
+    align-self: center;
+  }
 
 /* -----------------------------Room map start------------------------------------------------- */
 
-    .class-date {
-      font-size: 1.2em;
-    }
+  .class-date {
+    font-size: 1.2em;
+  }
 
-    .class-coach {
-      font-size: 1.5em;
-    }
+  .class-coach {
+    font-size: 1.5em;
+  }
 
-    .title-choose-bicycle {
-      font-size: 1.2em;
-    }
+  .title-choose-bicycle {
+    font-size: 1.2em;
+  }
 
-    .room-map {
-      font-size: 1.3em;
-      grid-template-rows: 60px repeat(5, 50px);
-    }
+  .room-map {
+    font-size: 1.3em;
+    grid-template-rows: 60px repeat(5, 50px);
+  }
 
-    .row1 {
-      grid-template-columns: 1fr 60px 1fr;
-    }
+  .row1 {
+    grid-template-columns: 1fr 60px 1fr;
+  }
 
-    .row2, .row3, .row5, .row6, .row {
-      grid-template-columns: repeat(6, 50px);
-      grid-gap: 10px;
-    }
-    
-    .row4 {
-      grid-template-columns: repeat(5, 50px);
-      grid-gap: 10px;
-      justify-content: center;
-    }
+  .row2, .row3, .row5, .row6, .row {
+    grid-template-columns: repeat(6, 50px);
+    grid-gap: 10px;
+  }
+  
+  .row4 {
+    grid-template-columns: repeat(5, 50px);
+    grid-gap: 10px;
+    justify-content: center;
+  }
 /* -----------------------------Room map end------------------------------------------------- */
 
-    .packages-container {
-      grid-template-rows: repeat(4, 275px);
-      grid-column-gap: 2%;
-      max-width: 768px;
-      margin: 0 auto;
-    }
-    
-    .package {
-      grid-column-end: span 4;
-      /* grid-row: 1 / span 1; */
-    }
-    
-    /* .package:nth-of-type(2){
-      grid-column: 5 / span 4;
-      grid-row: 1 / span 1;
-    }
-    
-    .package:nth-of-type(3){
-      grid-column: 9 / span 4;
-      grid-row: 1 / span 1;
-    }
-    
-    .package:nth-of-type(4){
-      grid-column: 1 / span 4;
-      grid-row: 2 / span 1;
-    }
-    
-    .package:nth-of-type(5){
-      grid-column: 5 / span 4;
-      grid-row: 2 / span 1;
-    }
-    
-    .package:nth-of-type(6){
-      grid-column: 9 / span 4;
-      grid-row: 2 / span 1;
-    }
+  .packages-container {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
 
-    .package:nth-of-type(7){
-      grid-column: 1 / span 4;
-      grid-row: 3 / span 1;
-    }
-    
-    .package:nth-of-type(8){
-      grid-column: 5 / span 4;
-      grid-row: 3 / span 1;
-    }
-    
-    .package:nth-of-type(9){
-      grid-column: 9 / span 4;
-      grid-row: 3 / span 1;
-    }
+  .package-info-header, .package-info-cost {
+    font-size: 1.1em;
+  }
 
-    .package:nth-of-type(10){
-      grid-column: 1 / span 4;
-      grid-row: 4 / span 1;
-    } */
+  .package {
+    height: 270px;
+  }
 
-    .contact-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: initial;
-    }
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: initial;
+  }
 
-    .form-email h3 {
-      font-size: 1.5em;
-    }
+  .form-email h3 {
+    font-size: 1.5em;
+  }
 
-    .form-email button {
-      margin-left: 0;
-    }
+  .form-email button {
+    margin-left: 0;
+  }
 
-    .social {
-      font-size: 2em;
-      justify-content: space-between;
-      height: 50px;
-    }
+  .social {
+    font-size: 2em;
+    justify-content: space-between;
+    height: 50px;
+  }
 
-    .footer {
-      font-size: .9em;
-    }
+  .footer {
+    font-size: .9em;
+  }
 
-    /* -----------------------------Payment 768px start------------------------------------------------- */
-    .payment-wrapper, .package-info-wrapper {
-      max-width: 550px;
-      margin: 0 auto;
-      font-size: 1em;
-    }
+/* -----------------------------Payment 768px start------------------------------------------------- */
+  .payment-wrapper, .package-info-wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+    font-size: 1em;
+  }
 
-    .payment-form div:nth-of-type(3) {
-      width: 30%;
-      display: inline-block;
-      margin-right: 3%;
-    }
+  .payment-form div:nth-of-type(3) {
+    width: 30%;
+    display: inline-block;
+    margin-right: 3%;
+  }
 
-    .payment-form div:nth-of-type(4) {
-      width: 66%;
-      display: inline-block;
+  .payment-form div:nth-of-type(4) {
+    width: 66%;
+    display: inline-block;
 
-    }
+  }
 
-    .form-inline {
-      display: flex;
-      justify-content: space-between;
-    }
+  .form-inline {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .form-inline div {
-      width: 30%;
-    }
+  .form-inline div {
+    width: 30%;
+  }
 
-    .payment-btn-subtmit, .btn-submit, .btn-red {
-      font-size: 1em;
-    }
-
+  .payment-btn-subtmit, .btn-submit, .btn-red {
+    font-size: 1em;
+  } 
 /* -----------------------------Payment 768px end------------------------------------------------- */
 
 /* -----------------------------Admin profile 768px start------------------------------------------------- */
+  .wrapper-add-input label { 
+    font-size: 1.1em;
+  }
 
-    .wrapper-add-input label {
-      font-size: 1.1em;
-    }
-
-    .select-coach, #session-date, #session-time, #session-duration, .duration-span {
-      font-size: 16px;
-    }
-
+  .select-coach, #session-date, #session-time, #session-duration, .duration-span {
+    font-size: 16px;
+  }
 /* -----------------------------Admin profile 768px end------------------------------------------------- */
 
 }
@@ -1838,73 +1811,8 @@ h3 {
     }
 
     .package:hover {
-      background: rgb(255, 0, 34);
-      color: white;
-      border: none;
-      transform: scale(1.1);
+      outline: auto;
     }
-
-    .package:hover .txt-class, .package:hover .txt-validity {
-      color: white;
-    }
-
-    .packages-container {
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(2, 280px);
-      grid-row-gap: 1.5em;
-    }
-    
-    .package {
-      grid-column-end: span 1;
-      /* grid-row: 1 / span 1; */
-    }
-    
-    /* .package:nth-of-type(2){
-      grid-column: 2 / span 1;
-      grid-row: 1 / span 1;
-
-    }
-    
-    .package:nth-of-type(3){
-      grid-column: 3 / span 1;
-      grid-row: 1 / span 1;
-
-    }
-    
-    .package:nth-of-type(4){
-      grid-column: 4 / span 1;
-      grid-row: 1 / span 1;
-    }
-    
-    .package:nth-of-type(5){
-      grid-column: 5 / span 1;
-      grid-row: 1 / span 1;
-    }
-
-    .package:nth-of-type(6){
-      grid-column: 1 / span 1;
-      grid-row: 2 / span 1;
-    }
-    
-    .package:nth-of-type(7){
-      grid-column: 2 / span 1;
-      grid-row: 2 / span 1;
-    }
-    
-    .package:nth-of-type(8){
-      grid-column: 3 / span 1;
-      grid-row: 2 / span 1;
-    }
-    
-    .package:nth-of-type(9){
-      grid-column: 4 / span 1;
-      grid-row: 2 / span 1;
-    }
-    
-    .package:nth-of-type(10){
-      grid-column: 5 / span 1;
-      grid-row: 2 / span 1;
-    } */
 
     .footer {
       font-size: 1em;
