@@ -721,6 +721,10 @@ h3 {
   margin: 0 0 15px;
 }
 
+.package a {
+  text-decoration: none;
+}
+
 .package-info-name {
   font-size: 1.2em;
 }
@@ -732,82 +736,7 @@ h3 {
 
 .package-info-description {
   color: #5d5d5d;
-
 }
-
-/* .package {
-  grid-row: 1 / span 1;
-} */
-
-/* .package:nth-of-type(2){
-  grid-column: 7 / span 6;
-  grid-row: 1 / span 1;
-}
-
-.package:nth-of-type(3){
-  grid-column: 1 / span 6;
-  grid-row: 2 / span 1;
-}
-
-.package:nth-of-type(4){
-  grid-column: 7 / span 6;
-  grid-row: 2 / span 1;
-}
-
-.package:nth-of-type(5){
-  grid-column: 1 / span 6;
-  grid-row: 3 / span 1;
-}
-
-.package:nth-of-type(6){
-  grid-column: 7 / span 6;
-  grid-row: 3 / span 1;
-}
-
-.package:nth-of-type(7){
-  grid-column: 1 / span 6;
-  grid-row: 4 / span 1;
-}
-
-.package:nth-of-type(8){
-  grid-column: 7 / span 6;
-  grid-row: 4 / span 1;
-}
-.package:nth-of-type(9){
-  grid-column: 1 / span 6;
-  grid-row: 5 / span 1;
-}
-.package:nth-of-type(10){
-  grid-column: 7 / span 6;
-  grid-row: 5 / span 1;
-} */
-
-
-/* .package-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.class-number {
-  font-size: 4em;
-  margin: 0;
-  font-weight: 300;
-  font-family: 'Lato', 'Oxyge', sans-serif;
-}
-
-.txt-cost {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: .8em 0;
-  font-family: 'Lato', 'Oxyge', sans-serif;  
-}
-
-.txt-class, .txt-validity {
-  font-size: .8em;
-  font-weight: 600;
-  color: #8a8a8a;
-  margin: 0;
-} */
 
 .add-btn {
   margin: 1.5em 0 0;
@@ -1133,7 +1062,7 @@ h3 {
 
 /* -----------------------------Payment start------------------------------------------------- */
 
-.payment, .add-package, .add-session, .admin-package {
+.payment, .add-package, .add-session, .admin-package, .section-form {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
