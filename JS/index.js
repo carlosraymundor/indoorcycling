@@ -12,11 +12,11 @@ const linkContact = document.querySelector('.link-contact');
 
 const nextClasses = document.querySelector('.next-classes-title');
 const finishedClasses = document.querySelector('.finished-classes-title');
-const canceledClasses = document.querySelector('.canceled-classes-title');
+// const canceledClasses = document.querySelector('.canceled-classes-title');
 
 const tableNext = document.querySelector('.next-classes-table');
 const tableFinished = document.querySelector('.finished-classes-table');
-const tableCanceled = document.querySelector('.canceled-classes-table');
+// const tableCanceled = document.querySelector('.canceled-classes-table');
 
 const bike = document.querySelector('.room-place-link');
 const roomOverlay = document.querySelector('.overlay-bike');
@@ -100,9 +100,9 @@ if(finishedClasses) {
   finishedClasses.addEventListener('click', optFinishedActive);
 }
 
-if(canceledClasses) {
-  canceledClasses.addEventListener('click', optCanceledActive);
-}
+// if(canceledClasses) {
+//   canceledClasses.addEventListener('click', optCanceledActive);
+// }
 
 if(editPackage) {
   editPackage.addEventListener('click', showInputsPackage);
@@ -146,29 +146,29 @@ function hideShow() {
 function optNextActive() {
   nextClasses.classList.add('is-active');
   finishedClasses.classList.remove('is-active');
-  canceledClasses.classList.remove('is-active');
+  // canceledClasses.classList.remove('is-active');
   tableNext.classList.add('is-active');
   tableFinished.classList.remove('is-active');
-  tableCanceled.classList.remove('is-active');
+  // tableCanceled.classList.remove('is-active');
 }
   
 function optFinishedActive() {
   nextClasses.classList.remove('is-active');
   finishedClasses.classList.add('is-active');
-  canceledClasses.classList.remove('is-active');
+  // canceledClasses.classList.remove('is-active');
   tableNext.classList.remove('is-active');
   tableFinished.classList.add('is-active');
-  tableCanceled.classList.remove('is-active');
+  // tableCanceled.classList.remove('is-active');
 }
     
-function optCanceledActive() {
-  nextClasses.classList.remove('is-active');
-  finishedClasses.classList.remove('is-active');
-  canceledClasses.classList.add('is-active');
-  tableNext.classList.remove('is-active');
-  tableFinished.classList.remove('is-active');
-  tableCanceled.classList.add('is-active');
-}
+// function optCanceledActive() {
+//   nextClasses.classList.remove('is-active');
+//   finishedClasses.classList.remove('is-active');
+//   canceledClasses.classList.add('is-active');
+//   tableNext.classList.remove('is-active');
+//   tableFinished.classList.remove('is-active');
+//   tableCanceled.classList.add('is-active');
+// }
       
 function showUserMenu() {
   if (menuUser.classList.contains('is-active')) {
