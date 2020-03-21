@@ -80,27 +80,38 @@
             </div> 
         </div>
     </header>
-    <section class="add-data under-header section-form">
-        <div class="add-data-wrapper">
-            <div class="add-data-header">
-                <p>Ingresa tus datos</p>
+    <section class="add-data under-header">
+        <div class="add-data-wrapper section-form">
+            <div class="add-data-header section-header">
+                <h3 class="section-title">Ingresa tus datos</h3>
             </div>
             <div class="details-plan">
                 <div class="details-info">
                     <small class="details-title">Plan seleccionado</small>
-                    <p class="details-name">Plan 5 clases</p>
+                    <p class="details-name">Plan N clases</p>
+                    <small class="details-expiration">Vigencía N días</small>
                 </div>
-                <div class="detail-price">1,450 MXN</div>
+                <div class="details-price">$N MXN</div>
             </div>
             <div class="form-wrapper">
-                <form class="form-add-data"></form>
-                <p class="form-title">Datos básicos</p>
-                <div class="form-input">
-                    <input type="text" class="form-inputs" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-input">
-                    <input type="email" class="form-inputs" placeholder="Correo electrónico" required>
-                </div>
+                <form class="form-add-data">
+                    <p class="form-title">Datos básicos</p>
+                    <div class="form-group form-input">
+                        <input type="text" class="form-inputs" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group form-input">
+                        <input type="email" class="form-inputs" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" class="accept-terms-check" name="terms" required>
+                            <a href="terminos.html" class="accept-terms-link link">Acepto términos y condiciones</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-red">Continuar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

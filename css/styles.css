@@ -1071,7 +1071,7 @@ h3 {
   margin: 0 auto;
 }
 
-.order-title, .package-title  {
+.order-title, .package-title, .section-title {
   font-size: 1.8em;
   margin: 0 0 .5em;
   color: initial;
@@ -1102,7 +1102,7 @@ h3 {
   font-size: 70%;
 }
 
-.payment-wrapper, .package-info-wrapper {
+.payment-wrapper, .package-info-wrapper, .section-form {
   padding: 1em 0 2em;
   max-width: 440px;
   margin: 0 auto;
@@ -1233,7 +1233,6 @@ h3 {
 /* -----------------------------Admin profile end------------------------------------------------- */
 
 /* -----------------------------Admin package start------------------------------------------------- */
-
 .admin-package-info, .package-details {
   padding: 0 1em;
 }
@@ -1259,12 +1258,41 @@ h3 {
 .package-buttons {
   display: flex;
 }
-
-
-
 /* -----------------------------Admin package end------------------------------------------------- */
 
+.details-plan, .form-wrapper {
+  padding: 1em;
+}
 
+.details-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.details-info small{
+  color: #696969;
+  font-size: 12px; 
+}
+
+.details-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.details-price {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.form-title {
+  font-weight: bold;
+}
+
+.section-header {
+  padding: 0 .5em;
+}
 
 
 /* Mobile first */
@@ -1592,7 +1620,7 @@ h3 {
   }
 
 /* -----------------------------Payment 768px start------------------------------------------------- */
-  .payment-wrapper, .package-info-wrapper {
+  .payment-wrapper, .package-info-wrapper, .section-form {
     max-width: 550px;
     margin: 0 auto;
     font-size: 1em;
