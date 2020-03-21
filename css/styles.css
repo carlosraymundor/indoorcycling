@@ -1066,12 +1066,14 @@ h3 {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.payment-card {
+/* .payment-card {
   max-width: 90%;
   margin: 0 auto;
-}
+} */
 
-.order-title, .package-title, .section-title {
+/* , .section-title */
+
+.order-title, .package-title {
   font-size: 1.8em;
   margin: 0 0 .5em;
   color: initial;
@@ -1102,28 +1104,30 @@ h3 {
   font-size: 70%;
 }
 
-.payment-wrapper, .package-info-wrapper, .section-form {
+.package-info-wrapper, .section-form {
   padding: 1em 0 2em;
   max-width: 440px;
   margin: 0 auto;
 }
 
-.payment-wrapper:nth-of-type(2) {
-  background: #f1f1f1;
-}
-
-.payment-head {
+.section-title {
   margin: 0 0 1em;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.payment-form {
+/* .payment-form {
   padding: 0 1em;
-}
+} */
 
 .form-group {
   margin-bottom: 1.5em;
+}
+
+.form-group.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .payment-terms, .form-check {
@@ -1132,23 +1136,23 @@ h3 {
   line-height: 1px;
 }
 
-.card-expiration-date {
+/* .card-expiration-date {
   display: grid;
   grid-template-columns: repeat(2, 47%);
   grid-column-gap: 6%;
-}
+} */
 
-.accept-total-txt {
+/* .accept-total-txt {
   text-transform: uppercase;
   font-weight: bold;
   color: #6d6a6a;
-}
+} */
 
-.accept-total-ampount {
+/* .accept-total-ampount {
   font-size: 1.5em;
   font-weight: bolder;
   margin: 0 0 .8em;
-}
+} */
 
 .accept-terms {
   margin-bottom: 1em;
@@ -1160,6 +1164,17 @@ h3 {
 
 .accept-button {
   margin: 0 auto;
+}
+
+.form-payment .form-group:nth-last-of-type(1){
+  margin: 0;
+}
+
+.security {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #696969;
 }
 
 /* -----------------------------Payment end------------------------------------------------- */
@@ -1620,7 +1635,7 @@ h3 {
   }
 
 /* -----------------------------Payment 768px start------------------------------------------------- */
-  .payment-wrapper, .package-info-wrapper, .section-form {
+  .package-info-wrapper, .section-form {
     max-width: 550px;
     margin: 0 auto;
     font-size: 1em;
