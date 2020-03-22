@@ -36,6 +36,15 @@ const pInputName = document.querySelector(".package-input-name");
 const pInputTotal = document.querySelector(".package-input-total");
 const pInputExpiration = document.querySelector(".package-input-expiration");
 
+const basicData = document.querySelector("#btn-BasicData");
+const cardData = document.querySelector("#btn-CardData");
+// const continuePayment = document.querySelector(".form-add-data");
+const formCard = document.querySelector("#form-CardData");
+const formBasicData = document.querySelector("#form-BasicData");
+const formShowData = document.querySelector("#form-PaymentData");
+const security = document.querySelector(".security");
+
+
 Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
 
 var conektaSuccessResponseHandler = function(token) {
@@ -110,6 +119,14 @@ if(editPackage) {
 
 if(cancelChanges) {
   cancelChanges.addEventListener('click', hideInputsPackage);
+}
+
+if(basicData) {
+  basicData.addEventListener('click', showFormCard);
+
+}
+if(cardData) {
+  cardData.addEventListener('click', showFormData);
 }
 
 
@@ -213,4 +230,18 @@ function hideInputsPackage() {
   deletePackage.style.display = 'block';
   saveChanges.style.display = 'none';
   cancelChanges.style.display = 'none';
+}
+
+function showFormCard() {
+  formCard.style.display = 'block';
+  security.style.display = 'block';
+  formBasicData.style.display = 'none';
+}
+
+function showFormData() {
+  formCard.style.display = 'none';
+  security.style.display = 'none';
+  formShowData.style.display = 'block';
+  // document.getElementById('card');
+
 }
