@@ -94,17 +94,17 @@
                 <div class="details-price">$N MXN</div>
             </div>
             <div class="form-wrapper" id="form-BasicData">
-                <form class="form-add-data" >
+                <form class="form-add-data" id="basicData-form">
                     <p class="form-title">Datos básicos</p>
                     <div class="form-group">
-                        <input type="text" class="form-inputs" placeholder="Nombre completo" id="bd-name" required>
+                        <input type="text" required class="form-inputs" placeholder="Nombre completo" id="bd-name">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-inputs" placeholder="Correo electrónico" required>
+                        <input type="email" required id="userEmail" class="form-inputs" placeholder="Correo electrónico">
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input type="checkbox" id="terms" class="accept-terms-check" required>
+                            <input type="checkbox" required id="terms" class="accept-terms-check">
                             <a href="terminos.html" class="accept-terms-link link">Acepto términos y condiciones</a>
                         </div>
                     </div>
@@ -115,18 +115,18 @@
             </div>
             <div class="form-wrapper" id="form-CardData">
                 <form class="form-payment" id="card-form">
-                    <input type="hidden" id="conektaTokenId" name="conektaTokenId" value="">
+
                     <p class="form-title">Datos de la tarjeta</p>
                     <div class="form-group">
-                        <input type="text" data-conekta="card[name]" name="name" id="name" placeholder="Nombre del tarjetahabiente"  class="form-inputs">
+                        <input type="text" required data-conekta="card[name]" name="name" id="name" placeholder="Nombre del tarjetahabiente"  class="form-inputs">
                     </div>
                     <div class="form-group">
-                        <input type="number" data-conekta="card[number]" name="card" id="card" placeholder="Número de tarjeta" class="form-inputs" maxlength="16">
+                        <input type="number" required data-conekta="card[number]" name="card" id="card" placeholder="Número de tarjeta" class="form-inputs" maxlength="16">
                     </div>       
                     <div class="form-group three">
-                        <input type="number" data-conekta="card[cvc]" maxlength="4" placeholder="CVC" class="form-inputs" >        
-                        <input type="number" data-conekta="card[exp_month]" placeholder="MM" maxlength="2" class="form-inputs" min="1" max="12">
-                        <input type="number" data-conekta="card[exp_year]" placeholder="AA" maxlength="2" class="form-inputs" min="20" max="99">
+                        <input type="number" required id="cardCVC" data-conekta="card[cvc]" maxlength="4" minlength="3" placeholder="CVC" class="form-inputs" >        
+                        <input type="number" required id="cardMonth" data-conekta="card[exp_month]" placeholder="MM" maxlength="2" class="form-inputs" min="1" max="12">
+                        <input type="number" required id="cardYear" data-conekta="card[exp_year]" placeholder="AA" maxlength="2" class="form-inputs" min="20" max="99">
                     </div>
                     <div class="form-group">
                         <button class="btn-red" id="btn-CardData">Continuar</button>
@@ -134,31 +134,32 @@
                 </form>
             </div>
             <div class="form-wrapper" id="form-PaymentData">
-                <form class="show-PaymentData" >
-                    <p class="form-title">Confirmar datos</p>                    
+                <form name="confirmPayment" class="show-PaymentData" >
+                    <p class="form-title">Confirmar datos</p>
+                    <input type="hidden" id="conektaTokenId" name="conektaTokenId" value="">
                     <div class="form-group">
                         <Label>Nombre completo:</Label>
-                        <div id="basicData-name">Algún nombre</div>
+                        <div id="showName"></div>
                     </div> 
                     <div class="form-group">
                         <Label>Correo electrónico:</Label>
-                        <div id="basicData-email"></div>
+                        <div id="showEmail">email</div>
                     </div> 
                     <div class="form-group">
                         <Label>Número de tarjeta:</Label>
-                        <div id="cardData-card"></div>
+                        <div id="showCard"></div>
                     </div> 
                     <div class="form-group">
                         <Label>CVC:</Label>
-                        <div id="cardData-CVC"></div>
+                        <div id="showCVC"></div>
                     </div> 
                     <div class="form-group">
                         <Label>Mes de expiración:</Label>
-                        <div id="cardData-month"></div>
+                        <div id="showMonth"></div>
                     </div> 
                     <div class="form-group">
                         <Label>Año de expiración:</Label>
-                        <div id="cardData-year"></div>
+                        <div id="showYear"></div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn-red">Confirmar y pagar</button>

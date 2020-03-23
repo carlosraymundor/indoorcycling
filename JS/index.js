@@ -36,21 +36,38 @@ const pInputName = document.querySelector(".package-input-name");
 const pInputTotal = document.querySelector(".package-input-total");
 const pInputExpiration = document.querySelector(".package-input-expiration");
 
-const basicData = document.querySelector("#btn-BasicData");
-const cardData = document.querySelector("#btn-CardData");
-const formCard = document.querySelector("#form-CardData");
-const formBasicData = document.querySelector("#form-BasicData");
-const formShowData = document.querySelector("#form-PaymentData");
+const formBasicData = document.getElementById('basicData-form');
+const formCard = document.getElementById("form-CardData");
+const formShowData = document.getElementById("form-PaymentData");
 const security = document.querySelector(".security");
-
 
 Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
 
 var conektaSuccessResponseHandler = function(token) {
   // var $form = $("#card-form");
-
+  
   $("#conektaTokenId").val(token.id);
 
+  document.getElementById('form-CardData').style.display = 'none';
+    security.style.display = 'none';
+    formShowData.style.display = 'block';
+      
+    var cardName = document.getElementById('name').value;
+    var cardNumber = parseInt(document.getElementById('card').value);
+    var userEmail = document.getElementById('userEmail').value;
+    var cardCVC = parseInt(document.getElementById('cardCVC').value);
+    var cardMonth = parseInt(document.getElementById('cardMonth').value);
+    var cardYear = parseInt(document.getElementById('cardYear').value);
+      
+    document.getElementById('showName').innerText = cardName;
+    document.getElementById('showCard').innerText = cardNumber;
+    document.getElementById('showEmail').innerText = userEmail;
+    document.getElementById('showCVC').innerText = cardCVC;
+    document.getElementById('showMonth').innerText = cardMonth;
+    document.getElementById('showYear').innerText = cardYear;
+
+
+  
   //Inserta el token_id en la forma para que se envíe al servidor
   // $form.append($('<input type="hidden" name="conektaTokenId" id="conektaTokenId">').val(token.id));
   // $form.get(0).submit(); //Hace submit
@@ -58,7 +75,7 @@ var conektaSuccessResponseHandler = function(token) {
 
 var conektaErrorResponseHandler = function(response) {
   var $form = $("#card-form");
-
+  
   alert(response.message_to_purchaser);
   // $form.find(".card-errors").text(response.message_to_purchaser);
   // $form.find("button").prop("disabled", false);
@@ -67,17 +84,17 @@ var conektaErrorResponseHandler = function(response) {
 $(document).ready(function() {
   $('#card-form').submit(function(e) {
     e.preventDefault();
-
+    
     var $form = $("#card-form");
-
+    
     Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
   })
 })
 
 //jQuery para que genere el token después de dar click en submit
 // $(function () {
-//   $("#card-form").submit(function(event) {
-//     var $form = $(this);
+  //   $("#card-form").submit(function(event) {
+    //     var $form = $(this);
 //     // Previene hacer submit más de una vez
 //     $form.find("button").prop("disabled", true);
 //     Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
@@ -109,28 +126,28 @@ if(finishedClasses) {
 }
 
 // if(canceledClasses) {
-//   canceledClasses.addEventListener('click', optCanceledActive);
-// }
-
-if(editPackage) {
-  editPackage.addEventListener('click', showInputsPackage);
-}
-
-if(cancelChanges) {
-  cancelChanges.addEventListener('click', hideInputsPackage);
-}
-
-if(basicData) {
-  basicData.addEventListener('click', showFormCard);
-
-}
-if(cardData) {
-  cardData.addEventListener('click', showFormData);
-}
-
-
-function validation(event) {
-  if (event.matches) {
+  //   canceledClasses.addEventListener('click', optCanceledActive);
+  // }
+  
+  if(editPackage) {
+    editPackage.addEventListener('click', showInputsPackage);
+  }
+  
+  if(cancelChanges) {
+    cancelChanges.addEventListener('click', hideInputsPackage);
+  }
+  
+  if(formBasicData) {
+    formBasicData.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formCard.style.display = 'block';
+      document.querySelector(".security").style.display = 'block';
+      document.getElementById('form-BasicData').style.display = 'none';
+    });
+  }  
+  
+  function validation(event) {
+    if (event.matches) {
     burgerButton.addEventListener('click', hideShow);
     closeMenu.addEventListener('click', hideShow);
     linkReserve.addEventListener('click', hideShow);
@@ -167,7 +184,7 @@ function optNextActive() {
   tableFinished.classList.remove('is-active');
   // tableCanceled.classList.remove('is-active');
 }
-  
+
 function optFinishedActive() {
   nextClasses.classList.remove('is-active');
   finishedClasses.classList.add('is-active');
@@ -176,71 +193,57 @@ function optFinishedActive() {
   tableFinished.classList.add('is-active');
   // tableCanceled.classList.remove('is-active');
 }
-    
+
 // function optCanceledActive() {
-//   nextClasses.classList.remove('is-active');
-//   finishedClasses.classList.remove('is-active');
-//   canceledClasses.classList.add('is-active');
-//   tableNext.classList.remove('is-active');
-//   tableFinished.classList.remove('is-active');
-//   tableCanceled.classList.add('is-active');
-// }
-      
-function showUserMenu() {
-  if (menuUser.classList.contains('is-active')) {
-    menuUser.classList.remove('is-active');    
-  } else {
-    menuUser.classList.add('is-active');
+  //   nextClasses.classList.remove('is-active');
+  //   finishedClasses.classList.remove('is-active');
+  //   canceledClasses.classList.add('is-active');
+  //   tableNext.classList.remove('is-active');
+  //   tableFinished.classList.remove('is-active');
+  //   tableCanceled.classList.add('is-active');
+  // }
+  
+  function showUserMenu() {
+    if (menuUser.classList.contains('is-active')) {
+      menuUser.classList.remove('is-active');    
+    } else {
+      menuUser.classList.add('is-active');
+    }
   }
-}
-
-function showDialog() {
-  if (roomOverlay.classList.contains('is-active')) {
-    roomOverlay.classList.remove('is-active');    
-  } else {
-    roomOverlay.classList.add('is-active');
+  
+  function showDialog() {
+    if (roomOverlay.classList.contains('is-active')) {
+      roomOverlay.classList.remove('is-active');    
+    } else {
+      roomOverlay.classList.add('is-active');
+    }
   }
-}
-
-function showInputsPackage() {
-  pTxtName.style.display = 'none';
-  pTxtTotal.style.display = 'none';
-  pTxtExpiration.style.display = 'none';
-  pInputName.style.display = 'block';
-  pInputName.placeholder = pTxtName.textContent;
-  pInputTotal.style.display = 'block';
-  pInputTotal.placeholder = pTxtTotal.textContent;
-  pInputExpiration.style.display = 'block';
-  pInputExpiration.placeholder = pTxtExpiration.textContent;
-  editPackage.style.display = 'none';
-  deletePackage.style.display = 'none';
-  saveChanges.style.display = 'block';
-  cancelChanges.style.display = 'block';
-}
-
-function hideInputsPackage() {
-  pTxtName.style.display = 'block';
-  pTxtTotal.style.display = 'block';
-  pTxtExpiration.style.display = 'block';
-  pInputName.style.display = 'none';
-  pInputTotal.style.display = 'none';
-  pInputExpiration.style.display = 'none';
-  editPackage.style.display = 'block';
-  deletePackage.style.display = 'block';
-  saveChanges.style.display = 'none';
-  cancelChanges.style.display = 'none';
-}
-
-function showFormCard() {
-  formCard.style.display = 'block';
-  security.style.display = 'block';
-  formBasicData.style.display = 'none';
-}
-
-function showFormData() {
-  formCard.style.display = 'none';
-  security.style.display = 'none';
-  formShowData.style.display = 'block';
-  // document.getElementById('card');
-
-}
+  
+  function showInputsPackage() {
+    pTxtName.style.display = 'none';
+    pTxtTotal.style.display = 'none';
+    pTxtExpiration.style.display = 'none';
+    pInputName.style.display = 'block';
+    pInputName.placeholder = pTxtName.textContent;
+    pInputTotal.style.display = 'block';
+    pInputTotal.placeholder = pTxtTotal.textContent;
+    pInputExpiration.style.display = 'block';
+    pInputExpiration.placeholder = pTxtExpiration.textContent;
+    editPackage.style.display = 'none';
+    deletePackage.style.display = 'none';
+    saveChanges.style.display = 'block';
+    cancelChanges.style.display = 'block';
+  }
+  
+  function hideInputsPackage() {
+    pTxtName.style.display = 'block';
+    pTxtTotal.style.display = 'block';
+    pTxtExpiration.style.display = 'block';
+    pInputName.style.display = 'none';
+    pInputTotal.style.display = 'none';
+    pInputExpiration.style.display = 'none';
+    editPackage.style.display = 'block';
+    deletePackage.style.display = 'block';
+    saveChanges.style.display = 'none';
+    cancelChanges.style.display = 'none';
+  }
