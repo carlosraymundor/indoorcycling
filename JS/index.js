@@ -38,7 +38,6 @@ const pInputExpiration = document.querySelector(".package-input-expiration");
 
 const basicData = document.querySelector("#btn-BasicData");
 const cardData = document.querySelector("#btn-CardData");
-// const continuePayment = document.querySelector(".form-add-data");
 const formCard = document.querySelector("#form-CardData");
 const formBasicData = document.querySelector("#form-BasicData");
 const formShowData = document.querySelector("#form-PaymentData");
