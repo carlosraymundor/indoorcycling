@@ -618,9 +618,13 @@ h3 {
 }
 
 .calendar {
-  font-size: .6em;
+  font-size: .7em;
   display: grid;
-  grid-template-rows: 30px 5fr;
+  grid-template-rows: 50px auto;
+}
+
+.calendar-header {
+  height: 40px;
 }
 
 .calendar-header, .calendar-sessions {
@@ -651,7 +655,7 @@ h3 {
 
 .content-day {
   display: grid;
-  grid-template-rows: repeat(5, 60px);
+  grid-template-rows: repeat(auto-fill, 60px);
   grid-gap: 5px;
 }
 
@@ -663,6 +667,7 @@ h3 {
   color: #130e0e;
   border: solid 1px #f4f4f4;
   background: #fff;
+  height: 60px;
 }
 
 .session-link.sold-out {
@@ -1320,7 +1325,7 @@ h3 {
     }
 
     .calendar {
-      grid-template-rows: 55px 5fr;
+      grid-template-rows: 55px auto;
     }
 
     .calendar-header {
@@ -1341,13 +1346,13 @@ h3 {
     }
 
     .content-day {
-      display: grid;
-      grid-template-rows: repeat(5, 75px);
+      grid-template-rows: repeat(auto-fill, 75px);
       grid-gap: 6px;
     }
 
     .session-link {
       font-size: 1.5em;
+      height: 75px;
     }
   }
 
@@ -1362,13 +1367,12 @@ h3 {
   }
 
   .content-day {
-    display: grid;
-    grid-template-rows: repeat(5, 80px);
-    grid-gap: 6px;
+    grid-template-rows: repeat(auto-fill, 80px);
   }
 
   .session-link {
     font-size: 1.7em;
+    height: 80px;
   }
 
     
@@ -1538,17 +1542,16 @@ h3 {
   }
 
   .content-day {
-    display: grid;
-    grid-template-rows: repeat(5, 110px);
-    grid-gap: 10px;
+    grid-template-rows: repeat(auto-fill, 110px);
   }
 
   .session-link {
     font-size: 2.3em;
+    height: 110px;
   }
 
   .calendar {
-    grid-template-rows: 70px 5fr;
+    grid-template-rows: 70px auto;
   }
 
   .calendar-header {
