@@ -18,8 +18,7 @@ const tableNext = document.querySelector('.next-classes-table');
 const tableFinished = document.querySelector('.finished-classes-table');
 // const tableCanceled = document.querySelector('.canceled-classes-table');
 
-const bike = document.querySelector('.room-place-link');
-const roomOverlay = document.querySelector('.overlay-bike');
+const bike = document.querySelectorAll('.room-place-link');
 const cancelBike = document.querySelector('.cancel');
 
 const menuUser = document.querySelector(".menu-user-container");
@@ -107,13 +106,28 @@ $(document).ready(function() {
 
 ipad.addListener(validation);
 
+// function recorreAray(bike){
+//   var numerobike;
+//   for (var b = 0; b < bike.length; b++) {
 
-if(bike) {
-  bike.addEventListener('click', showDialog);
+//   }
+// }
+
+for (var b = 0; b < bike.length; b++) {
+  bike[b].addEventListener('click', function () {
+    document.querySelector('.overlay-bike').style.display = 'block';
+    document.querySelector('.dialog-bike-number').textContent = this.textContent;
+  });
+
+  // bike[b].addEventListener('click', (e) => {
+  //   numberBike.innerText = '';
+  // });
 }
 
 if(cancelBike) {
-  cancelBike.addEventListener('click', showDialog);
+  cancelBike.addEventListener('click', (e) => {
+    document.querySelector('.overlay-bike').style.display = 'none';
+  });
 }
 
 if(iconUser) {
@@ -256,13 +270,9 @@ function showUserMenu() {
   }
 }
   
-function showDialog() {
-  if (roomOverlay.classList.contains('is-active')) {
-    roomOverlay.classList.remove('is-active');    
-  } else {
-    roomOverlay.classList.add('is-active');
-  }
-}
+// function showDialog() {
+ 
+// }
   
 function showInputsPackage() {
   pTxtName.style.display = 'none';
