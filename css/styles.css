@@ -189,7 +189,7 @@ h6 {
 /* ---------------------------menu user end ------------------------------------ */
 
 .btn-login, .burger-button-wrapper, 
-.btn-buy, .btn-reserve, .button-log-out, .btn-subtmit {
+.btn-buy, .btn-reserve .btn-subtmit {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -218,7 +218,7 @@ h6 {
 
 .btn-login, .burger-button, .session-link, .package, 
 .btn-form, .login-input-submit, .register-input-submit, 
-.btn-buy, .btn-reserve, .button-log-out, .payment-btn-subtmit,
+.btn-buy, .btn-reserve, .payment-btn-subtmit,
 .room-map a, .btn-submit, .btn-red {
   transition: .2s;
   will-change: transform;
@@ -227,8 +227,7 @@ h6 {
 .btn-login:active, .burger-button:active, .session-link:active, 
 .btn-form:active,.login-input-submit:active, .register-input-submit:active, 
 .social-link:active, .btn-buy:active, .btn-reserve:active, 
-.button-log-out:active, .payment-btn-subtmit:active, .btn-submit:active, 
-.btn-red:active {
+.payment-btn-subtmit:active, .btn-submit:active, .btn-red:active {
   transform: scale(.9);
 }
 
@@ -453,7 +452,7 @@ ol {
   margin: 0;
 }
 
-.available-classes, .log-out-wrapper {
+.available-classes {
   margin: .8em auto;
 }
 
@@ -468,6 +467,36 @@ ol {
   border-bottom: 1px solid white;
   color: #f02;
   font-weight: bold;
+}
+
+.edit-user-profile {
+  text-align: left;
+}
+
+.edit-user-profile input {
+  display: none;
+}
+
+.edit-user-profile label {
+  color: #5d5d5d;
+  font-weight: bold;
+}
+
+.edit-user-profile .form-title {
+  margin: 0 0 1em !important;
+}
+
+.user-info {
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.form-group.buttons {
+  display: flex;
+}
+
+.save-profile-changes, .cancel-profile-changes {
+  display: none;
 }
 
 .plan-info-wrapper {
@@ -490,16 +519,6 @@ ol {
 
 .plan-buttons {
   margin-bottom: 1em;
-}
-
-.btn-buy, .btn-reserve, .button-log-out {
-  padding: 8px 8px;
-  background: rgb(255, 0, 34);
-  display: inline-block;
-  color: white;
-  border-radius: 5px;
-  box-shadow: outset 0 -.2em rgba(0, 0, 0, .2);
-  cursor: pointer;
 }
 
 .schedule-classes {
@@ -537,14 +556,13 @@ ol {
 }
 
 .table-header {
-  border-bottom: 1px solid #c1c1c1;
   padding: 0.5em 0;
   color: #ff0022;
   font-weight: bold;
 }
 
 .table-info {
-  font-size: .9em;
+  font-size: .8em;
 }
 
 /* .table-info div{
@@ -558,6 +576,7 @@ ol {
   display: grid;
   grid-template-columns: 20% 30% 50%;
   padding: .5em 0;
+  border-bottom: 1px solid #c1c1c1;
 }
 
 .table.four {
@@ -1166,7 +1185,7 @@ h3 {
   margin: 0 auto;
 }
 
-.form-payment .form-group:nth-last-of-type(1){
+.form-group:nth-last-of-type(1){
   margin: 0;
 }
 
@@ -1360,6 +1379,10 @@ h3 {
       font-size: 1.5em;
       height: 75px;
     }
+
+    .table-info {
+      font-size: .9em;
+    }
   }
 
 @media screen and (min-width: 601px) {
@@ -1400,6 +1423,9 @@ h3 {
     font-size: 1.2em;
   } /*-------------------Room map end------------------------ */
 
+  .table-info {
+    font-size: 1em;
+  }
 
 }
 
@@ -1505,8 +1531,7 @@ h3 {
 /* ----------------------------------------user profile start --------------------------------------- */
 
   .profile-wrapper {
-    grid-template-columns: 1fr 2fr;
-
+    grid-template-columns: 40% 60%;
   }
 
   .profile-data, .plan-active {
@@ -1695,9 +1720,9 @@ h3 {
     .btn-form:hover, .icon-facebook:hover, .icon-instagram:hover,
     .login-input-submit:hover, .restorePass-input-submit:hover, 
     .register-input-submit:hover, .box a:hover,
-    .btn-back-calendar:hover, .menu-link:hover,
-    .button-log-out:hover, .plan-buttons a:hover,
-    .schedule-classes a:hover, .btn-submit:hover, .btn-red:hover {
+    .btn-back-calendar:hover, .menu-link:hover, 
+    .plan-buttons a:hover, .schedule-classes a:hover, 
+    .btn-submit:hover, .btn-red:hover {
       opacity: .7; 
     }
 
@@ -1705,7 +1730,7 @@ h3 {
       height: 70px;
     }
 
-    .btn-login, .btn-buy, .btn-reserve, .button-log-out {
+    .btn-login, .btn-buy, .btn-reserve {
       padding: 10px 18px;
       font-size: 1.2em;
     }

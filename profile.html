@@ -87,24 +87,41 @@
                     <div class="profile-title">
                         <p class="account-click">Cuenta</p>
                     </div>
-                    <div class="data">
-                        <div class="labels">
-                            <p class="data-label label-name">Nombre</p>
-                            <p class="data-label label-last-name">Apellidos</p>
-                            <p class="data-label label-email">Correo</p>
-                            <p class="data-label label-phone">Teléfono</p>
-                            <p class="data-label label-shoes-size">Talla (mx)</p>
-                        </div>
-                        <div class="labels-info">
-                            <p class="data-label data-name">Carlos</p>
-                            <p class="data-label data-last-name">Raymundo Rivera</p>
-                            <p class="data-label data-email">raymundoriveracarlos@gmail.com</p>
-                            <p class="data-label data-phone">914 140 2040</p>
-                            <p class="data-label data-size">7.0</p>
-                        </div>
-                    </div>
-                    <div class="log-out-wrapper">
-                        <a class="button-log-out link">Cerrar sesión</a>
+                    <div class="form-wrapper data">
+                        <form class="edit-user-profile">
+                            <p class="form-title">Tus datos</p>
+                            <div class="form-group">
+                                <label class="data-label label-name">Nombre:</label>
+                                <p class="user-info data-name">Carlos</p>    
+                                <input type="text" class="form-inputs" id="editProfileName">
+                            </div>
+                            <div class="form-group">
+                                <label class="data-label label-last-name">Apellidos:</label>
+                                <p class="user-info data-last-name">Raymundo Rivera</p>
+                                <input type="text" class="form-inputs" id="editProfileLastName">
+                            </div>
+                            <div class="form-group">
+                                <label class="data-label label-email">Correo:</label>
+                                <p class="user-info data-email">raymundoriveracarlos@gmail.com</p>
+                                <input type="email" class="form-inputs" id="editProfileMail">
+                            </div>
+                            <div class="form-group">
+                                <label class="data-label label-phone">Teléfono:</label>
+                                <p class="user-info data-phone">914 140 2040</p>
+                                <input type="tel" class="form-inputs" id="editProfilePhone">
+                            </div>
+                            <div class="form-group">
+                                <label class="data-label label-shoes-size">Talla (mx):</label>
+                                <p class="user-info data-size">7.0</p>
+                                <input type="number" class="form-inputs" id="editProfileShoesSize">
+                            </div>
+                            <div class="form-group buttons">
+                                <button class="btn-red edit-profile">Editar perfil</button>
+                                <button class="btn-red change-pass">Cambiar contraseña</button>
+                                <button type="submit" class="btn-red save-profile-changes">Guardar</button>
+                                <button class="btn-red cancel-profile-changes">Cancelar cambios</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="plan-active">
@@ -119,12 +136,12 @@
                             <time datetime="2020-03-08">8 de marzo</time>
                         </p>
                         <div class="plan-buttons">
-                            <a href="buysession.html" class="link btn-buy link-hl">
+                            <button href="buysession.html" class="btn-red">
                                 <span>Comprar clases</span>
                             </a>
-                            <a href="reserve.html" class="link btn-reserve link-hl">
+                            <button href="reserve.html" class="btn-red">
                                 <span>Reservar clase</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -151,21 +168,18 @@
                                 <p class="next-classes-coach">Coach</p>
                             </div>
                             <div class="table-info">
-                                <!-- <div class="info-none">
-                                    <p>No tienes próximas clases</p>
-                                </div> -->
                                 <div class="table four">
                                     <div>10:00am</div>
                                     <div>22/11/2020</div>
-                                    <div>Coach1</div>
+                                    <div>Nombre coach</div>
                                     <div>
-                                        <i class="icon-cross"></i>
+                                        <i class="icon-cross room-place-link"></i>
                                     </div>
                                 </div>
                                 <div class="table four">
                                     <div>10:00am</div>
                                     <div>22/11/2020</div>
-                                    <div>Coach1</div>
+                                    <div>Nombre coach</div>
                                     <div>
                                         <i class="icon-cross"></i>
                                     </div>
@@ -178,10 +192,22 @@
                                 <p class="finished-classes-date">Fecha</p>
                                 <p class="finished-classes-coach">Coach</p>
                             </div>
-                            <div class="table">
-                                <p class="txt-finished-classes">No tienes clases terminadas</p>
-                                <p class="txt-finished-classes">No tienes clases terminadas</p>
-                                <p class="txt-finished-classes">No tienes clases terminadas</p>
+                            <div class="table-info">
+                                <div class="table">
+                                    <div>10:00am</div>
+                                    <div>10/10/2019</div>
+                                    <div>Nombre coach</div>
+                                </div>
+                                <div class="table">
+                                    <div>10:00am</div>
+                                    <div>10/10/2019</div>
+                                    <div>Nombre coach</div>
+                                </div>
+                                <div class="table">
+                                    <div>10:00am</div>
+                                    <div>10/10/2019</div>
+                                    <div>Nombre coach</div>
+                                </div>
                             </div>
                         </div>
                         <!-- <div class="canceled-classes-table classes-tables">
@@ -194,6 +220,31 @@
                                 <p class="txt-canceled-classes">No tienes clases canceladas</p>
                             </div>
                         </div> -->
+                    </div>
+                    <div class="overlay-bike">
+                        <div class="dialog-container">
+                            <div class="dialog-content">
+                                <div class="dialog-wrapper">
+                                    <p class="dialog-title">Reservación</p>
+                                </div>
+                                <div class="dialog-wrapper">
+                                    <p class="dialog-text">¿Deseas reservar el lugar número N?</p>
+                                </div>
+                                <div class="dialog-wrapper">
+                                    <small class="dialog-text">
+                                        * Recuerda que para cancelar tu clase debes hacerlo con 
+                                        un mínimo de 2 horas de anticipación directamente desde 
+                                        la página web, de lo contrario no podrá ser reembolsada.
+                                    </small>
+                                </div>
+                                <div class="dialog-wrapper">
+                                    <div class="dialog-actions">
+                                        <button class="dialog-btn cancel" type="button">Cancel</button>
+                                        <button class="dialog-btn ok" type="button">Aceptar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -41,6 +41,9 @@ const formCard = document.getElementById("form-CardData");
 const formShowData = document.getElementById("form-PaymentData");
 const security = document.querySelector(".security");
 
+const editProfile = document.querySelector(".edit-profile");
+const cancelProfileChanges = document.querySelector(".cancel-profile-changes");
+
 Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
 
 var conektaSuccessResponseHandler = function(token) {
@@ -129,25 +132,67 @@ if(finishedClasses) {
   //   canceledClasses.addEventListener('click', optCanceledActive);
   // }
   
-  if(editPackage) {
-    editPackage.addEventListener('click', showInputsPackage);
-  }
+if(editPackage) {
+  editPackage.addEventListener('click', showInputsPackage);
+}
   
-  if(cancelChanges) {
-    cancelChanges.addEventListener('click', hideInputsPackage);
-  }
+if(cancelChanges) {
+  cancelChanges.addEventListener('click', hideInputsPackage);
+}
   
-  if(formBasicData) {
-    formBasicData.addEventListener('submit', (e) => {
-      e.preventDefault();
-      formCard.style.display = 'block';
-      document.querySelector(".security").style.display = 'block';
-      document.getElementById('form-BasicData').style.display = 'none';
-    });
-  }  
+if(formBasicData) {
+  formBasicData.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formCard.style.display = 'block';
+    document.querySelector(".security").style.display = 'block';
+    document.getElementById('form-BasicData').style.display = 'none';
+  });
+}
   
-  function validation(event) {
-    if (event.matches) {
+if(editProfile) {
+  editProfile.addEventListener('click', (e) => {
+    e.preventDefault();
+    var userInfo = document.querySelectorAll('.edit-user-profile .user-info');
+    var inputs = document.querySelectorAll('.edit-user-profile .form-inputs');
+    
+    editProfile.style.display = 'none';
+    document.querySelector('.change-pass').style.display = 'none';
+    document.querySelector('.save-profile-changes').style.display = 'block';
+    document.querySelector('.cancel-profile-changes').style.display = 'block';
+    document.querySelector('.edit-user-profile .form-title').textContent = 'Modificar perfil';
+    
+    for (var i = 0; i<userInfo.length; i++){
+      userInfo[i].style.display = 'none';
+      inputs[i].style.display = 'block';
+      inputs[i].value = userInfo[i].textContent;
+      inputs[i].required = true;
+    }
+
+  });
+}
+
+if(cancelProfileChanges) {
+  cancelProfileChanges.addEventListener('click', (e) => {
+    e.preventDefault();
+    var userInfo = document.querySelectorAll('.edit-user-profile .user-info');
+    var inputs = document.querySelectorAll('.edit-user-profile .form-inputs');
+    
+    editProfile.style.display = 'block';
+    document.querySelector('.change-pass').style.display = 'block';
+    cancelProfileChanges.style.display = 'none';
+    document.querySelector('.save-profile-changes').style.display = 'none';
+    document.querySelector('.edit-user-profile .form-title').textContent = 'Tus datos';
+    
+    for (var i = 0; i<userInfo.length; i++){
+      userInfo[i].style.display = 'block';
+      inputs[i].style.display = 'none';
+    }
+
+  });
+}
+  
+function validation(event) {
+  if (event.matches) {
     burgerButton.addEventListener('click', hideShow);
     closeMenu.addEventListener('click', hideShow);
     linkReserve.addEventListener('click', hideShow);
@@ -203,47 +248,47 @@ function optFinishedActive() {
   //   tableCanceled.classList.add('is-active');
   // }
   
-  function showUserMenu() {
-    if (menuUser.classList.contains('is-active')) {
-      menuUser.classList.remove('is-active');    
-    } else {
-      menuUser.classList.add('is-active');
-    }
+function showUserMenu() {
+  if (menuUser.classList.contains('is-active')) {
+    menuUser.classList.remove('is-active');    
+  } else {
+    menuUser.classList.add('is-active');
   }
+}
   
-  function showDialog() {
-    if (roomOverlay.classList.contains('is-active')) {
-      roomOverlay.classList.remove('is-active');    
-    } else {
-      roomOverlay.classList.add('is-active');
-    }
+function showDialog() {
+  if (roomOverlay.classList.contains('is-active')) {
+    roomOverlay.classList.remove('is-active');    
+  } else {
+    roomOverlay.classList.add('is-active');
   }
+}
   
-  function showInputsPackage() {
-    pTxtName.style.display = 'none';
-    pTxtTotal.style.display = 'none';
-    pTxtExpiration.style.display = 'none';
-    pInputName.style.display = 'block';
-    pInputName.placeholder = pTxtName.textContent;
-    pInputTotal.style.display = 'block';
-    pInputTotal.placeholder = pTxtTotal.textContent;
-    pInputExpiration.style.display = 'block';
-    pInputExpiration.placeholder = pTxtExpiration.textContent;
-    editPackage.style.display = 'none';
-    deletePackage.style.display = 'none';
-    saveChanges.style.display = 'block';
-    cancelChanges.style.display = 'block';
-  }
+function showInputsPackage() {
+  pTxtName.style.display = 'none';
+  pTxtTotal.style.display = 'none';
+  pTxtExpiration.style.display = 'none';
+  pInputName.style.display = 'block';
+  pInputName.placeholder = pTxtName.textContent;
+  pInputTotal.style.display = 'block';
+  pInputTotal.placeholder = pTxtTotal.textContent;
+  pInputExpiration.style.display = 'block';
+  pInputExpiration.placeholder = pTxtExpiration.textContent;
+  editPackage.style.display = 'none';
+  deletePackage.style.display = 'none';
+  saveChanges.style.display = 'block';
+  cancelChanges.style.display = 'block';
+}
   
-  function hideInputsPackage() {
-    pTxtName.style.display = 'block';
-    pTxtTotal.style.display = 'block';
-    pTxtExpiration.style.display = 'block';
-    pInputName.style.display = 'none';
-    pInputTotal.style.display = 'none';
-    pInputExpiration.style.display = 'none';
-    editPackage.style.display = 'block';
-    deletePackage.style.display = 'block';
-    saveChanges.style.display = 'none';
-    cancelChanges.style.display = 'none';
-  }
+function hideInputsPackage() {
+  pTxtName.style.display = 'block';
+  pTxtTotal.style.display = 'block';
+  pTxtExpiration.style.display = 'block';
+  pInputName.style.display = 'none';
+  pInputTotal.style.display = 'none';
+  pInputExpiration.style.display = 'none';
+  editPackage.style.display = 'block';
+  deletePackage.style.display = 'block';
+  saveChanges.style.display = 'none';
+  cancelChanges.style.display = 'none';
+}
