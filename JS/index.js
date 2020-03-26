@@ -45,6 +45,10 @@ const cancelProfileChanges = document.querySelector(".cancel-profile-changes");
 
 const cancelClass = Array.from(document.querySelectorAll('.table-info .cancel-class'));
 
+const adminCancelClass = Array.from(document.querySelectorAll('.admin-cancel-class'));
+const adminBtnCancel = document.querySelector('.table-bike-reserved .cancel');
+
+
 
 Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
 
@@ -221,6 +225,29 @@ for (var i = 0; i < cancelClass.length; i++) {
     
   });
 
+}
+
+for (var i = 0; i < adminCancelClass.length; i++) {
+  adminCancelClass[i].addEventListener('click', function () {
+    document.querySelector('.overlay-dialog.admin').style.display = 'block';
+
+    const bikeNumber = document.querySelectorAll('.bike-number');
+    const bikeUser = document.querySelectorAll('.bike-user');
+    const busqueda = this;
+    const indice = adminCancelClass.indexOf(busqueda);
+
+    document.querySelector('.user-bike-reserved').textContent = bikeUser[indice].textContent;
+    document.querySelector('.number-bike-reserved').textContent = bikeNumber[indice].textContent;
+    
+  });
+
+}
+
+if (adminBtnCancel) {
+  adminBtnCancel.addEventListener('click', (e) => {
+    document.querySelector('.overlay-dialog.admin').style.display = 'none';
+
+  });
 }
   
 function validation(event) {
