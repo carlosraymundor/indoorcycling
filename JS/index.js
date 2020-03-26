@@ -43,6 +43,9 @@ const security = document.querySelector(".security");
 const editProfile = document.querySelector(".edit-profile");
 const cancelProfileChanges = document.querySelector(".cancel-profile-changes");
 
+const cancelClass = Array.from(document.querySelectorAll('.table-info .cancel-class'));
+
+
 Conekta.setPublicKey('key_KJysdbf6PotS2ut2');
 
 var conektaSuccessResponseHandler = function(token) {
@@ -115,7 +118,7 @@ ipad.addListener(validation);
 
 for (var b = 0; b < bike.length; b++) {
   bike[b].addEventListener('click', function () {
-    document.querySelector('.overlay-bike').style.display = 'block';
+    document.querySelector('.overlay-dialog').style.display = 'block';
     document.querySelector('.dialog-bike-number').textContent = this.textContent;
   });
 
@@ -126,7 +129,7 @@ for (var b = 0; b < bike.length; b++) {
 
 if(cancelBike) {
   cancelBike.addEventListener('click', (e) => {
-    document.querySelector('.overlay-bike').style.display = 'none';
+    document.querySelector('.overlay-dialog').style.display = 'none';
   });
 }
 
@@ -203,6 +206,21 @@ if(cancelProfileChanges) {
     }
 
   });
+}
+
+
+for (var i = 0; i < cancelClass.length; i++) {
+  cancelClass[i].addEventListener('click', function () {
+    document.querySelector('.overlay-dialog').style.display = 'block';
+    
+    const date = document.querySelectorAll('.date-class');
+    const busqueda = this;
+    const indice = cancelClass.indexOf(busqueda);
+
+    document.querySelector('.cancel-class-date').textContent = date[indice].textContent;
+    
+  });
+
 }
   
 function validation(event) {

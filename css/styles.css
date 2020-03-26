@@ -587,6 +587,10 @@ ol {
   color: #f02;
 }
 
+.cancel-class {
+  cursor: pointer;
+}
+
 /* -----------------------------------------User profile end------------------------------------------------ */
 
 .hero {
@@ -1006,7 +1010,7 @@ h3 {
   color: white;
 }
 
-.overlay-bike {
+.overlay-dialog {
   position: fixed;
   background: rgba(0, 0, 0, .6);
   left: 0;
