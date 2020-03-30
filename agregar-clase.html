@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -81,35 +82,38 @@
         </div>
     </header>
     <section class="add-session under-header">
-        <div class="add-container">
-            <h3 class="add-title">Agregar clase</h3>
-            <form action="" class="add-form" id="add-session-form">
-                <div class="wrapper-add-input">
-                    <label for="add-session-coach">Coach</label>
-                    <select name="select-coach" id="add-session-coach" class="select-coach">
-                        <option >Coach</option>
-                        <option value="coach1">Nombre coach</option>
-                        <option value="coach2">Nombre coach</option>
-                        <option value="coach3">Nombre coach</option>
-                    </select>
-                </div>
-                <div class="wrapper-add-input">
-                    <label for="session-date">Fecha de la clase</label>
-                    <input type="date" class="form-inputs" id="session-date" required>
-                </div>
-                <div class="wrapper-add-input">
-                    <label for="session-time">Hora de inicio de la clase</label>
-                    <input type="time" class="form-inputs" id="session-time" value="05:00" min="05:00" max="21:00" required>
-                </div>
-                <div class="wrapper-add-input">
-                    <label for="session-duration">Duración de la clase</label>
-                    <input type="number" class="form-inputs" max="5" id="session-duration" placeholder="Duración" required>
-                    <span class="duration-span">hr(s)</span>
-                </div>
-                <div class="wrapper-add-input">
-                    <input type="submit" value="Agregar clase" class="btn-submit" id="submit-session">
-                </div>
-            </form>
+        <div class="section-form">
+            <div class="section-header">
+                <p class="section-title">Agregar clase</p>
+            </div>
+            <div class="form-wrapper">
+                <form class="form-add-class" id="add-session-form">
+                    <div class="form-group">
+                        <label for="add-session-coach">Coach</label>
+                        <select name="select-coach" id="add-session-coach" class="select-coach">
+                            <option >Coach</option>
+                            <option value="coach1">Nombre coach</option>
+                            <option value="coach2">Nombre coach</option>
+                            <option value="coach3">Nombre coach</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="session-date">Fecha de la clase</label>
+                        <input type="date" class="form-inputs" id="session-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="session-time">Hora de inicio de la clase</label>
+                        <input type="time" class="form-inputs" id="session-time" value="05:00" min="05:00" max="21:00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="session-duration">Duración de la clase</label>
+                        <input type="number" class="form-inputs" max="5" id="session-duration" placeholder="Duración" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-red" id="submit-session">Agregar clase</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
     <footer class="footer">

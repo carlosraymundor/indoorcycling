@@ -25,15 +25,8 @@ const menuUser = document.querySelector(".menu-user-container");
 const iconUser = document.getElementById("icon-user");
 
 const editPackage = document.querySelector(".package-edit");
-const deletePackage = document.querySelector(".package-delet");
-const saveChanges = document.querySelector(".package-save");
-const cancelChanges = document.querySelector(".package-cancel");
-const pTxtName = document.querySelector(".package-name-txt");
-const pTxtTotal = document.querySelector(".package-amount-txt");
-const pTxtExpiration = document.querySelector(".package-expiration-txt");
-const pInputName = document.querySelector(".package-input-name");
-const pInputTotal = document.querySelector(".package-input-total");
-const pInputExpiration = document.querySelector(".package-input-expiration");
+const cancelPackageChanges = document.querySelector(".package-cancel");
+
 
 const formBasicData = document.getElementById('basicData-form');
 const formCard = document.getElementById("form-CardData");
@@ -154,11 +147,47 @@ if(finishedClasses) {
   // }
   
 if(editPackage) {
-  editPackage.addEventListener('click', showInputsPackage);
+  editPackage.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const planInfo = Array.from(document.querySelectorAll('.package-info'));
+    const planInfoP = Array.from(document.querySelectorAll('.package-p'));
+    const planInputs = Array.from(document.querySelectorAll('.form-manage-plan .form-inputs'));
+
+    editPackage.style.display = 'none';
+    document.querySelector('.package-delet').style.display = 'none';
+    cancelPackageChanges.style.display = 'block';
+    document.querySelector('.package-save').style.display = 'block';
+
+  for (var i = 0; i<planInfo.length; i++){
+    planInfo[i].style.display = 'none';
+    planInfoP[i].style.display = 'none';
+    planInputs[i].style.display = 'block';
+    planInputs[i].value = planInfo[i].textContent;
+    planInputs[i].required = true;
+  }
+  });
 }
+
+if(cancelPackageChanges) {
+  cancelPackageChanges.addEventListener('click', (e) => {
+    e.preventDefault();
+    const planInfo = Array.from(document.querySelectorAll('.package-info'));
+    const planInfoP = Array.from(document.querySelectorAll('.package-p'));
+    const planInputs = Array.from(document.querySelectorAll('.form-manage-plan .form-inputs'));
   
-if(cancelChanges) {
-  cancelChanges.addEventListener('click', hideInputsPackage);
+    editPackage.style.display = 'block';
+    document.querySelector('.package-delet').style.display = 'block';
+    cancelPackageChanges.style.display = 'none';
+    document.querySelector('.package-save').style.display = 'none';
+  
+    for (var i = 0; i<planInfo.length; i++){
+      planInfo[i].style.display = 'inline';
+      planInputs[i].style.display = 'none';
+      planInfoP[i].style.display = 'block';
+
+    }
+  });
 }
   
 if(formBasicData) {
@@ -315,35 +344,7 @@ function showUserMenu() {
   }
 }
   
-// function showDialog() {
- 
-// }
-  
 function showInputsPackage() {
-  pTxtName.style.display = 'none';
-  pTxtTotal.style.display = 'none';
-  pTxtExpiration.style.display = 'none';
-  pInputName.style.display = 'block';
-  pInputName.placeholder = pTxtName.textContent;
-  pInputTotal.style.display = 'block';
-  pInputTotal.placeholder = pTxtTotal.textContent;
-  pInputExpiration.style.display = 'block';
-  pInputExpiration.placeholder = pTxtExpiration.textContent;
-  editPackage.style.display = 'none';
-  deletePackage.style.display = 'none';
-  saveChanges.style.display = 'block';
-  cancelChanges.style.display = 'block';
-}
   
-function hideInputsPackage() {
-  pTxtName.style.display = 'block';
-  pTxtTotal.style.display = 'block';
-  pTxtExpiration.style.display = 'block';
-  pInputName.style.display = 'none';
-  pInputTotal.style.display = 'none';
-  pInputExpiration.style.display = 'none';
-  editPackage.style.display = 'block';
-  deletePackage.style.display = 'block';
-  saveChanges.style.display = 'none';
-  cancelChanges.style.display = 'none';
+
 }

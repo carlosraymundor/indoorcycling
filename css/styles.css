@@ -477,7 +477,7 @@ ol {
   display: none;
 }
 
-.edit-user-profile label {
+.form-group label {
   color: #5d5d5d;
   font-weight: bold;
 }
@@ -493,6 +493,7 @@ ol {
 
 .form-group.buttons {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .save-profile-changes, .cancel-profile-changes {
@@ -1139,6 +1140,7 @@ h3 {
 
 .form-group {
   margin-bottom: 1.5em;
+  font-size: 16px;
 }
 
 .form-group.three {
@@ -1195,10 +1197,10 @@ h3 {
   padding: 0 1em;
 }
 
-.show-PaymentData label {
+/* .show-PaymentData label {
   color: #f02;
   font-weight: bold;
-}
+} */
 
 /* .show-PaymentData div {
   margin: 5px 0 0;
@@ -1208,98 +1210,36 @@ h3 {
 
 /* -----------------------------Admin profile end------------------------------------------------- */
 
-.add-package, .add-session {
-  max-width: 440px;
-  margin: 0 auto;
-}
-
-.add-container {
-  padding: 1em;
-}
-
-.add-title {
-  margin-top: 0;
-  font-size: 1.5em;
-  color: initial;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bolder;
-  letter-spacing: .03em;
-}
-
-.add-form {
-  padding: 0 1em;
-}
-
-.wrapper-add-input {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  align-items: end;
-  margin: 0 0 1em;
-}
-
-.wrapper-add-input label {
-  padding: 0 1em 0 0;
-  font-size: .9em;
-  font-weight: bold;
-}
-
-.wrapper-add-input:nth-of-type(5) {
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
-}
-
 .select-coach {
   background: transparent;
   border: none;
   border-bottom: 1px solid #a7a89a;
   padding: .5em 0; 
   outline: none;
-  color: #6d6a6a;
-}
-
-#session-date, #session-time {
-  color: #6d6a6a;
-  font-size: .8em;
-}
-
-.add-session .wrapper-add-input:nth-of-type(4) {
-  grid-template-columns: 40% 50% 10%;
-}
-
-.duration-span {
-  text-align: end;
-  font-size: .8em;
+  font-size: 16px;
+  display: block;
+  width: 100%;
 }
 
 /* -----------------------------Admin profile end------------------------------------------------- */
 
 /* -----------------------------Admin package start------------------------------------------------- */
-.admin-package-info, .package-details {
-  padding: 0 1em;
-}
-
-.package-form label {
-  font-weight: bold;
-  color: #f02;
-}
-
-.package-form p {
-  margin: .5em 0 0;
+.package-p {
   font-weight: bold;
 }
 
-.package-form div {
-  margin: 0 0 1.5em;
-}
-
-.package-form input, .package-save, .package-cancel {
+.form-manage-plan input{
   display: none;
 }
 
-.package-buttons {
-  display: flex;
+.package-save, .package-cancel {
+  display: none;
 }
+
+.form-group.buttons button {
+  margin: 0;
+}
+
 /* -----------------------------Admin package end------------------------------------------------- */
 
 .details-plan, .form-wrapper {
@@ -1700,19 +1640,13 @@ h3 {
     width: 30%;
   }
 
-  .payment-btn-subtmit, .btn-submit, .btn-red {
+  .payment-btn-subtmit, .btn-red {
     font-size: 1em;
   } 
 /* -----------------------------Payment 768px end------------------------------------------------- */
 
 /* -----------------------------Admin profile 768px start------------------------------------------------- */
-  .wrapper-add-input label { 
-    font-size: 1.1em;
-  }
 
-  .select-coach, #session-date, #session-time, #session-duration, .duration-span {
-    font-size: 16px;
-  }
 /* -----------------------------Admin profile 768px end------------------------------------------------- */
 
 }

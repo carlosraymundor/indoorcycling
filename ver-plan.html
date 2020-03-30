@@ -81,34 +81,39 @@
         </div>
     </header>
     <section class="admin-package under-header">
-        <div class="package-info-wrapper">
-            <div class="admin-package-info">
-                <h3 class="package-title">Información del plan</h3>
-                <div class="package-details">
-                    <form class="package-form">
-                        <div class="package-name">
-                            <label>Nombre:</label>
-                            <p class="package-name-txt package-p">Paquete 5 clases </p>
-                            <input type="text" id="package-name" class="form-inputs package-input-name">
+        <div class="section-form">
+            <div class="section-header">
+                <p class="section-title">Información del plan</p>
+            </div>
+            <div class="form-wrapper admin-package-info">
+                <form class="form-manage-plan">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <div class="package-name-txt| package-p">
+                            <span class="package-info">Paquete 5 clases</span> </div>
+                        <input type="text" id="package-name" class="form-inputs package-input-name">
+                    </div>
+                    <div class="form-group">
+                        <label>Monto:</label>
+                        <div class="package-amount-txt package-p">
+                            $<span class="package-info">1450</span> MXN
                         </div>
-                        <div class="package-amount">
-                            <label>Monto:</label>
-                            <p class="package-amount-txt package-p">$1,450 MN</p>
-                            <input type="number" id="package-total" class="form-inputs package-input-total">
+                        <input type="number" id="package-total" class="form-inputs package-input-total">
+                    </div>
+                    <div class="form-group">
+                        <label>Validez:</label>
+                        <div class="package-expiration-txt package-p">
+                            <span class="package-info">60</span> días
                         </div>
-                        <div class="package-expiration">
-                            <label>Validez:</label>
-                            <p class="package-expiration-txt package-p">60 días</p>
-                            <input type="number" id="package-expiration" class="form-inputs package-input-expiration">
-                        </div>
-                        <div class="package-buttons">
-                            <a class="btn-red package-save" id="package-save">Guardar</a>
-                            <a class="btn-red package-cancel" id="package-cancel">Cancelar</a>
-                            <a class="btn-red package-edit" id="package-edit">Modificar</a>
-                            <a class="btn-red package-delet" id="package-delet">Eliminar</a>
-                        </div>
-                    </form>
-                </div>
+                        <input type="number" id="package-expiration" class="form-inputs package-input-expiration">
+                    </div>
+                    <div class="form-group buttons">
+                        <button class="btn-red package-edit">Modificar</button>
+                        <button class="btn-red package-delet">Eliminar</button>
+                        <button type="submit" class="btn-red package-save">Guardar</button>
+                        <button class="btn-red package-cancel">Cancelar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

@@ -81,29 +81,33 @@
         </div>
     </header>
     <section class="add-package under-header">
-        <div class="add-container">
-            <h3 class="add-title">Agregar plan</h3>
-            <form action="" class="add-form" id="add-package-form">
-                <div class="wrapper-add-input">
-                    <label for="plan-name">Nombre del plan</label>
-                    <input type="text" class="form-inputs" id="plan-name" required>
-                </div>
-                <div class="wrapper-add-input">
-                    <label for="plan-sessions">Número de clases</label>
-                    <input type="number" class="form-inputs" id="plan-sessions" required>
-                </div>
-                <div class="wrapper-add-input">
-                    <label for="plan-cost">Costo del plan</label>
-                    <input type="number" class="form-inputs" id="plan-cost" required>
-                </div>
-                <div class="wrapper-add-input">
-                    <label for="plan-expiration">Vigencia en días</label>
-                    <input type="number" class="form-inputs" id="plan-expiration" required>
-                </div>
-                <div class="wrapper-add-input">
-                    <input type="submit" value="Agregar plan" class="btn-submit">
-                </div>
-            </form>
+        <div class="section-form">
+            <div class="section-header">
+                <p class="section-title">Agregar plan</p>
+            </div>
+            <div class="form-wrapper">
+                <form class="form-add-package">
+                    <div class="form-group">
+                        <label for="plan-name">Nombre del plan</label>
+                        <input type="text" class="form-inputs" id="plan-name" required placeholder="Ej. Plan 5 clases">
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-sessions">Número de clases</label>
+                        <input type="number" class="form-inputs" id="plan-sessions" required placeholder="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-cost">Costo del plan</label>
+                        <input type="number" class="form-inputs" id="plan-cost" required placeholder="5000">
+                    </div>
+                    <div class="form-group">
+                        <label for="plan-expiration">Vigencia en días</label>
+                        <input type="number" class="form-inputs" id="plan-expiration" required placeholder="50">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-red">Agregar plan</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
     <footer class="footer">
