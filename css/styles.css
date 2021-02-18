@@ -615,7 +615,6 @@ ol {
 
 .hero-image {
   width: 100%;
-  opacity: 0.6;
 }
 
 h2 {
@@ -1467,7 +1466,7 @@ h3 {
 /* ---------------------------menu user end ------------------------------------ */
 
   .coaches-list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
 /* ----------------------------------------user profile start --------------------------------------- */
