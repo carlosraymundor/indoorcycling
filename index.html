@@ -1,352 +1,401 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sport Life</title>
-    <link rel="icon" type="image/jpg" href="images/sportryde.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin" media="all">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
-</head>
-<body>
+    <link rel="icon" type="image/jpg" href="images/sportryde.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin"
+      media="all"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Roboto+Mono:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.conekta.io/js/latest/conekta.js"
+    ></script>
+  </head>
+  <body>
     <header class="header">
-        <div class="header-wrapper">
-            <figure class="logo">
-                <a class="home link-hl" href="index.html">
-                    <img src="images/sportryde.png" alt="Logo de http://sportlife.com.mx" />
-                </a>
-            </figure>
-            <div class="header-menu">
-                <div class="header-elements">
-                    <div class="button-login" >
-                        <a href="login.html" class="link btn-login link-hl" id="login-button">
-                            <span>Iniciar sesión</span>
-                        </a>
-                    </div>
-                    <div class="button-leave">
-                        <a href="index.html" class="link btn-login link-hl" id="login-button">
-                            <span>Salir</span>
-                        </a>
-                    </div>
-                    <div class="login-user-wrapper">
-                        <p class="user-name">Hola Carlos</p>
-                        <div class="link-user link icons">
-                            <i class="icon-user link-hl" id="icon-user"></i>
-                        </div>
-                        <div class="menu-user-container" id="userMenu">
-                            <div class="triangle"></div>
-                            <div class="box">
-                                <span>¡Hola, Carlos Raymundo!</span>
-                                <div class="box-opt">
-                                    <a href="profile.html" class="link">Ver mi perfil</a>
-                                </div>
-                                <div class="box-opt">
-                                    <a href="" class="link">Cerrar sesión</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="header-wrapper">
+        <figure class="logo">
+          <a class="home link-hl" href="index.html">
+            <img
+              src="images/sportryde.png"
+              alt="Logo de http://sportlife.com.mx"
+            />
+          </a>
+        </figure>
+        <div class="header-menu">
+          <div class="header-elements">
+            <div class="button-login">
+              <a
+                href="login.html"
+                class="link btn-login link-hl"
+                id="login-button"
+              >
+                <span>Iniciar sesión</span>
+              </a>
+            </div>
+            <div class="button-leave">
+              <a
+                href="index.html"
+                class="link btn-login link-hl"
+                id="login-button"
+              >
+                <span>Salir</span>
+              </a>
+            </div>
+            <div class="login-user-wrapper">
+              <p class="user-name">Hola Carlos</p>
+              <div class="link-user link icons">
+                <i class="icon-user link-hl" id="icon-user"></i>
+              </div>
+              <div class="menu-user-container" id="userMenu">
+                <div class="triangle"></div>
+                <div class="box">
+                  <span>¡Hola, Carlos Raymundo!</span>
+                  <div class="box-opt">
+                    <a href="profile.html" class="link">Ver mi perfil</a>
+                  </div>
+                  <div class="box-opt">
+                    <a href="" class="link">Cerrar sesión</a>
+                  </div>
                 </div>
-                <div class="burger-button-wrapper">
-                    <i class="icon-menu burger-button link-hl" id="burger-menu"></i>	
-                </div>
-                <nav class="menu ">
-                    <div class="menu-close">
-                        <img src="images/cross.svg" alt="close" class="menu-close-img">
-                     </div>
-                    <ol>
-                        <li>
-                            <a class="link menu-link link-reserve" href="#reserve">Reservar</a>
-                        </li>
-                        <li>
-                            <a class="link menu-link link-buySession" href="#buySession">Comprar clases</a>
-                        </li>
-                        <li>
-                            <a class="link menu-link link-weAre" href="#we-are">¿Quiénes somos?</a>
-                        </li>
-                        <li>
-                            <a class="link menu-link link-coaches" href="#coaches">Instructores</a>
-                        </li>
-                        <li>
-                            <a class="link menu-link link-contact" href="#contact">Contacto</a>
-                        </li>
-                    </ol>
-                </nav>
-            </div> 
+              </div>
+            </div>
+          </div>
+          <div class="burger-button-wrapper">
+            <i class="icon-menu burger-button link-hl" id="burger-menu"></i>
+          </div>
+          <nav class="menu">
+            <div class="menu-close">
+              <img src="images/cross.svg" alt="close" class="menu-close-img" />
+            </div>
+            <ol>
+              <li>
+                <a class="link menu-link link-reserve" href="#reserve"
+                  >Reservar</a
+                >
+              </li>
+              <li>
+                <a class="link menu-link link-buySession" href="#buySession"
+                  >Comprar clases</a
+                >
+              </li>
+              <li>
+                <a class="link menu-link link-weAre" href="#we-are"
+                  >¿Quiénes somos?</a
+                >
+              </li>
+              <li>
+                <a class="link menu-link link-coaches" href="#coaches"
+                  >Instructores</a
+                >
+              </li>
+              <li>
+                <a class="link menu-link link-contact" href="#contact"
+                  >Contacto</a
+                >
+              </li>
+            </ol>
+          </nav>
         </div>
+      </div>
     </header>
     <section class="hero">
-        <div class="container">
-            <div class="hero-container">
-                <h1 class="hero-title">
+      <div class="container">
+        <div class="hero-container">
+          <ul class="slider">
+            <li><img src="images/slider1.jpg" class="hero-image" alt="" /></li>
+            <li><img src="images/slider2.jpg" class="hero-image" alt="" /></li>
+            <li><img src="images/slider3.jpg" class="hero-image" alt="" /></li>
+            <li><img src="images/slider4.jpg" class="hero-image" alt="" /></li>
+            <li><img src="images/slider5.jpg" class="hero-image" alt="" /></li>
+            <li><img src="images/slider6.jpg" class="hero-image" alt="" /></li>
+          </ul>
+          <!-- <h1 class="hero-title">
                     Sport Life ............
                 </h1>
-                <img class="hero-image" src="images/portada1.jpg" alt="Imagen principal del sitio #1" />
-            </div>
+                <img class="hero-image" src="images/portada1.jpg" alt="Imagen principal del sitio #1" /> -->
         </div>
+      </div>
     </section>
     <section class="reserve" id="reserve">
-        <div class="container">
-            <h2>Reservar</h2>
-            <div class="calendar">
-                <div class="calendar-header">
-                    <div class="days">
-                        <span class="title-day">LUN</span>
-                        <span class="date">1/10</span>
-                    </div>
-                    <div class="days">
-                        <span class="title-day">MAR</span>
-                        <span class="date">2/10</span>
-                    </div>
-                    <div class="days">
-                        <span class="title-day">MIÉ</span>
-                        <span class="date">3/10</span>
-                    </div>
-                    <div class="days">
-                        <span class="title-day">JUE</span>
-                        <span class="date">4/10</span>
-                    </div>
-                    <div class="days">
-                        <span class="title-day">VIE</span>
-                        <span class="date">5/10</span>
-                    </div>
-                    <div class="days">
-                        <span class="title-day">SÁB</span>
-                        <span class="date">6/10</span>
-                    </div>
-                    <div class="days">
-                        <span class="title-day">DOM</span>
-                        <span class="date">7/10</span>
-                    </div>
-                </div>
-                <div class="calendar-sessions">
-                    <div class="content-day">
-                        <a href="clase.html" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                    <div class="content-day">
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                    <div class="content-day">
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                    <div class="content-day">
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                    <div class="content-day">
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                    <div class="content-day">
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                    <div class="content-day">
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor1</p>
-                            <p class="session-hour">8:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor2</p>
-                            <p class="session-hour">10:00 am</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor3</p>
-                            <p class="session-hour">12:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor4</p>
-                            <p class="session-hour">2:00 pm</p>
-                        </a>
-                        <a href="#" class="link session-link">
-                            <p class="session-coache">Instructor5</p>
-                            <p class="session-hour">4:00 pm</p>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>Reservar</h2>
+        <div class="calendar">
+          <div class="calendar-header">
+            <div class="days">
+              <span class="title-day">LUN</span>
+              <span class="date">1/10</span>
             </div>
-            <div class="add-btn">
-                <a href="agregar-clase.html" class="link btn-red">Agregar clase</a>
+            <div class="days">
+              <span class="title-day">MAR</span>
+              <span class="date">2/10</span>
             </div>
+            <div class="days">
+              <span class="title-day">MIÉ</span>
+              <span class="date">3/10</span>
+            </div>
+            <div class="days">
+              <span class="title-day">JUE</span>
+              <span class="date">4/10</span>
+            </div>
+            <div class="days">
+              <span class="title-day">VIE</span>
+              <span class="date">5/10</span>
+            </div>
+            <div class="days">
+              <span class="title-day">SÁB</span>
+              <span class="date">6/10</span>
+            </div>
+            <div class="days">
+              <span class="title-day">DOM</span>
+              <span class="date">7/10</span>
+            </div>
+          </div>
+          <div class="calendar-sessions">
+            <div class="content-day">
+              <a href="clase.html" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+            <div class="content-day">
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+            <div class="content-day">
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+            <div class="content-day">
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+            <div class="content-day">
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+            <div class="content-day">
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+            <div class="content-day">
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor1</p>
+                <p class="session-hour">8:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor2</p>
+                <p class="session-hour">10:00 am</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor3</p>
+                <p class="session-hour">12:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor4</p>
+                <p class="session-hour">2:00 pm</p>
+              </a>
+              <a href="#" class="link session-link">
+                <p class="session-coache">Instructor5</p>
+                <p class="session-hour">4:00 pm</p>
+              </a>
+            </div>
+          </div>
         </div>
+        <div class="add-btn">
+          <a href="agregar-clase.html" class="link btn-red">Agregar clase</a>
+        </div>
+      </div>
     </section>
     <section class="buySession" id="buySession">
-        <div class="container">
-            <h2>Comprar clases</h2>
-            <div class="packages-container">
-                <div class="package link-hl" id="package1">
-                    <div class="package-info-header">
-                        <p class="package-info-name">Comprar <strong>1</strong> clase</p>
-                        <p class="package-info-description">
-                            Esta compra incluye 1 clase y derecho a gimnasio (sólo la primera vez)
-                        </p>
-                    </div>
-                    <div class="package-info-content">
-                        <p class="package-info-cost"><strong>$130 MXN</strong></p>
-                        <a class="btn-red" href="pago.html">Comprar</a>
-                        <!-- <a class="btn-red" href="ver-plan.html">Ver plan</a> -->
-                    </div>
-                </div>
-                <div class="package link-hl" id="package2">
-                    <div class="package-info-header">
-                        <p class="package-info-name">Plan <strong>5</strong> clases</p>
-                        <p class="package-info-description">
-                            Este plan incluye 5 clases que expiran en 20 días posteriores a su compra
-                        </p>
-                    </div>
-                    <div class="package-info-content">
-                        <p class="package-info-cost"><strong>$550 MXN</strong></p>
-                        <a class="btn-red" href="pago.html">Comprar</a>
-                        <a class="btn-red" href="ver-plan.html">Ver plan</a>
-                    </div>
-                </div>
-                <div class="package link-hl" id="package3">
-                    <div class="package-info-header">
-                        <p class="package-info-name">Plan <strong>10</strong> clases</p>
-                        <p class="package-info-description">
-                            Este plan incluye 10 clases que expiran en 40 días posteriores a su compra
-                        </p>
-                    </div>
-                    <div class="package-info-content">
-                        <p class="package-info-cost"><strong>$950 MXN</strong></p>
-                        <a class="btn-red" href="pago.html">Comprar</a>
-                        <a class="btn-red" href="ver-plan.html">Ver plan</a>
-                    </div>
-                </div>
-                <div class="package link-hl" id="package4">
-                    <div class="package-info-header">
-                        <p class="package-info-name">Plan <strong>20</strong> clases</p>
-                        <p class="package-info-description">
-                            Este plan incluye 20 clases que expiran en 76 días posteriores a su compra
-                        </p>
-                    </div>
-                    <div class="package-info-content">
-                        <p class="package-info-cost"><strong>$1,700 MXN</strong></p>
-                        <a class="btn-red" href="pago.html">Comprar</a>
-                        <a class="btn-red" href="ver-plan.html">Ver plan</a>
-                    </div>
-                </div>
-                <!-- <div class="package link-hl" id="package5">
+      <div class="container">
+        <h2>Comprar clases</h2>
+        <div class="packages-container">
+          <div class="package link-hl" id="package1">
+            <div class="package-info-header">
+              <p class="package-info-name">Comprar <strong>1</strong> clase</p>
+              <p class="package-info-description">
+                Esta compra incluye 1 clase y derecho a gimnasio (sólo la
+                primera vez)
+              </p>
+            </div>
+            <div class="package-info-content">
+              <p class="package-info-cost"><strong>$130 MXN</strong></p>
+              <a class="btn-red" href="pago.html">Comprar</a>
+              <!-- <a class="btn-red" href="ver-plan.html">Ver plan</a> -->
+            </div>
+          </div>
+          <div class="package link-hl" id="package2">
+            <div class="package-info-header">
+              <p class="package-info-name">Plan <strong>5</strong> clases</p>
+              <p class="package-info-description">
+                Este plan incluye 5 clases que expiran en 20 días posteriores a
+                su compra
+              </p>
+            </div>
+            <div class="package-info-content">
+              <p class="package-info-cost"><strong>$550 MXN</strong></p>
+              <a class="btn-red" href="pago.html">Comprar</a>
+              <a class="btn-red" href="ver-plan.html">Ver plan</a>
+            </div>
+          </div>
+          <div class="package link-hl" id="package3">
+            <div class="package-info-header">
+              <p class="package-info-name">Plan <strong>10</strong> clases</p>
+              <p class="package-info-description">
+                Este plan incluye 10 clases que expiran en 40 días posteriores a
+                su compra
+              </p>
+            </div>
+            <div class="package-info-content">
+              <p class="package-info-cost"><strong>$950 MXN</strong></p>
+              <a class="btn-red" href="pago.html">Comprar</a>
+              <a class="btn-red" href="ver-plan.html">Ver plan</a>
+            </div>
+          </div>
+          <div class="package link-hl" id="package4">
+            <div class="package-info-header">
+              <p class="package-info-name">Plan <strong>20</strong> clases</p>
+              <p class="package-info-description">
+                Este plan incluye 20 clases que expiran en 76 días posteriores a
+                su compra
+              </p>
+            </div>
+            <div class="package-info-content">
+              <p class="package-info-cost"><strong>$1,700 MXN</strong></p>
+              <a class="btn-red" href="pago.html">Comprar</a>
+              <a class="btn-red" href="ver-plan.html">Ver plan</a>
+            </div>
+          </div>
+          <!-- <div class="package link-hl" id="package5">
                     <div class="package-info-header">
                         <p class="package-info-name">Plan <strong>50</strong> clases</p>
                         <p class="package-info-description">
@@ -423,73 +472,113 @@
                         <a class="btn-red" href="pago.html" >Comprar</a>
                         <a class="btn-red" href="ver-plan.html">Ver plan</a>
                     </div> -->
-            </div>
         </div>
-            <div class="add-btn">
-                <a href="agregar-plan.html" class="link btn-red">Agregar plan</a>
-            </div>
+      </div>
+      <div class="add-btn">
+        <a href="agregar-plan.html" class="link btn-red">Agregar plan</a>
+      </div>
     </section>
     <section class="we-are" id="we-are">
-        <div class="container">
-            <h2>¿Quiénes somos?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum eligendi iusto incidunt quisquam consectetur odio illum tempora, nam saepe iure dolorem reiciendis voluptate, nisi fuga rem blanditiis nihil fugit nobis.</p>
-        </div>
+      <div class="container">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
+          eligendi iusto incidunt quisquam consectetur odio illum tempora, nam
+          saepe iure dolorem reiciendis voluptate, nisi fuga rem blanditiis
+          nihil fugit nobis.
+        </p>
+      </div>
     </section>
     <section class="coaches" id="coaches">
-        <div class="container">
-            <h2>Instructores</h2>
-            <div class="coaches-container">
-                <div class="coaches-list">
-                    <div class="coaches-item">
-                        <img src="images/Hilary-profile.png" alt="coach" class="coach-img">
-                        <span class="coach-name">Hilary</span>
-                    </div>
-                    <div class="coaches-item">
-                        <img src="images/Zuly-profile.png" alt="coach" class="coach-img">
-                        <span class="coach-name">Zuly</span>
-                    </div>
-                    <div class="coaches-item">
-                        <img src="images/Lalo-profile.png" alt="coach" class="coach-img">
-                        <span class="coach-name">Lalo</span>
-                    </div>
-                    <div class="coaches-item">
-                        <img src="images/Odet-profile.png" alt="coach" class="coach-img">
-                        <span class="coach-name">Odet</span>
-                    </div>
-                    <div class="coaches-item">
-                        <img src="images/Eugenia-profile.png" alt="coach" class="coach-img">
-                        <span class="coach-name">Eugenia</span>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>Instructores</h2>
+        <div class="coaches-container">
+          <div class="coaches-list">
+            <div class="coaches-item">
+              <img
+                src="images/Hilary-profile.png"
+                alt="coach"
+                class="coach-img"
+              />
+              <span class="coach-name">Hilary</span>
             </div>
+            <div class="coaches-item">
+              <img
+                src="images/Zuly-profile.png"
+                alt="coach"
+                class="coach-img"
+              />
+              <span class="coach-name">Zuly</span>
+            </div>
+            <div class="coaches-item">
+              <img
+                src="images/Lalo-profile.png"
+                alt="coach"
+                class="coach-img"
+              />
+              <span class="coach-name">Lalo</span>
+            </div>
+            <div class="coaches-item">
+              <img
+                src="images/Odet-profile.png"
+                alt="coach"
+                class="coach-img"
+              />
+              <span class="coach-name">Odet</span>
+            </div>
+            <div class="coaches-item">
+              <img
+                src="images/Eugenia-profile.png"
+                alt="coach"
+                class="coach-img"
+              />
+              <span class="coach-name">Eugenia</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <form action="/suscripcion/" class="form-email">
-                    <h3>¿Quiéres saber más sobre nosotros?</h3>
-                    <input type="email" name="email" placeholder="Déjanos tu email" id="email" required/>
-                    <button class="btn-form">Enviar</button>
-                </form>
-                <div class="social">
-                    <a href="https://www.facebook.com/sportlifetab/" target="_blank" class="social-link facebook">
-                        <i class="icon-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sportlifetab/" target="_blank" class="social-link instagram">
-                        <i class="icon-instagram"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="contact-wrapper">
+          <form action="/suscripcion/" class="form-email">
+            <h3>¿Quiéres saber más sobre nosotros?</h3>
+            <input
+              type="email"
+              name="email"
+              placeholder="Déjanos tu email"
+              id="email"
+              required
+            />
+            <button class="btn-form">Enviar</button>
+          </form>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/sportlifetab/"
+              target="_blank"
+              class="social-link facebook"
+            >
+              <i class="icon-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/sportlifetab/"
+              target="_blank"
+              class="social-link instagram"
+            >
+              <i class="icon-instagram"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="container-footer">
-            <p>
-                    Sport Life 2020 © Todos los Derechos Reservados. Diseñado y desarrollado por Hola Mundo TI
-            </p>
-        </div>
+      <div class="container-footer">
+        <p>
+          Sport Life 2020 © Todos los Derechos Reservados. Diseñado y
+          desarrollado por Hola Mundo TI
+        </p>
+      </div>
     </footer>
     <script src="JS/index.js"></script>
-</body>
+  </body>
 </html>
